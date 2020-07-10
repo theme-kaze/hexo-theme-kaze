@@ -1,0 +1,10 @@
+* {
+    margin: 0;
+    padding: 0;
+    border: 0;
+}
+
+.content {
+    width: 500px;
+    margin: 0 auto;
+}
