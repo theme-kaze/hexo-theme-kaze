@@ -1,0 +1,13 @@
+<% if(is_home()) { %>
+<%- partial('_pages/postlist') %>
+<% } %>
+<% if(is_post()) { %>
+<%- partial('_pages/post') %>
+<% } %>
+<% if(page.layout === 'categories') { %>
+<%- partial('_pages/categories') %>
+<% } else if(page.layout === 'links') { %>
+<%- partial('_pages/links') %>
+<% } else if (page.layout === 'archives') { %>
+<%- partial('_pages/archives') %>
+<% } %>

@@ -6,10 +6,10 @@ menus:
   Home: /
   Archives: /archives
   About: /about
+  Friends: /links
 rss: /atom.xml
 
 # Content
-excerpt_link: Read More
 fancybox: true
 
 # Sidebar
@@ -20,6 +20,23 @@ widgets:
 - tagcloud
 - archive
 - recent_posts
+
+# Links
+links: 
+  friend:
+    url: /
+    img: 
+  # name1:
+  #   url: https://example.com
+  #   img: 
+
+post:
+  # Please use <!-- more --> in the post to set the length of excerpt mannually
+  # and will overwite the configuration here.
+  excerpt_length: 120
+  #
+  excerpt_link: Read More
+
 
 # display widgets at the bottom of index pages (pagination == 2)
 index_widgets:

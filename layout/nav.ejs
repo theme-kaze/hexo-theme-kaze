@@ -1,2 +1,7 @@
-<ul class="menu">
-</ul>
+<nav class="navbar">
+    <ul class="menu">
+        <% for(const menu in theme.menus) { %>
+        <a href="<%= theme.menus[menu] %>" class="menu"><%= menu %> </a>
+        <% } %>
+    </ul>
+</nav>
