@@ -1,13 +1,31 @@
+<%# ### Home Page ### %>
 <% if(is_home()) { %>
 <%- partial('_pages/postlist') %>
 <% } %>
+
+<%# ### Post Page ### %>
 <% if(is_post()) { %>
 <%- partial('_pages/post') %>
 <% } %>
-<% if(page.layout === 'categories') { %>
-<%- partial('_pages/categories') %>
-<% } else if(page.layout === 'links') { %>
-<%- partial('_pages/links') %>
-<% } else if (page.layout === 'archives') { %>
+
+<%# ### Tags ### %>
+<% if(is_tag()) { %>
+<%- partial('_pages/tags') %>
+<% } %>
+
+<%# ### Archives ### %>
+<% if (page.archive) { %>
 <%- partial('_pages/archives') %>
+
+<%# ### Categories ### %>
+<% } else if(page.path.startsWith('category')) { %>
+<%- partial('_pages/category') %>
+
+<%# ### Links ### %>
+<% } else if(page.path.startsWith('links')) { %>
+<%- partial('_pages/links') %>
+
+<%# ### About Page ### %>
+<% } else if(page.path.startsWith('about')) { %>
+<%- partial('_pages/about') %>
 <% } %>

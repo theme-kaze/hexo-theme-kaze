@@ -1,0 +1,32 @@
+<footer class="footer">
+    <div class="footer-container">
+        <div class="copyright">
+            <span id="copy_year">Copyright ©
+                <% if(theme.footer.copy_year) { %>
+                <%- theme.footer.copy_year %> -
+                <% } %>
+                <%- date(Date.now(), 'YYYY') %>
+            </span>
+            <a href="/" class="footer-link"><%- theme.title %> </a>
+        </div>
+
+        <% if(theme.footer.showPoweredBy || theme.footer.showDesignedBy) { %>
+        <div>
+            <%# showPoweredBy %>
+            <% if(theme.footer.showPoweredBy) { %>
+            Powered by
+            <a href="https://hexo.io/" class="footer-link" target="_blank">Hexo</a>
+            <% } %>
+
+            <span class="dot"></span>
+
+            <%# showDesignedBy %>
+            <% if(theme.footer.showDesignedBy) { %>
+            Designed By
+            <a href="https://github.com/0x4qE" class="footer-link" target="_blank">0x4qE</a>
+            <% } %>
+        </div>
+        <% } %>
+
+    </div>
+</footer>

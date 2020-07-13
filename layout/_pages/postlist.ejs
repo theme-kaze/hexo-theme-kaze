@@ -1,22 +1,23 @@
-<% site.posts.forEach(post => { %>
+<% site.posts.sort('date').forEach(post => { %>
 <div class="card">
     <article class="card-content">
-        <a href="/<%- post.path %>" class="post-title"><%- post.title %> </a>
+        <a href="/<%= post.path %>" class="post-title"><%= post.title %> </a>
         <div class="card-excerpt">
             <% if(post.excerpt) { %>
-            <%- strip_html(post.excerpt) %>
+            <%= strip_html(post.excerpt) %>
             <% } else { %>
-            <%- strip_html(truncate( post.content, { length : 120 })) %>
+            <%= strip_html(truncate( post.content, { length : 120 })) %>
             <% } %>
         </div>
         <div class="card-post-footer">
-            <time datetime="<%- date_xml(post.date) _%>"><%- date(post.date) %></time>
+            <time datetime="<%= date_xml(post.date) _%>"><%= date(post.date) %></time>
             <span class="dot">
                 <% if(post.categories.data) { %>
-                <a href="<%- post.categories %>"></a>
+                <a href="<%= post.categories %>"></a>
+                <%= post.categories.data.path %>
                 <% } %>
             </span>
-            <a href="<%- url_for(post.path) %>"><%- theme.post.excerpt_link %> </a>
+            <a href="<%= url_for(post.path) %>"><%= theme.post.excerpt_link %> </a>
         </div>
     </article>
 </div>

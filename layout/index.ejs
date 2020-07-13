@@ -1,9 +1,20 @@
 <div class="section">
     <div class="container">
         <div class="columns">
-            <main class="main-column"><%- partial('page.ejs') %></main>
-            <aside class="left-column"></aside>
-            <aside class="right-column"></aside>
+            <main class="main-column"><%- partial('page') %></main>
+            <aside class="left-column">
+
+                <%# author card %>
+                <div class="card card-author">
+                    <%- partial('_partial/author') %>
+                </div>
+
+                <%# sticky-tablet %>
+                <%- partial('left-aside') %>
+            </aside>
+            <aside class="right-column">
+                <%- partial('right-aside') %>
+            </aside>
         </div>
     </div>
 </div>

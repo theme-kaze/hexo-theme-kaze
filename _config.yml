@@ -1,7 +1,8 @@
-# Header
+### Header ###
 title: 0x4qE's Blog
 author: 0x4qE
 
+### navebar ###
 menus:
   Home: /
   Archives: /archives
@@ -12,7 +13,7 @@ rss: /atom.xml
 # Content
 fancybox: true
 
-# Sidebar
+### Sidebar ###
 sidebar: right
 widgets:
 - category
@@ -21,7 +22,7 @@ widgets:
 - archive
 - recent_posts
 
-# Links
+### Links ###
 links: 
   friend:
     url: /
@@ -30,6 +31,9 @@ links:
   #   url: https://example.com
   #   img: 
 
+
+
+### Post ###
 post:
   # Please use <!-- more --> in the post to set the length of excerpt mannually
   # and will overwite the configuration here.
@@ -37,6 +41,13 @@ post:
   #
   excerpt_link: Read More
 
+### Footer ###
+footer:
+  copy_year: 2019
+  # if showPoweredBy is ture, 'Powered by Hexo' will be seen on the footer
+  showPoweredBy: true
+  # if showDesignedBy is ture, 'Powered by Hexo' will be seen on the footer
+  showDesignedBy: true
 
 # display widgets at the bottom of index pages (pagination == 2)
 index_widgets:

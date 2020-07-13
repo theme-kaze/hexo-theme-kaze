@@ -4,12 +4,15 @@
 <%- partial('_partial/head') %>
 
 <body>
-    <%# main content %> 
+    <%# navbar %>
     <%- partial('nav.ejs') %>
+
+    <%# main content %>
     <%- body %>
 
     <%# footer %>
-    
+    <%- partial('footer.ejs') %>
+
     <%- js('js/main.js') %>
 </body>
 
