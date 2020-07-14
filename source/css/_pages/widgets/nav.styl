@@ -1,0 +1,49 @@
+//默认navbar布局
+.navbar
+  min-height: 54px
+  box-shadow: $shadow-style
+  .navbar-logo
+    display: inline-block
+    margin-left: 96px
+    .navbar-logo-main
+      display: flex
+      align-items: center
+      justify-content: space-around
+      line-height: 54px
+      .navbar-logo-dsc
+        font-weight: bold
+        font-size: 1.4rem
+      .navbar-logo-img
+        height: 34px
+        margin-right: 10px
+  .navbar-menu
+    font-weight: lighter
+    font-size: 1.22rem
+    line-height: 54px
+    margin-right: 320px
+    float: right
+    a
+      display: inline-block
+      color: $text-color
+      cursor: pointer
+      margin: 0 8px
+      &:hover
+        color: $link-color
+
+//手机navbar布局
+@media (max-width: 1092px)
+  .navbar
+    min-height: 108px
+    .navbar-logo
+      margin-left: 0
+      display: block
+      .navbar-logo-main
+        justify-content: center
+    .navbar-menu
+      width: 100%
+      display: flex
+      margin-right: 0
+      justify-content: center
+      
+
+  

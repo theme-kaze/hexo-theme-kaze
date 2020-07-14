@@ -1,7 +1,13 @@
 <nav class="navbar">
-    <ul class="menu">
-        <% for(const menu in theme.menus) { %>
-        <a href="<%= theme.menus[menu] %>" class="menu"><%= menu %> </a>
-        <% } %>
-    </ul>
+  <div class="navbar-logo">
+    <span class="navbar-logo-main">
+      <img class="navbar-logo-img" src="https://img.songhn.com/img/hexo-theme-kaze-logo.png?imageView2/0/format/webp/q/75|imageslim" />
+      <span class="navbar-logo-dsc"><%- theme.title %></span>
+    </span>
+  </div>
+  <div class="navbar-menu">
+    <% for(const menu in theme.menus) { %>
+    <a href="<%= theme.menus[menu] %>" class="navbar-menu-item"><%= menu %> </a>
+    <% } %>
+  </div>
 </nav>
