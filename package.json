@@ -1,0 +1,37 @@
+{
+  "name": "hexo-theme-kaze",
+  "version": "0.0.1",
+  "description": "hexo-theme-kaze",
+  "main": "index.js",
+  "scripts": {
+    "lint": "gulp"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/0x4qE/hexo-theme-Kaze.git"
+  },
+  "keywords": [
+    "hexo",
+    "theme",
+    "Kaze"
+  ],
+  "author": "0x4qE/songhn",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/0x4qE/hexo-theme-Kaze/issues"
+  },
+  "homepage": "https://github.com/0x4qE/hexo-theme-Kaze#readme",
+  "devDependencies": {
+    "ejs-lint": "^1.1.0",
+    "eslint": "^7.4.0",
+    "gulp": "^4.0.2",
+    "gulp-eslint": "^6.0.0",
+    "gulp-shell": "^0.8.0",
+    "husky": "^4.2.5"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "npm run lint"
+    }
+  }
+}

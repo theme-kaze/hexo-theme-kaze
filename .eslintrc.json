@@ -1,0 +1,26 @@
+{
+  "extends": [
+    "eslint:recommended"
+  ],
+  "parserOptions": {
+    "ecmaVersion": 6
+  },
+  "rules": {
+    "semi": 2,
+    "no-var": "error",
+    "init-declarations": 2,
+    "quotes": ["error", "single"],
+    // "linebreak-style": ["error", "unix"],
+    "indent": ["error", 2, {"SwitchCase": 1}],
+    "brace-style": [2, "1tbs", {"allowSingleLine": true}],
+    "camelcase": 2,
+    "comma-dangle": [2, "never"],
+    "comma-spacing": [2, {"before": false, "after": true}],
+    "comma-style": [2, "last"]
+  },
+  "env": {
+    "browser": true,
+    "node": true,
+    "es6": true
+  }
+}
