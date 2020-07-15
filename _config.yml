@@ -1,7 +1,7 @@
 ### Header ###
 title: 0x4qE's Blog
 author: 0x4qE
-logo_path: https://img.songhn.com/img/hexo-theme-kaze-logo.png?imageView2/0/format/webp/q/75|imageslim # put the logo on the ${blog_path}/source/img/${picname}.png or use urls
+logo_path: /img/Kaze.png # put the logo on the ${blog_path}/source/img/${picname}.png or use urls
 
 ### navebar ###
 menus:
@@ -68,3 +68,16 @@ twitter:
 google_plus:
 fb_admins:
 fb_app_id:
+
+# the config of theme colors and styles
+# you can modify these presets to design different styles
+color:
+  text-color: "#3c4858"
+  link-color: "#3273dc"
+  link-hover-color: "#6596e5"
+  info-text-color: "#909faf"
+  background-color: "#fff"
+
+font:
+  font-size: 16px # global font-size
+  font-family: # global font-family
