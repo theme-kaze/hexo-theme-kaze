@@ -76,7 +76,8 @@ color:
   link-color: "#3273dc"
   link-hover-color: "#6596e5"
   info-text-color: "#909faf"
-  background-color: "#fff"
+  widget-background-color: "#fff"
+  body-background-color: "#f2f5f8"
 
 font:
   font-size: 16px # global font-size

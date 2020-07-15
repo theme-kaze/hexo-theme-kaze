@@ -20,4 +20,5 @@ console.log(String.raw`
        \::|   |                  /:::/    /              \:::\____\               \:::\____\        
         \:|   |                  \::/    /                \::/    /                \::/    /        
          \|___|                   \/____/                  \/____/                  \/____/         
+see theme at https://github.com/0x4qE/hexo-theme-Kaze
 `);
