@@ -47,7 +47,7 @@ footer:
   copy_year: 2019
   # if showPoweredBy is ture, 'Powered by Hexo' will be seen on the footer
   showPoweredBy: true
-  # if showDesignedBy is ture, 'Powered by Hexo' will be seen on the footer
+  # if showDesignedBy is ture, 'Designed by 0x4qE/songhn' will be seen on the footer
   showDesignedBy: true
 
 # display widgets at the bottom of index pages (pagination == 2)
