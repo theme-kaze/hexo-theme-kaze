@@ -14,23 +14,23 @@
 
     <% if(theme.footer.showPoweredBy || theme.footer.showDesignedBy) { %>
     <div class="footer-dsc">
-    <div>
+      <div>
         <%# showPoweredBy %>
         <% if(theme.footer.showPoweredBy) { %>
         Powered by
         <a href="https://hexo.io/" class="footer-link" target="_blank">Hexo</a>
         <% } %>
-
         <% if(theme.footer.showPoweredBy && theme.footer.showDesignedBy) { %>
-        <span>|</span>
+          <span>|</span>
         <% } %>
         <%# showDesignedBy %>
         <% if(theme.footer.showDesignedBy) { %>
         Designed By
         <a href="https://github.com/0x4qE" class="footer-link" target="_blank">0x4qE</a>
+        /
+        <a href="https://github.com/songhn233" class="footer-link" target="_blank">songhn233</a>
         <% } %>
       </div>
     </div>
-    <% } %>
-  </div>
+  <% } %>
 </footer>
