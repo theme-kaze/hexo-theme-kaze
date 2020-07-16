@@ -1,1 +1,11 @@
-categories sticky-tablet
+<div class="categories-card">
+  <div class="categories-header" data-content=<%- __("categories.title") %>></div>
+  <div class="categories-list">
+    <% for(const item of site.categories.data) { %>
+      <div class="categories-list-item">
+        <%= item.name %>
+        <span class="categories-list-item-badge"><%= item.posts.length %></span>
+      </div>
+    <% } %>
+  </div>
+</div>

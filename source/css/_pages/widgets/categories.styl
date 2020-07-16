@@ -1,0 +1,29 @@
+.categories-header
+  border-top: 0.5px solid $divider-color
+  height: 0.5px
+  margin-top: 1px
+  margin-bottom: 1px
+  &::after
+    background-color: $widget-background-color
+    color: $text-light-color
+    content: attr(data-content)
+    font-size: $sm-font-size
+    display: inline-block
+    position: relative
+    top: -12px
+    padding-right: 8px
+.categories-list
+  margin-top: 22px
+  .categories-list-item
+    margin-left: 17px
+    font-size: $ml-font-size
+    + .categories-list-item
+        margin-top: 9px
+    .categories-list-item-badge
+      float: right
+      margin-right: 10px
+      font-size: $sm-font-size
+      background-color: $badge-background-color
+      padding: 3px 7px
+      text-align: center
+      border-radius: 0.3rem
