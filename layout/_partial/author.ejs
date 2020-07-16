@@ -1,1 +1,17 @@
-author
+<img class="author-img" src="<%- theme.author_img %>"/>
+<p class="author-name"><%- theme.author || config.author %></p>
+<p class="author-description"><%- theme.author_description || config.description %></p>
+<div class="author-message">
+  <p class="author-posts-count">
+    <span><%- site.posts.length %></span>
+    <span>文章</span>
+  </p>
+  <p class="author-categories-count">
+    <span><%- site.categories.length %></span>
+    <span>分类</span>
+  </p>
+  <p class="author-tags-count">
+    <span><%- site.tags.length %></span>
+    <span>标签</span>
+  </p>
+</div>

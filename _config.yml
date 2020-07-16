@@ -1,8 +1,9 @@
 ### Header ###
-title: 0x4qE's Blog
-author: 0x4qE
-logo_path: /img/Kaze.png # put the logo on the ${blog_path}/source/img/${picname}.png or use urls
-
+title: them-kaze demo
+author: theme-kaze
+logo_img: /img/Kaze.png # put the logo on the ${blog_path}/source/img/${picname}.png or use urls
+author_img: /img/Kaze.png
+author_description: designed by theme-kaze
 ### navebar ###
 menus:
   Home: /

@@ -15,12 +15,12 @@
     "theme",
     "Kaze"
   ],
-  "author": "hexo-kaze-dev",
+  "author": "theme-kaze",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/0x4qE/hexo-theme-Kaze/issues"
+    "url": "https://github.com/theme-kaze/hexo-theme-Kaze/issues"
   },
-  "homepage": "https://github.com/0x4qE/hexo-theme-Kaze#readme",
+  "homepage": "https://github.com/theme-kaze/hexo-theme-Kaze#readme",
   "devDependencies": {
     "ejs-lint": "^1.1.0",
     "eslint": "^7.4.0",
