@@ -1,1 +1,8 @@
-tags sticky-tablet
+<div class="tags-card">
+  <div class="tags-header" data-content=<%- __("hottags.title") %>></div>
+  <div class="tags-list">
+    <% site.tags.data.slice(0, Math.min(12, site.tags.data.length)).forEach(function(item){ %>
+    <div class="tags-list-item"><%= item.name %></div>
+    <% }) %>
+  </div>
+</div>

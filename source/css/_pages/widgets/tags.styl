@@ -1,0 +1,25 @@
+.tags-header
+  border-top: 0.5px solid $divider-color
+  height: 0.5px
+  margin-top: 1px
+  margin-bottom: 1px
+  &::after
+    background-color: $widget-background-color
+    color: $text-light-color
+    content: attr(data-content)
+    font-size: $sm-font-size
+    display: inline-block
+    position: relative
+    top: -12px
+    padding-right: 8px
+.tags-list
+  margin-top: 22px
+  overflow: hidden
+  .tags-list-item
+    float: left
+    margin: 0 7px 8px 7px 
+    font-size: $md-font-size
+    background-color: $badge-background-color
+    padding: 3px 7px
+    text-align: center
+    border-radius: 0.3rem
