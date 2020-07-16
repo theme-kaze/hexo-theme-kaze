@@ -1,4 +1,4 @@
-<% site.posts.sort('-date').forEach(post => { %>
+<% site.posts.sort('date', -1).forEach(post => { %>
 <div class="card">
   <article class="card-content">
     <a href="/<%= post.path %>">
