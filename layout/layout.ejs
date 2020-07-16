@@ -13,8 +13,13 @@
   <%# footer %>
   <%- partial('footer.ejs') %>
   <%- partial('_partial/scrollbutton.ejs') %>
-  <%- js('js/console.js') %>
+
   <%- js('js/main.js') %>
+  <%# scroll-up animation %>
+  <% if(theme.scrollUpAnimation) { %>
+  <%- js('js/scroll-up.js') %>
+  <% } %>
+  <%- js('js/console.js') %>
 </body>
 
 </html>

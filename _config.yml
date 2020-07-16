@@ -50,6 +50,10 @@ footer:
   # if showDesignedBy is ture, 'Designed by 0x4qE/songhn' will be seen on the footer
   showDesignedBy: true
 
+### Up to top ###
+# if scrollUpAnimation is true, there will be scroll-up animation.
+scrollUpAnimation: false
+
 # display widgets at the bottom of index pages (pagination == 2)
 index_widgets:
 # - category
