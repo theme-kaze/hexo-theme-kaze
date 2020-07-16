@@ -4,8 +4,8 @@
   padding: 0.75rem
 .left-column
   .sticky-tablet > div
-      margin-bottom: 1.5rem
-@media screen and (min-width: 968px)
+    margin-bottom: 1.5rem
+@media screen and (min-width: 768px)
   .columns
     display: flex
   .left-column, .right-column
@@ -28,3 +28,12 @@
   .right-column
     order: 3
     display: block
+// sticky aside
+@media screen and (min-width: 1280px)
+  .sticky-widescreen
+    position: sticky
+    top: 1.5rem
+@media screen and (min-width: 768px)
+  .sticky-tablet
+    position: sticky
+    top: 1.5rem
