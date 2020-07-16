@@ -1,7 +1,11 @@
 <% site.posts.sort('-date').forEach(post => { %>
 <div class="card">
   <article class="card-content">
-    <a href="/<%= post.path %>" class="post-title"><%= post.title %> </a>
+    <a href="/<%= post.path %>">
+      <h1 class="post-title">
+        <%= post.title %>
+      </h1>
+    </a>
     <div class="card-excerpt">
       <% if(post.excerpt) { %>
       <%= strip_html(post.excerpt) %>

@@ -14,17 +14,19 @@
 
     <% if(theme.footer.showPoweredBy || theme.footer.showDesignedBy) { %>
     <div class="footer-dsc">
-      <div>
-        <%# showPoweredBy %>
+      <%# showPoweredBy %>
+      <div class="powerer">
         <% if(theme.footer.showPoweredBy) { %>
         Powered by
-        <a href="https://hexo.io/" class="footer-link" target="_blank">Hexo</a>
+        <a href="https://hexo.io/" class="footer-link" target="_blank">Hexo </a>
         <% } %>
-        <% if(theme.footer.showPoweredBy && theme.footer.showDesignedBy) { %>
-          <span>|</span>
-        <% } %>
-        <%# showDesignedBy %>
-        <% if(theme.footer.showDesignedBy) { %>
+      </div>
+      <% if(theme.footer.showPoweredBy && theme.footer.showDesignedBy) { %>
+      <span>&nbsp;|&nbsp;</span>
+      <% } %>
+      <%# showDesignedBy %>
+      <% if(theme.footer.showDesignedBy) { %>
+      <div class="designer">
         Designed By
         <a href="https://github.com/0x4qE" class="footer-link" target="_blank">0x4qE</a>
         /
@@ -32,5 +34,5 @@
         <% } %>
       </div>
     </div>
-  <% } %>
+    <% } %>
 </footer>

@@ -8,16 +8,16 @@
   bottom: 0
   .footer-container
     color: $info-text-color
-    .copyright
-      margin-right: 80px
-    a
-      color: $link-color
-      &:hover
-        color: $link-hover-color
-@media screen and (min-width: 768px)
-  .footer-container
     display: flex
     justify-content: space-between
+    .copyright
+      margin-right: 80px
+    .footer-dsc
+      display: flex
+    a
+      color: $text-strong-color
+      &:hover
+        color: $link-hover-color
 // mobiles footer
 @media (max-width: 902px)
   .footer
@@ -31,3 +31,12 @@
       .footer-dsc
         display: flex
         justify-content: center
+@media (max-width: 425px)
+  .footer
+    .footer-dsc
+      flex-direction: column
+      span
+        display: none
+      div
+        display: block
+        text-align: center
