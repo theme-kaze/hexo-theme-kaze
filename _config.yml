@@ -48,8 +48,8 @@ footer:
   copy_year: 2019
   # if showPoweredBy is ture, 'Powered by Hexo' will be seen on the footer
   showPoweredBy: true
-  # if showDesignedBy is ture, 'Designed by 0x4qE/songhn' will be seen on the footer
-  showDesignedBy: true
+  # if showThemeName is ture, 'Theme - Kaze' will be seen on the footer
+  showThemeName: true
 
 ### Up to top ###
 # if scrollUpAnimation is true, there will be scroll-up animation.
