@@ -15,7 +15,10 @@
     </div>
     <div class="card-post-footer">
       <div class="post-meta">
-        <time datetime="<%= date_xml(post.date) _%>"><%= date(post.date) %></time>
+        <time datetime="<%= date_xml(post.date) _%>" style="display: flex; align-items: center;">
+          <i class="iconfont icon-calendar" style="margin-right: 2px;"></i>
+          <span><%= date(post.date) %></span>
+        </time>
         <span class="dot">
           <% if(post.categories.data) { %>
           <a href="<%= post.categories %>"></a>
@@ -23,7 +26,7 @@
           <% } %>
         </span>
       </div>
-      <a href="<%= url_for(post.path) %>"><%= theme.post.excerpt_link %> </a>
+      <a href="<%= url_for(post.path) %>"><%- __('readmore.title') %> </a>
     </div>
   </article>
 </div>

@@ -40,8 +40,6 @@ post:
   # Please use <!-- more --> in the post to set the length of excerpt mannually
   # and will overwite the configuration here.
   excerpt_length: 120
-  #
-  excerpt_link: Read More
 
 ### Footer ###
 footer:
