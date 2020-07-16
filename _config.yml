@@ -6,10 +6,10 @@ author_img: /img/Kaze.png
 author_description: designed by theme-kaze
 ### navebar ###
 menus:
-  Home: /
-  Archives: /archives
-  About: /about
-  Friends: /links
+  home: /
+  archive: /archives
+  about: /about
+  friends: /links
 rss: /atom.xml
 
 # Content

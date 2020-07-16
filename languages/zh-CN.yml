@@ -1,0 +1,20 @@
+home:
+  title: 首页
+
+archive:
+  title: 归档
+
+about:
+  title: 标签
+
+friends:
+  title: 友链
+
+post:
+  title: 文章
+
+categories:
+  title: 分类
+
+tags:
+  title: 标签

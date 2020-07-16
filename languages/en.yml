@@ -1,0 +1,20 @@
+home:
+  title: Home
+
+archive:
+  title: Archive
+
+about:
+  title: About
+
+friends:
+  title: Friends
+
+post:
+  title: Post
+
+categories:
+  title: Categories
+
+tags:
+  title: Tags

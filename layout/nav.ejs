@@ -7,7 +7,7 @@
   </div>
   <div class="navbar-menu">
     <% for(const menu in theme.menus) { %>
-    <a href="<%= theme.menus[menu] %>" class="navbar-menu-item"><%= menu %> </a>
+    <a href="<%= theme.menus[menu] %>" class="navbar-menu-item"><%- __(menu + '.title') %> </a>
     <% } %>
   </div>
 </nav>
