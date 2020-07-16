@@ -78,6 +78,8 @@ fb_app_id:
 color:
   text-color: "#3c4858"
   text-strong-color: "#2f3d4e"
+  text-light-color: "#909faf"
+  divider-color: "#e6e8ee"
   title-color: "#475b6d"
   link-color: "#3273dc"
   link-hover-color: "#6596e5"
