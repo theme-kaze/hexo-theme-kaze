@@ -9,23 +9,23 @@
 <% } %>
 
 <%# ### Tags ### %>
-<% if(is_tag()) { %>
+<% if(page.path.startsWith('tags')) { %>
 <%- partial('_pages/tags') %>
 <% } %>
 
 <%# ### Archives ### %>
-<% if (page.archive) { %>
+<% if (is_archive()) { %>
 <%- partial('_pages/archives') %>
-
+<% } %>
 <%# ### Categories ### %>
-<% } else if(page.path.startsWith('category')) { %>
-<%- partial('_pages/category') %>
-
+<% if(page.path.startsWith('categories')) { %>
+<%- partial('_pages/categories') %>
+<% } %>
 <%# ### Links ### %>
-<% } else if(page.path.startsWith('links')) { %>
+<% if(page.path.startsWith('links')) { %>
 <%- partial('_pages/links') %>
-
+<% } %>
 <%# ### About Page ### %>
-<% } else if(page.path.startsWith('about')) { %>
+<% if(page.path.startsWith('about')) { %>
 <%- partial('_pages/about') %>
 <% } %>
