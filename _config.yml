@@ -26,12 +26,21 @@ widgets:
 
 ### Links ###
 links: 
-  friend:
+  friend1:
     url: /
-    img: 
+    avatar: /img/Kaze.png
+    description: test1
+  friend2:
+    url: /
+    avatar: /img/Kaze.png
+    description: test2
+  friend3:
+    url: /
+    avatar: /img/Kaze.png
+    description: test3
   # name1:
   #   url: https://example.com
-  #   img: 
+  #   avatar: 
 
 
 
