@@ -1,1 +1,12 @@
-recent-post
+<div class="recent-posts-card">
+  <div class="recent-posts-header" data-content="<%- __("recentposts.title") %>"></div>
+  <div class="recent-posts-list">
+    <% site.posts.sort('date', -1).slice(0, Math.min(5, site.posts.length)).forEach(post => { %>
+      <div class="recent-posts-item">
+        <div class="recent-posts-item-title"><%= date(post.date) %></div>
+        <div class="recent-posts-item-content"><%= post.title %></div>
+        <div class="divider"></div>
+      </div>
+    <% }) %>
+  </div>
+</div>

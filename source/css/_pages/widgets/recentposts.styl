@@ -1,0 +1,31 @@
+.recent-posts-header
+  border-top: 0.5px solid $divider-color
+  height: 0.5px
+  margin-top: 1px
+  margin-bottom: 1px
+  &::after
+    background-color: $widget-background-color
+    color: $text-light-color
+    content: attr(data-content)
+    font-size: $sm-font-size
+    display: inline-block
+    position: relative
+    top: -12px
+    padding-right: 8px
+.recent-posts-list
+  margin-top: 22px
+  .recent-posts-item
+    &:last-child .divider
+      display: none
+    .recent-posts-item-title
+      font-size: $sm-font-size
+    .recent-posts-item-content
+      margin-top: 6px
+      font-size: $ml-font-size
+    + .recent-posts-item
+      margin-top: 10px
+    .divider
+      height: 1px
+      background-color: $divider-color
+      width: 100%
+      margin-top: 14px

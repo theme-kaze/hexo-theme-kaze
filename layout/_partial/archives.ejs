@@ -1,1 +1,27 @@
-archives sticky-tablet
+<div class="archive-card">
+  <div class="archive-card-header" data-content="<%- __("archive.title") %>"></div>
+  <div class="archive-card-list">
+    <% let archiveYear = ''; %>
+    <% let count = 0; %>
+    <% site.posts.sort('date', -1).forEach(post => { %>
+      <% if (date(post.date,'YYYY') != archiveYear) { %>
+        <% if (count != 0) {%>
+          <div class="archive-card-list-item">
+            <%= archiveYear %>
+            <span class="archive-card-list-item-badge"><%= count %></span>
+          </div>
+        <% } %>
+        <% count = 1; %>
+        <% archiveYear = date(post.date,'YYYY'); %>
+      <% } else { %>
+        <% count++; %>
+      <% } %>
+    <% }); %>
+    <% if (count != 0) {%>
+      <div class="archive-card-list-item">
+        <%= archiveYear %>
+        <span class="archive-card-list-item-badge"><%= count %></span>
+      </div>
+    <% } %>
+  </div>
+</div>
