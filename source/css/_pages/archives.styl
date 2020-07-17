@@ -1,0 +1,26 @@
+.archive-timeline
+  .archive-timeline-tag
+    background-color: $blue-tag-color
+    border-radius: 0.3rem
+    max-width: 66px
+    height: 32px
+    display: flex
+    justify-content: center
+    align-items: center
+    color: $text-white-color
+  .archive-timeline-item
+    position: relative
+    margin-left: 32px
+    &::before
+      content: ""
+      background-color: $divider-color
+      position: absolute
+      top: 0
+      width: 2px
+      height: 100%
+    .archive-timeline-post
+      margin-left: 20px
+      padding: 16px 6px
+      .archive-timeline-post-content
+        margin-top: 12px
+        font-size: $ml-font-size
