@@ -5,14 +5,14 @@
   <font size=6>hexo-theme-Kaze</font>
 </center>
 <center>
-  <font size=3>A simple, responsive Hexo theme</font>
+  <font size=3>一个简洁，响应式的Hexo主题</font>
 </center>
-<center>English | <a href="README_zh.md">Chinese</a></center>
+<center>中文 | <a href="README_zh.md">英文</a></center>
 
 ---
 
-### Introduction
+### 简介
 
-### Feature
+### 特性
 
-### installation
+### 安装
