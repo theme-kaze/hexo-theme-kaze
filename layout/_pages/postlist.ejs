@@ -20,11 +20,11 @@
           <span><%= date(post.date) %></span>
         </time>
         <span class="dot">
-          <% if(post.categories.data) { %>
-          <a href="<%= post.categories %>"></a>
-          <%= post.categories.data.path %>
-          <% } %>
         </span>
+        <% for(const item of post.categories.data) { %>
+        <a href="<%= item.path %>" class="post-meta-link"><%= item.name %></a>
+        <% console.log(item.path) %>
+        <% } %>
       </div>
       <a href="<%= url_for(post.path) %>"><%- __('readmore.title') %> </a>
     </div>
