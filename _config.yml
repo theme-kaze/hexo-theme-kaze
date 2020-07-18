@@ -12,7 +12,16 @@ menus:
   categories: /categories
   about: /about
   friends: /links
-rss: /atom.xml
+
+page:
+  # about page config
+  about:
+    description: description
+    social_links:
+      - { icon: icon-icon-test5, link: https://github.com }
+      - { icon: icon-icon-test, link: / }
+      - { icon: icon-icon-test1, link: / }
+      - { icon: icon-icon-test4, link: / }
 
 # Content
 fancybox: true
