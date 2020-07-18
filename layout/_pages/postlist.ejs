@@ -19,11 +19,11 @@
           <i class="iconfont icon-calendar" style="margin-right: 2px;"></i>
           <span><%= date(post.date) %></span>
         </time>
-        <span class="dot">
-        </span>
-        <% for(const item of post.categories.data) { %>
-        <a href="<%= item.path %>" class="post-meta-link"><%= item.name %></a>
-        <% console.log(item.path) %>
+        <% if(post.categories.data.length) { %>
+          <span class="dot"></span>
+          <% for(const item of post.categories.data) { %>
+          <a href="<%= item.path %>" class="post-meta-link"><%= item.name %></a>
+          <% } %>
         <% } %>
       </div>
       <a href="<%= url_for(post.path) %>"><%- __('readmore.title') %> </a>
