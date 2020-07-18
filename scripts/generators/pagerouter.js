@@ -5,23 +5,35 @@ hexo.extend.generator.register('_categories', function(locals) {
   return {
     path  : 'categories/index.html',
     data  : locals.theme,
-    layout: 'index'
+    layout: 'categories'
   };
 });
+
 // generate tags router
 hexo.extend.generator.register('_tags', function(locals) {
   return {
     path  : 'tags/index.html',
     data  : locals.theme,
-    layout: 'index'
+    layout: 'tags'
+  };
+});
+
+
+// generate links router
+hexo.extend.generator.register('_links', function(locals) {
+  return {
+    path  : 'links/index.html',
+    data  : locals.theme,
+    layout: 'links'
   };
 });
 
 // generate about router
-hexo.extend.generator.register('_about', function(locals) {
+// about page should be created by users
+/*hexo.extend.generator.register('_about', function(locals) {
   return {
     path  : 'about/index.html',
     data  : locals.theme,
     layout: 'index'
   };
-});
+});*/

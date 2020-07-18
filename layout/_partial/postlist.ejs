@@ -1,0 +1,33 @@
+<% site.posts.sort('date', -1).forEach(post => { %>
+<div class="card">
+  <article class="card-content">
+    <a href="/<%= post.path %>">
+      <h1 class="post-title">
+        <%= post.title %>
+      </h1>
+    </a>
+    <div class="card-excerpt">
+      <% if(post.excerpt) { %>
+      <%= strip_html(post.excerpt) %>
+      <% } else { %>
+      <%= strip_html(truncate( post.content, { length : 120 })) %>
+      <% } %>
+    </div>
+    <div class="card-post-footer">
+      <div class="post-meta">
+        <time datetime="<%= date_xml(post.date) _%>" style="display: flex; align-items: center;">
+          <i class="iconfont icon-calendar" style="margin-right: 2px;"></i>
+          <span><%= date(post.date) %></span>
+        </time>
+        <% if(post.categories.data.length) { %>
+          <span class="dot"></span>
+          <% for(const item of post.categories.data) { %>
+          <a href="<%= item.path %>" class="post-meta-link"><%= item.name %></a>
+          <% } %>
+        <% } %>
+      </div>
+      <a href="<%= url_for(post.path) %>"><%- __('readmore.title') %> </a>
+    </div>
+  </article>
+</div>
+<% }); %>
