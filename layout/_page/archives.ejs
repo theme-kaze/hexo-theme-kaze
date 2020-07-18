@@ -1,6 +1,6 @@
 <div class="archive-timeline">
   <% let archiveYear = ''; %>
-  <% site.posts.sort('date', -1).forEach(post => { %>
+  <% page.posts.sort('date', -1).forEach(post => { %>
     <% if (date(post.date,'YYYY') != archiveYear) { %>
       <div class="archive-timeline-tag"><span><%= date(post.date,'YYYY') %></span></div>
       <% archiveYear = date(post.date,'YYYY'); %>
