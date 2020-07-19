@@ -1,6 +1,6 @@
 // default navbar
 .navbar
-  background-color: $widget-background-color
+  background-color: var(--widget-background-color)
   min-height: 45px
   box-shadow: $shadow-style
   .navbar-logo
@@ -25,11 +25,11 @@
     float: right
     a
       display: inline-block
-      color: $text-color
+      color: var(--text-color)
       cursor: pointer
       margin: 0 8px
       &:hover
-        color: $link-hover-color
+        color: var(--link-hover-color)
 // mobiles navbar
 @media (max-width: 1088px)
   .navbar

@@ -1,18 +1,12 @@
-<div class="section">
-  <div class="container">
-    <div class="columns">
-      <main class="main-column"><%- partial('_page/post') %></main>
-      <aside class="left-column">
-        <%# author card %>
-        <div class="card card-author">
-            <%- partial('_partial/author') %>
-        </div>
-        <%# sticky-tablet %>
-        <%- partial('_partial/left-aside') %>
-      </aside>
-      <aside class="right-column">
-        <%- partial('_partial/right-aside') %>
-      </aside>
+<article class="card">
+  <div class="card-content">
+    <header>
+      <h1 class="post-title">
+        <%- page.title %>
+      </h1>
+    </header>
+    <div id="section">
+      <%- page.content %>
     </div>
   </div>
-</div>
+</article>

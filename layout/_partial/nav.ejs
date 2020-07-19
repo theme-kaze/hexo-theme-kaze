@@ -9,5 +9,6 @@
     <% for(const menu in theme.menus) { %>
     <a href="<%= theme.menus[menu] %>" class="navbar-menu-item"><%- __(menu + '.title') %> </a>
     <% } %>
+    <a class="navbar-menu-item" id="dark"><i class="iconfont icon-weather"></i></a>
   </div>
 </nav>

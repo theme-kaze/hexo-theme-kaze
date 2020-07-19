@@ -1,13 +1,13 @@
 // default footer
 .footer
   font-size: $sm-font-size
-  background-color: $widget-background-color
+  background-color: var(--widget-background-color)
   width: 100%
   box-shadow: $shadow-style
   padding: 3rem 1.5rem 3rem
   bottom: 0
   .footer-container
-    color: $info-text-color
+    color: var(--info-text-color)
     display: flex
     justify-content: space-between
     .copyright
@@ -15,9 +15,9 @@
     .footer-dsc
       display: flex
     a
-      color: $text-strong-color
+      color: var(--text-strong-color)
       &:hover
-        color: $link-hover-color
+        color: var(--link-hover-color)
 // mobiles footer
 @media (max-width: 902px)
   .footer

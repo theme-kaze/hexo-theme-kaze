@@ -2,16 +2,16 @@
 <p class="author-name"><%- theme.author || config.author %></p>
 <p class="author-description"><%- theme.author_description || config.description %></p>
 <div class="author-message">
-  <p class="author-posts-count">
+  <a class="author-posts-count" href="/archives" target="_blank" rel="nofollow noopener noreferrer">
     <span><%- site.posts.length %></span>
     <span><%- __("posts.title") %></span>
-  </p>
-  <p class="author-categories-count">
+  </a>
+  <a class="author-categories-count" href="/categories" target="_blank" rel="nofollow noopener noreferrer">
     <span><%- site.categories.length %></span>
     <span><%- __("categories.title") %></span>
-  </p>
-  <p class="author-tags-count">
+  </a>
+  <a class="author-tags-count" href="/tags" target="_blank" rel="nofollow noopener noreferrer">
     <span><%- site.tags.length %></span>
     <span><%- __("tags.title") %></span>
-  </p>
+  </a>
 </div>

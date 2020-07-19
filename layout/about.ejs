@@ -1,32 +1,21 @@
-<div class="section">
-  <div class="container">
-    <div class="columns">
-      <main class="main-column">
-        <div class="card card-content about-card">
-          <img src="<%= theme.author_img %>" class="about-card-avatar" />
-          <div class="about-card-author"><%= theme.author || config.author %></div>
-          <% if(theme.page.about.description) { %>
-            <div class="about-card-dsc"><%= theme.page.about.description %></div>
-          <% } %>
-          <div class="about-card-society">
-            <% for(const item of theme.page.about.social_links) { %>
-              <a class="about-card-society-icon" href="<%= item.link %>">
-                <i class="iconfont <%= item.icon %> society-icon"></i>
-              </a>
-            <% } %>
-          </div>
+<div class="card card-content about-card">
+  <img src="<%= theme.author_img %>" class="about-card-avatar" />
+  <div class="about-card-content">
+    <div class="about-card-author"><%= theme.author || config.author %></div>
+    <% if(theme.page.about.description) { %>
+      <div class="about-card-dsc"><%= theme.page.about.description %></div>
+    <% } %>
+    <div class="about-card-society">
+      <% for(const item of theme.page.about.social_links) { %>
+        <div class="about-card-society-icon">
+          <a href="<%= item.link %>">
+            <i class="iconfont <%= item.icon %> society-icon"></i>
+          </a>
         </div>
-        <div class="card card-content">
-          <%- page.content %>
-        </div>
-      </main>
-      <aside class="left-column">
-        <%# sticky-tablet %>
-        <%- partial('_partial/left-aside') %>
-      </aside>
-      <aside class="right-column">
-        <%- partial('_partial/right-aside') %>
-      </aside>
+      <% } %>
     </div>
   </div>
+</div>
+<div class="card card-content">
+  <%- page.content %>
 </div>
