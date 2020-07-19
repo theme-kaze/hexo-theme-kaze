@@ -3,7 +3,26 @@ html, body, p, ol, ul, li, dl, dt, dd, blockquote, figure, fieldset, legend, tex
   padding: 0
 h1, h2, h3, h4, h5, h6
   font-size: 100%
-  font-weight: normal
+  font-weight: 700
+  line-height: 1.25
+  color: var(--title-color)
+h2
+  font-size: 1.5rem
+  margin-bottom: 0.5rem
+  margin-top: 1.15rem
+h3
+  font-size: 1.35rem
+  margin-bottom: (2 / 3)rem
+  margin-top: (4 / 3)rem
+h4
+  font-size: 1.15rem
+  margin-bottom: 0.8rem
+h5
+  font-size: 1rem
+  margin-bottom: 0.888rem
+h6
+  font-size: 0.875rem
+  color: var(--text-strong-color)
 ul
   list-style: none
 button, input, select, textarea
@@ -28,7 +47,7 @@ a
   cursor: pointer
   color: var(--link-color)
   text-decoration: none
-div
+div, figure
   display: block
 *
   box-sizing: border-box
@@ -38,3 +57,49 @@ body
   font-family: $font-family
   color: var(--text-color)
   background-color: var(--body-background-color)
+ol ol, ul ol, ul ul
+  margin-top: 0
+  margin-bottom: 0
+ol ol, ul ol
+  list-style-type: lower-roman
+ol ol ol, ol ul ol, ul ol ol, ul ul ol
+  list-style-type: lower-alpha
+ol li, ul li
+  margin-top: 0.5rem
+  margin-bottom: 0.5rem
+li>p
+  margin-top: 1rem
+li+li
+  margin-top: 0.25rem
+code, kbd, pre
+  font-family: Consolas, Monaco, SFMono-Regular, 'Andale Mono', 'Liberation Mono', 'Ubuntu Mono', Menlo, monospace
+  font-size: 0.9em
+code
+  color: var(--code-color)
+  background-color: var(--code-background-color)
+  margin: auto 0.2rem
+  padding: 0.2rem 0.3rem 0.1rem
+  overflow-wrap: break-word
+  word-wrap: break-word
+  border-radius: 0.25rem
+  vertical-align: 0.1rem
+table
+  display: block
+  overflow: auto
+  border-spacing: 0
+  border-collapse: collapse
+tr
+  background-color: var(--widget-background-color)
+td, th
+  border: 0.08rem solid var(--border-color)
+  padding: 0.5rem 0.75rem
+th
+  font-weight: 700
+  color: var(--title-color)
+tbody
+  tr:nth-child(odd)
+    background-color: var(--pre-color)
+pre
+  overflow: auto
+  overflow-wrap: normal
+  padding: 1rem

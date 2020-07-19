@@ -1,15 +1,27 @@
 .post-show-meta
   margin-bottom: 1rem
 .post-content
+  h1
+    font-size: 1.75em
+    margin-bottom: 0.5em
+    margin-top: 0.5em
+  dl, ol, ul, blockquote, h6, figure, p, pre, table
+    margin-bottom: 1em
   p
     margin-bottom: 1rem
   blockquote
     padding: 1rem
     background-color: #f9f8f7
-    border-left: 0.25rem solid $border-color
+    border-left: 0.25rem solid var(--border-color)
   ul
     list-style: disc
-    margin-left: 1.2rem
-  h2
+    margin-left: 1.2em
+  ol
+    list-style-position: outside
+    margin-left: 1.2em
+    margin-top: 0
+  ol:not([type])
+    list-style-type: decimal
+  h1, h2
     padding-bottom: 0.35rem
-    border-bottom: 1px solid $border-color
+    border-bottom: 1px solid var(--border-color)
