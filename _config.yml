@@ -29,14 +29,14 @@ fancybox: true
 ### Sidebar ###
 sidebar: right
 widgets:
-- category
-- tag
-- tagcloud
-- archive
-- recent_posts
+  - category
+  - tag
+  - tagcloud
+  - archive
+  - recent_posts
 
 ### Links ###
-links: 
+links:
   friend1:
     url: /
     avatar: /img/Kaze.png
@@ -51,9 +51,7 @@ links:
     description: test3
   # name1:
   #   url: https://example.com
-  #   avatar: 
-
-
+  #   avatar:
 
 ### Post ###
 post:
@@ -80,7 +78,7 @@ index_widgets:
 # - archive
 
 # widget behavior
-archive_type: 'monthly'
+archive_type: "monthly"
 show_count: false
 
 # Miscellaneous
@@ -105,6 +103,8 @@ color:
   info-text-color: "#909faf"
   widget-background-color: "#fff"
   body-background-color: "#f2f5f8"
+  border-color: "#e1e4e9"
+  pre-color: "#f4f5f7"
 
 font:
   font-size: 16px # global font-size

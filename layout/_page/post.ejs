@@ -4,8 +4,20 @@
       <h1 class="post-title">
         <%- page.title %>
       </h1>
+      <div class="post-meta post-show-meta">
+        <time datetime="<%= date_xml(page.date) _%>" style="display: flex; align-items: center;">
+          <i class="iconfont icon-calendar" style="margin-right: 2px;"></i>
+          <span><%= date(page.date) %></span>
+        </time>
+        <% if(page.categories.data.length) { %>
+        <span class="dot"></span>
+        <% for(const item of page.categories.data) { %>
+        <a href="<%= item.path %>" class="post-meta-link"><%= item.name %></a>
+        <% } %>
+        <% } %>
+      </div>
     </header>
-    <div id="section">
+    <div id="section" class="post-content">
       <%- page.content %>
     </div>
   </div>
