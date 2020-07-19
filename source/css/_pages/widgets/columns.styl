@@ -1,10 +1,10 @@
 // layout into two columns
 .columns, .left-column, .main-column, .right-column
   display: block
-  padding: 0.75rem
+  padding: 0.5rem 0.25rem
 .left-column
   .sticky-tablet > div
-    margin-bottom: 1.5rem
+    margin-bottom: 0.8rem
 @media screen and (min-width: 768px)
   .columns
     display: flex
@@ -34,6 +34,11 @@
     position: sticky
     top: 1.5rem
 @media screen and (min-width: 768px)
+  .columns, .left-column, .main-column, .right-column
+    padding: 0.75rem
   .sticky-tablet
     position: sticky
     top: 1.5rem
+  .left-column
+    .sticky-tablet > div
+      margin-bottom: 1.5rem
