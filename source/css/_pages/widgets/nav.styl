@@ -1,8 +1,10 @@
 // default navbar
 .navbar
   background-color: var(--widget-background-color)
-  min-height: 45px
+  min-height: 3.25rem
   box-shadow: $shadow-style
+  display: flex
+  align-items: stretch
   .navbar-logo
     display: inline-block
     margin-left: 96px
@@ -10,7 +12,7 @@
       display: flex
       align-items: center
       justify-content: space-around
-      line-height: 45px
+      padding: 0.7rem 0.6rem
       .navbar-logo-dsc
         font-weight: normal
         font-size: $lg-font-size
@@ -20,20 +22,20 @@
   .navbar-menu
     font-weight: lighter
     font-size: $md-font-size
-    line-height: 45px
-    margin-right: 320px
-    float: right
+    display: flex
+    align-items: center
     a
       display: inline-block
       color: var(--text-color)
       cursor: pointer
-      margin: 0 8px
+      padding: 0.7rem 0.6rem
       &:hover
         color: var(--link-hover-color)
 // mobiles navbar
 @media (max-width: 1088px)
   .navbar
     min-height: 90px
+    display: block
     .navbar-logo
       margin-left: 0
       display: block
