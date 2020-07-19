@@ -1,11 +1,11 @@
 .categories-header
-  border-top: 0.5px solid $divider-color
+  border-top: 0.5px solid var(--divider-color)
   height: 0.5px
   margin-top: 1px
   margin-bottom: 1px
   &::after
-    background-color: $widget-background-color
-    color: $text-light-color
+    background-color: var(--widget-background-color)
+    color: var(--text-light-color)
     content: attr(data-content)
     font-size: $sm-font-size
     display: inline-block
@@ -15,13 +15,13 @@
 .categories-list
   margin-top: 22px
   .categories-list-item
-    color: $text-color
+    color: var(--text-color)
     padding: 6px 8px
     font-size: $ml-font-size
     &:hover
       cursor: pointer
       border-radius: 0.3rem
-      background-color: $badge-background-color
+      background-color: var(--badge-background-color)
       transition-duration: 0.2s
       transition-timing-function: ease-in-out
     + .categories-list-item
@@ -30,7 +30,7 @@
       float: right
       margin-right: 10px
       font-size: $sm-font-size
-      background-color: $badge-background-color
+      background-color: var(--badge-background-color)
       padding: 3px 7px
       text-align: center
       border-radius: 0.3rem

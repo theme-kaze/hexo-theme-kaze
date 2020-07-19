@@ -1,0 +1,39 @@
+:root
+  --text-color: $text-color
+  --text-strong-color: $text-strong-color
+  --text-light-color: $text-light-color
+  --text-white-color: $text-white-color
+  --divider-color: $divider-color
+  --title-color: $title-color
+  --link-color: $link-color
+  --link-hover-color: $link-hover-color
+  --info-text-color: $info-text-color
+  --widget-background-color: $widget-background-color
+  --body-background-color: $body-background-color
+  --badge-background-color: $badge-background-color
+  --badge-hover-background-color: $badge-hover-background-color
+  --blue-tag-color: $blue-tag-color
+
+dark-mode()
+  --text-color: $dark-text-color
+  --text-strong-color: $dark-text-strong-color
+  --text-light-color: $dark-text-light-color
+  --text-white-color: $dark-text-white-color
+  --divider-color: $dark-divider-color
+  --title-color: $dark-title-color
+  --link-color: $dark-link-color
+  --link-hover-color: $dark-link-hover-color
+  --info-text-color: $dark-info-text-color
+  --widget-background-color: $dark-widget-background-color
+  --body-background-color: $dark-body-background-color
+  --badge-background-color: $dark-badge-background-color
+  --badge-hover-background-color: $dark-badge-hover-background-color
+  --blue-tag-color: $dark-blue-tag-color
+
+@media(prefers-color-scheme: dark)
+  :root:not([data-user-color-scheme])
+    dark-mode()
+
+[data-user-color-scheme="dark"]
+  dark-mode()
+  

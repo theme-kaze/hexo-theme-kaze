@@ -1,19 +1,35 @@
 .about-card
   display: flex
-  flex-direction: column
+  flex-direction: row
   justify-content: center
   align-items: center
   .about-card-avatar
     width: 150px
     height: 150px
-  .about-card-author
-    margin-top: 12px
-    font-size: $ex-font-size
-  .about-card-dsc
-    margin-top: 6px
-    color: $text-light-color
-  .about-card-society
-    margin-top: 4px
-    .society-icon
-      font-size: 22px
-      color: $text-strong-color
+    margin-right: 90px
+  .about-card-content
+    display: flex
+    flex-direction: column
+    align-items: center
+    justify-content: center
+    .about-card-author
+      margin-top: 12px
+      font-size: $ex-font-size
+    .about-card-dsc
+      margin-top: 6px
+      color: var(--text-light-color)
+    .about-card-society
+      margin-top: 8px
+      display: flex
+      flex-direction: row
+      .about-card-society-icon
+        padding: 0 5px
+        .society-icon
+          font-size: 22px
+          color: var(--text-strong-color)
+
+@media (max-width: 768px)
+  .about-card
+    flex-direction: column
+    .about-card-avatar
+      margin-right: 0
