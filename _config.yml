@@ -93,12 +93,12 @@ fb_app_id:
 # latex config
 # choose true to use latex by mathjax or katex
 latex:
-  enable: true
-  engine: katex # mathjax/katex
+  enable: false
+  engine: mathjax # mathjax/katex
   # for better rendering effect, when you choose mathjax, you can use it directly but you will lose some effect
   # so you can use hexo-renderer-kramed
   # when you choose katex, you must use hexo-renderer-markdown-it-plus or other render engine
-  global: true
+  global: false
   # because latex rendering is too expensive for page loading
   # so when you choose false, you can use latex by `latex: true` in post front-matter
 
