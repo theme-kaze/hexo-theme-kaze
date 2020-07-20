@@ -24,7 +24,8 @@
   </div>
 </article>
 <% if(theme.comment.enable && page.comment !== false) { %>
-  <div class="card card-content">
-    <%- partial('_partial/plugins/comments' + theme.comment.type) %>
+  <div class="card card-content comment-card">
+    <div class="comment-card-title">评论</div>
+    <%- partial('_partial/plugins/comments/' + theme.comment.type) %>
   </div>
 <% } %>

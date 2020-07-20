@@ -2,30 +2,34 @@
   <div id="vcomments"></div>
   <%- js(theme.cdn.valine) %>
   <script>
-    new Valine({
-      el: '#vcomments',
-      appId: <%= theme.comment.valine.appId %>,
-      appKey: <%= theme.comment.valine.appKey %>,
-      placeholder: <%= theme.comment.valine.appKey.placeholder %>,
-      path: <%= theme.comment.valine.appKey.path %>,
-      avatar: <%= theme.comment.valine.appKey.avatar %>,
-      meta: <%= theme.comment.valine.appKey.meta %>,
-      pageSize: <%= theme.comment.valine.appKey.pageSize %>,
-      lang: <%= theme.comment.valine.appKey.lang %>,
-      visitor: <%= theme.comment.valine.appKey.visitor %>,
-      highlight: <%= theme.comment.valine.appKey.highlight %>,
-      recordIP: <%= theme.comment.valine.appKey.recordIP %>,
-      <% if(serverURLs) { %>
-        serverURLs: <%= theme.comment.valine.appKey.serverURLs %>,
-      <% } %>
-      <% if(emojiCDN) { %>
-        emojiCDN: <%= theme.comment.valine.appKey.emojiCDN %>,
-      <% } %>
-      <% if(emojiMaps) { %>
-        emojiMaps: <%= theme.comment.valine.appKey.emojiMaps %>,
-      <% } %>
-      enableQQ: <%= theme.comment.valine.appKey.enableQQ %>,
-      requiredFields: <%= theme.comment.valine.appKey.requiredFields %>,
-    })
+    var oldLoadVa = window.onload;
+    window.onload = function () {
+      oldLoadVa && oldLoadVa();
+      new Valine({
+        el: '#vcomments',
+        appId: '<%= theme.comment.valine.appId %>',
+        appKey: '<%= theme.comment.valine.appKey %>',
+        placeholder: '<%= theme.comment.valine.placeholder %>',
+        path: '<%= theme.comment.valine.path %>',
+        avatar: '<%= theme.comment.valine.avatar %>',
+        meta: <%- JSON.stringify(theme.comment.valine.meta || []) %>,
+        pageSize: '<%= theme.comment.valine.pageSize %>',
+        lang: '<%= theme.comment.valine.lang %>',
+        visitor: '<%= theme.comment.valine.visitor %>',
+        highlight: '<%= theme.comment.valine.highlight %>',
+        recordIP: '<%= theme.comment.valine.recordIP %>',
+        <% if(theme.comment.valine.serverURLs) { %>
+        serverURLs: '<%= theme.comment.valine.serverURLs %>',
+        <% } %>
+        <% if(theme.comment.valine.emojiCDN) { %>
+        emojiCDN: '<%= theme.comment.valine.emojiCDN %>',
+        <% } %>
+        <% if(theme.comment.valine.emojiMaps) { %>
+        emojiMaps: '<%= theme.comment.valine.emojiMaps %>',
+        <% } %>
+        enableQQ: '<%= theme.comment.valine.enableQQ %>',
+        requiredFields: <%- JSON.stringify(theme.comment.valine.requiredFields || []) %>,
+      });
+    };
   </script>
 <% } %>

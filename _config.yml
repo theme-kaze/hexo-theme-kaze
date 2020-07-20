@@ -94,24 +94,23 @@ fb_app_id:
 # comment config
 #------------------------
 comment:
-  enable: false
-  type: # valine | gitalk | livere | disqus | we recommend valine
+  enable: true
+  type: valine # valine | gitalk | livere | disqus | we recommend valine
   # gitalk config details can see in https://github.com/gitalk/gitalk/blob/master/readme-cn.md
   valine:
-    appId:
-    appKey:
+    appId: OKcyabOkdkI4TScyeddAf7sG-gzGzoHsz
+    appKey: 27EhzHmOxkE2urakexeLDnR9
     placeholder: Just go go
     path: window.location.pathname
     avatar: mp
     meta: ['nick','mail','link']
     pageSize: 10
-    lang: zh-CN
     visitor: false
     highlight: true
     recordIP: false
-    serverURLs: # leancloud国内自定义域名
+    serverURLs: https://avoscloud.com # leancloud国内自定义域名
     emojiCDN:
-    emojiMaps:
+    emojiMaps: null
     enableQQ: false
     requiredFields: []
   gitalk:

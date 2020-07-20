@@ -4,14 +4,14 @@
   <%- js(theme.cdn.gitalk.js) %>
   <script>
     var gitalk = new Gitalk({
-      clientID: <%= theme.comment.gitalk.clientID %>,
-      clientSecret: <%= theme.comment.gitalk.clientSecret %>,
-      repo: <%= theme.comment.gitalk.repo %>,
-      owner: <%= theme.comment.gitalk.owner %>,
-      admin: <%= theme.comment.gitalk.admin %>,
-      id: <%= theme.comment.gitalk.id %>,
-      distractionFreeMode: <%= theme.comment.gitalk.distractionFreeMode %>,
-      language: <%= theme.comment.gitalk.language %>
+      clientID: '<%= theme.comment.gitalk.clientID %>',
+      clientSecret: '<%= theme.comment.gitalk.clientSecret %>',
+      repo: '<%= theme.comment.gitalk.repo %>',
+      owner: '<%= theme.comment.gitalk.owner %>',
+      admin: '<%= theme.comment.gitalk.admin %>',
+      id: '<%= theme.comment.gitalk.id %>',
+      distractionFreeMode: '<%= theme.comment.gitalk.distractionFreeMode %>',
+      language: '<%= theme.comment.gitalk.language %>',
     })
 
     gitalk.render('gitalk-container')
