@@ -1,0 +1,16 @@
+<% if(theme.comment.livere.uid){ %>
+  <div id="lv-container" data-id="city" data-uid="<%= theme.comment.livere.uid %>">
+    <script>
+      (function (d, s) {
+        var j, e = d.getElementsByTagName(s)[0];
+        if (typeof LivereTower === 'function') {
+          return;
+        }
+        j = d.createElement(s);
+        j.src = 'https://cdn-city.livere.com/js/embed.dist.js';
+        j.defer = true;
+        e.parentNode.insertBefore(j, e);
+      })(document, 'script');
+    </script>
+  </div>
+<% } %>

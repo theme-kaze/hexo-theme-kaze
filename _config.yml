@@ -95,8 +95,25 @@ fb_app_id:
 #------------------------
 comment:
   enable: false
-  type: # gitalk | valine | livere | disqus
+  type: # valine | gitalk | livere | disqus | we recommend valine
   # gitalk config details can see in https://github.com/gitalk/gitalk/blob/master/readme-cn.md
+  valine:
+    appId:
+    appKey:
+    placeholder: Just go go
+    path: window.location.pathname
+    avatar: mp
+    meta: ['nick','mail','link']
+    pageSize: 10
+    lang: zh-CN
+    visitor: false
+    highlight: true
+    recordIP: false
+    serverURLs: # leancloud国内自定义域名
+    emojiCDN:
+    emojiMaps:
+    enableQQ: false
+    requiredFields: []
   gitalk:
     clientID:
     clientSecret:
@@ -107,6 +124,9 @@ comment:
     distractionFreeMode: false
     # en | zh-CN | zh-TW
     language: navigator.language || navigator.userLanguage
+  livere:
+    uid:
+
 
 #------------------------
 # latex config
@@ -153,3 +173,4 @@ cdn:
   gitalk: 
     css: https://cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.css
     js: https://cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.min.js
+  valine: //unpkg.com/valine/dist/Valine.min.js
