@@ -30,14 +30,22 @@
   <%- partial('_partial/footer.ejs') %>
   <%- partial('_partial/scrollbutton.ejs') %>
 
+  <%# plugins %>
+  <% if(theme.latex.enable) { %>
+    <%- partial('_partial/plugins/latex.ejs') %>
+  <% } %>
+
   <%# javascript %>
   <%- js('js/main.js') %>
+  <%# dark mode script %>
   <%- js('js/darkmode.js') %>
+  <%# console script %>
+  <%- js('js/console.js') %>
+
   <%# scroll-up animation %>
   <% if(theme.scrollUpAnimation) { %>
   <%- js('js/scroll-up.js') %>
   <% } %>
-  <%- js('js/console.js') %>
 </body>
 
 </html>

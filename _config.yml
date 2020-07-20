@@ -90,6 +90,18 @@ google_plus:
 fb_admins:
 fb_app_id:
 
+# latex config
+# choose true to use latex by mathjax or katex
+latex:
+  enable: true
+  engine: katex # mathjax/katex
+  # for better rendering effect, when you choose mathjax, you can use it directly but you will lose some effect
+  # so you can use hexo-renderer-kramed
+  # when you choose katex, you must use hexo-renderer-markdown-it-plus or other render engine
+  global: true
+  # because latex rendering is too expensive for page loading
+  # so when you choose false, you can use latex by `latex: true` in post front-matter
+
 # the config of theme colors and styles
 # you can modify these presets to design different styles
 color:
