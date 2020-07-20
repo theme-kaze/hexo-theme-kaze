@@ -161,7 +161,7 @@ color:
 
 font:
   font-size: 16px # global font-size
-  font-family: # global font-family
+  font-family: "'Noto Sans SC', sans-serif;" # global font-family
 
 #------------------------
 # cdn config
