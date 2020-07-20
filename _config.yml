@@ -94,12 +94,12 @@ fb_app_id:
 # comment config
 #------------------------
 comment:
-  enable: true
+  enable: false
   type: valine # valine | gitalk | livere | disqus | we recommend valine
   # gitalk config details can see in https://github.com/gitalk/gitalk/blob/master/readme-cn.md
   valine:
-    appId: OKcyabOkdkI4TScyeddAf7sG-gzGzoHsz
-    appKey: 27EhzHmOxkE2urakexeLDnR9
+    appId:
+    appKey:
     placeholder: Just go go
     path: window.location.pathname
     avatar: mp
