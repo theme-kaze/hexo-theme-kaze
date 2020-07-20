@@ -1,0 +1,19 @@
+<% if(theme.comment.gitalk.clientID && theme.comment.gitalk.clientSecret && theme.comment.gitalk.repo && theme.comment.gitalk.owner && theme.comment.gitalk.admin) { %>
+  <div id="gitalk-container"></div>
+  <%- css(theme.cdn.gitalk.css) %>
+  <%- js(theme.cdn.gitalk.js) %>
+  <script>
+    var gitalk = new Gitalk({
+      clientID: <%= theme.comment.gitalk.clientID %>,
+      clientSecret: <%= theme.comment.gitalk.clientSecret %>,
+      repo: <%= theme.comment.gitalk.repo %>,
+      owner: <%= theme.comment.gitalk.owner %>,
+      admin: <%= theme.comment.gitalk.admin %>,
+      id: <%= theme.comment.gitalk.id %>,
+      distractionFreeMode: <%= theme.comment.gitalk.distractionFreeMode %>,
+      language: <%= theme.comment.gitalk.language %>
+    })
+
+    gitalk.render('gitalk-container')
+  </script>
+<% } %>

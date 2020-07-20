@@ -90,15 +90,35 @@ google_plus:
 fb_admins:
 fb_app_id:
 
+#------------------------
+# comment config
+#------------------------
+comment:
+  enable: false
+  type: # gitalk | valine | livere | disqus
+  # gitalk config details can see in https://github.com/gitalk/gitalk/blob/master/readme-cn.md
+  gitalk:
+    clientID:
+    clientSecret:
+    repo:
+    owner:
+    admin:
+    id: location.href
+    distractionFreeMode: false
+    # en | zh-CN | zh-TW
+    language: navigator.language || navigator.userLanguage
+
+#------------------------
 # latex config
+#------------------------
 # choose true to use latex by mathjax or katex
 latex:
-  enable: false
-  engine: mathjax # mathjax/katex
+  enable: true
+  engine: mathjax # mathjax | katex
   # for better rendering effect, when you choose mathjax, you can use it directly but you will lose some effect
   # so you can use hexo-renderer-kramed
   # when you choose katex, you must use hexo-renderer-markdown-it-plus or other render engine
-  global: false
+  global: true
   # because latex rendering is too expensive for page loading
   # so when you choose false, you can use latex by `latex: true` in post front-matter
 
@@ -123,3 +143,13 @@ color:
 font:
   font-size: 16px # global font-size
   font-family: # global font-family
+
+#------------------------
+# cdn config
+#------------------------
+cdn:
+  mathjax: https://cdn.jsdelivr.net/npm/mathjax@3.0.5/es5/tex-svg.js
+  katex: https://cdn.jsdelivr.net/npm/katex@0.11.1/dist/katex.min.css
+  gitalk: 
+    css: https://cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.css
+    js: https://cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.min.js

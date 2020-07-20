@@ -18,8 +18,8 @@ if(flag) {
         }
       };
     </script>
-    <%- js('https://cdn.jsdelivr.net/npm/mathjax@3.0.5/es5/tex-svg.js') %>
+    <%- js(theme.cdn.mathjax) %>
   <% } else if(engine === 'katex') { %>
-    <%- css('https://cdn.jsdelivr.net/npm/katex@0.11.1/dist/katex.min.css')%>
+    <%- css(theme.cdn.katex) %>
   <% } %>
 <% } %>
