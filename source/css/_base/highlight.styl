@@ -21,8 +21,10 @@ pre[class*='highlight']
   overflow: auto
   white-space: pre
   overflow-wrap: normal
+  &::-webkit-scrollbar
+    display: none
 :not(pre) > code[class*='hljs'], pre[class*='highlight']
-  background: #2d2d2d
+  background: var(--pre-color)
 /* Inline code */
 :not(pre) > code[class*='hljs']
   padding: 0.1em
