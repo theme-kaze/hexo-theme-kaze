@@ -1,1 +1,12 @@
-categories page
+<div class="card card-content">
+  <div class="categories-page-title" style="margin-bottom: 0.6rem;"><%- __('categories.title') %></div>
+  <div>共计<%= site.posts.data.length %>篇文章</div>
+</div>
+<div class="card card-content">
+  <% for(const postList of site.categories.data) { %>
+    <a href="/categories/<%= postList.name %>" class="categories-page-list-item">
+      <span><%= postList.name %></span>
+      <span class="categories-page-list-item-total">计<%= postList.posts.length %>篇文章</span>
+    </a>
+  <% } %>
+</div>
