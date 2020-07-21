@@ -23,8 +23,6 @@ page:
       - { icon: icon-icon-test1, link: / }
       - { icon: icon-icon-test4, link: / }
 
-# Content
-fancybox: true
 
 ### Sidebar ###
 sidebar: right
@@ -108,7 +106,7 @@ comment:
     visitor: false
     highlight: true
     recordIP: false
-    serverURLs: https://avoscloud.com # leancloud国内自定义域名
+    serverURLs: # leancloud国内自定义域名
     emojiCDN:
     emojiMaps: null
     enableQQ: false
@@ -137,9 +135,18 @@ latex:
   # so you can use hexo-renderer-kramed
   # when you choose katex, you must use hexo-renderer-markdown-it-plus or other render engine
   global: false
-  # because latex rendering is too expensive for page loading
+  # because latex rendering will put lots of loading burden on page loading
   # so when you choose false, you can use latex by `latex: true` in post front-matter
 
+#------------------------
+# plugins config
+#------------------------
+fancyBox:
+  enable: true
+
+#------------------------
+# theme design config
+#------------------------
 # the config of theme colors and styles
 # you can modify these presets to design different styles
 color:
@@ -173,3 +180,7 @@ cdn:
     js: https://cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.min.js
   valine: //unpkg.com/valine/dist/Valine.min.js
   prismjs: https://cdn.jsdelivr.net/npm/prismjs@1.19.0
+  jQuery: https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.min.js
+  fancyBox:
+    css: https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css
+    js: https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.js
