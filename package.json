@@ -33,9 +33,5 @@
     "hooks": {
       "pre-commit": "npm run lint"
     }
-  },
-  "dependencies": {
-    "hexo-renderer-marked": "https://github.com/hexojs/hexo-renderer-marked#8c67e6d0f47853159c12ba6769ce9de0f77530d7",
-    "prismjs": "^1.20.0"
   }
 }
