@@ -3,7 +3,7 @@
   background-color: var(--widget-background-color)
   max-width: 100%
   box-shadow: var(--shadow-style)
-.card +.card
+.card +.card, .card +.archive-timeline
   margin-top: 1.5rem
 // content style
 .card-content, .card-author
@@ -30,7 +30,6 @@
   margin: 0 0.309rem
   &::after
     content: '·'
-
-@media(max-width : 768px)
+@media (max-width: 768px)
   .card +.card
     margin-top: 0.8rem
