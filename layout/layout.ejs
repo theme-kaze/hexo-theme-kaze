@@ -34,7 +34,9 @@
   <% if(theme.latex.enable) { %>
     <%- partial('_partial/plugins/latex.ejs') %>
   <% } %>
-
+  <% if(theme.fancyBox.enable) { %>
+    <%- partial('_partial/plugins/fancyBox.ejs') %>
+  <% } %>
   <%# javascript %>
   <%- js('js/main.js') %>
   <%# dark mode script %>

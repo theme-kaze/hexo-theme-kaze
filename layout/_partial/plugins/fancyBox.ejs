@@ -1,0 +1,13 @@
+<%- js(theme.cdn.jQuery) %>
+<%- css(theme.cdn.fancyBox.css) %>
+<%- js(theme.cdn.fancyBox.js) %>
+<script>
+  $('.main-column img').each(
+    function () {
+      var element = document.createElement('a');
+      $(element).attr('data-fancybox', 'images');
+      $(element).attr('href', $(this).attr('src'));
+      $(this).wrap(element);
+    }
+  );
+</script>
