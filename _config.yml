@@ -103,7 +103,7 @@ comment:
     placeholder: Just go go
     path: window.location.pathname
     avatar: mp
-    meta: ['nick','mail','link']
+    meta: ["nick", "mail", "link"]
     pageSize: 10
     visitor: false
     highlight: true
@@ -125,7 +125,6 @@ comment:
     language: navigator.language || navigator.userLanguage
   livere:
     uid:
-
 
 #------------------------
 # latex config
@@ -169,7 +168,8 @@ font:
 cdn:
   mathjax: https://cdn.jsdelivr.net/npm/mathjax@3.0.5/es5/tex-svg.js
   katex: https://cdn.jsdelivr.net/npm/katex@0.11.1/dist/katex.min.css
-  gitalk: 
+  gitalk:
     css: https://cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.css
     js: https://cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.min.js
   valine: //unpkg.com/valine/dist/Valine.min.js
+  prismjs: https://cdn.jsdelivr.net/npm/prismjs@1.19.0
