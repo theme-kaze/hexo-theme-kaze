@@ -3,5 +3,11 @@
   <div>共计<%= site.tags.data.length %>个标签</div>
 </div>
 <div class="card card-content">
-  
+  <div class="tags-card">
+    <div class="tags-list">
+      <% site.tags.data.sort((a, b) => (a.posts.data.length - b.posts.data.length)).reverse().forEach(function(item){ %>
+      <a href="\tags\<%- item.name %>" title="<%- item.name %>"><div class="tags-list-item"><%= item.name %></div></a>
+      <% }); %>
+    </div>
+  </div>
 </div>
