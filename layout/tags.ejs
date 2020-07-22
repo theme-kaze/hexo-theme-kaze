@@ -1,6 +1,6 @@
 <div class="card card-content">
   <div class="tags-page-title" style="margin-bottom: 0.6rem;"><%= __('tags.title') %></div>
-  <div>共计<%= site.tags.data.length %>个标签</div>
+  <div><%= __('tags.total').split(' ')[0] %><%= site.tags.data.length %><%= __('tags.total').split(' ')[1] %></div>
 </div>
 <div class="card card-content">
   <div class="tags-card">

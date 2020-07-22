@@ -15,9 +15,11 @@ posts:
 
 categories:
   title: Categories
+  total: Total posts
 
 tags:
   title: Tags
+  total: Total tags
 
 hottags:
   title: hot tags

@@ -1,12 +1,12 @@
 <div class="card card-content">
   <div class="categories-page-title" style="margin-bottom: 0.6rem;"><%- __('categories.title') %></div>
-  <div>共计<%= site.posts.data.length %>篇文章</div>
+  <div><%=__('categories.total').split(' ')[0] %><%= site.posts.data.length %><%= __('categories.total').split(' ')[1] %></div>
 </div>
 <div class="card card-content">
   <% for(const postList of site.categories.data) { %>
     <a href="/categories/<%= postList.name %>" class="categories-page-list-item">
       <span><%= postList.name %></span>
-      <span class="categories-page-list-item-total">计<%= postList.posts.length %>篇文章</span>
+      <span class="categories-page-list-item-total"><%= __('categories.total').split(' ')[0] %><%= postList.posts.length %><%= __('categories.total').split(' ')[1] %></span>
     </a>
   <% } %>
 </div>

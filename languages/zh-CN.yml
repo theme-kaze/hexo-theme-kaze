@@ -15,9 +15,11 @@ posts:
 
 categories:
   title: 分类
+  total: 共计 篇文章
 
 tags:
   title: 标签
+  total: 共计 个标签
 
 hottags:
   title: 热门标签
