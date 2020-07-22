@@ -20,7 +20,7 @@
           <%- partial('_partial/left-aside') %>
         </aside>
         <aside class="right-column">
-          <% if(is_post()) { %>
+          <% if(is_post() && page.toc !== false) { %>
             <%- partial('_partial/toc-card') %>
           <% } else { %>
             <%- partial('_partial/right-aside') %>

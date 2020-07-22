@@ -1,9 +1,21 @@
 .toc-card
-  .toc-card-title
-    font-size: $ml-font-size
+  .toc-header
+    border-top: 0.5px solid var(--divider-color)
+    height: 0.5px
+    margin-top: 1px
+    margin-bottom: 24px
+    &::after
+      background-color: var(--widget-background-color)
+      color: var(--text-light-color)
+      content: attr(data-content)
+      font-size: $sm-font-size
+      display: inline-block
+      position: relative
+      top: -12px
+      padding-right: 8px
   .toc
     overflow: auto
-    max-height: 400px
+    max-height: 500px
     padding: 0 1rem
     ol, li
       list-style-type: none

@@ -53,9 +53,6 @@ links:
 
 ### Post ###
 post:
-  # Please use <!-- more --> in the post to set the length of excerpt mannually
-  # and will overwite the configuration here.
-  excerpt_length: 120
   toc:
     show_list_number: false
     max_depth: 6
@@ -182,7 +179,7 @@ cdn:
   gitalk:
     css: https://cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.css
     js: https://cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.min.js
-  valine: //unpkg.com/valine/dist/Valine.min.js
+  valine: https://unpkg.com/valine/dist/Valine.min.js
   prismjs: https://cdn.jsdelivr.net/npm/prismjs@1.19.0
   jQuery: https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.min.js
   fancyBox:
