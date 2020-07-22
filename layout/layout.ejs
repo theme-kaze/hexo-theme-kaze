@@ -6,7 +6,6 @@
 <body>
   <%# navbar %>
   <%- partial('_partial/nav.ejs') %>
-
   <%# main content %>
   <div class="section">
     <div class="container">
@@ -21,7 +20,11 @@
           <%- partial('_partial/left-aside') %>
         </aside>
         <aside class="right-column">
-          <%- partial('_partial/right-aside') %>
+          <% if(is_post()) { %>
+            <%- partial('_partial/toc-card') %>
+          <% } else { %>
+            <%- partial('_partial/right-aside') %>
+          <% } %>
         </aside>
       </div>
     </div>

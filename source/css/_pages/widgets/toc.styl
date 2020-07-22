@@ -1,0 +1,25 @@
+.toc-card
+  .toc-card-title
+    font-size: $ml-font-size
+  .toc
+    overflow: auto
+    max-height: 400px
+    padding: 0 1rem
+    ol, li
+      list-style-type: none
+    a
+      color: var(--text-color)
+    .toc-child
+      margin-left: 5px
+      position: relative
+      &::before
+        content: ""
+        position: absolute
+        top: 0
+        width: 1px
+        background-color: var(--badge-background-color)
+        height: 100%
+      > li
+        margin-left: 0.7rem
+    .toc-item
+      margin-top: 0.6rem

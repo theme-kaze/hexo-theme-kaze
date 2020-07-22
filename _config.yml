@@ -56,6 +56,10 @@ post:
   # Please use <!-- more --> in the post to set the length of excerpt mannually
   # and will overwite the configuration here.
   excerpt_length: 120
+  toc:
+    show_list_number: false
+    max_depth: 6
+    min_depth: 1
 
 ### Footer ###
 footer:

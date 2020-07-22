@@ -1,0 +1,6 @@
+<div class="sticky-widescreen">
+  <div class="card card-content toc-card">
+    <div class="toc-card-title"><%= __('toc.title') %></div>
+    <%- toc(page.content, { list_number: theme.post.toc.show_list_number, max_depth: theme.post.toc.max_depth, min_depth: theme.post.toc.min_depth }) %>
+  </div>
+</div>

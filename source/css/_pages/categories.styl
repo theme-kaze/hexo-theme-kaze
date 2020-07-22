@@ -1,2 +1,23 @@
 .categories-page-title
   font-size: $lg-font-size
+.category-page-card
+  margin-bottom: 24px
+.categories-page-list-item
+  display: flex
+  color: var(--text-color)
+  font-size: $lg-font-size
+  flex-direction: row
+  align-items: center
+  justify-content: space-between
+  padding: 0 20px
+  &:hover
+      cursor: pointer
+      border-radius: 0.3rem
+      background-color: var(--badge-background-color)
+      transition-duration: 0.2s
+      transition-timing-function: ease-in-out
+  + .categories-page-list-item
+    margin-top: 0.4rem
+  .categories-page-list-item-total
+    float: right
+    font-size: $md-font-size
