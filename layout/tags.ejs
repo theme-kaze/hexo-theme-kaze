@@ -1,12 +1,16 @@
 <div class="card card-content">
   <div class="tags-page-title" style="margin-bottom: 0.6rem;"><%= __('tags.title') %></div>
-  <div><%= __('tags.total').split(' ')[0] %><%= site.tags.data.length %><%= __('tags.total').split(' ')[1] %></div>
+  <div>
+    <%= __('tags.total').split(' ')[0] %>&nbsp;<%= site.tags.data.length %>&nbsp;<%= __('tags.total').split(' ')[1] %>
+  </div>
 </div>
 <div class="card card-content">
   <div class="tags-card">
     <div class="tags-list">
       <% site.tags.data.sort((a, b) => (a.posts.data.length - b.posts.data.length)).reverse().forEach(function(item){ %>
-      <a href="\tags\<%- item.name %>" title="<%- item.name %>"><div class="tags-list-item"><%= item.name %></div></a>
+      <a href="\tags\<%- item.name %>" title="<%- item.name %>">
+        <div class="tags-list-item"><%= item.name %></div>
+      </a>
       <% }); %>
     </div>
   </div>

@@ -1,12 +1,15 @@
 <div class="card card-content">
   <div class="categories-page-title" style="margin-bottom: 0.6rem;"><%- __('categories.title') %></div>
-  <div><%=__('categories.total').split(' ')[0] %><%= site.posts.data.length %><%= __('categories.total').split(' ')[1] %></div>
+  <div>
+    <%=__('categories.total').split(' ')[0] %>&nbsp;<%= site.posts.data.length %>&nbsp;<%= __('categories.total').split(' ')[1] %>
+  </div>
 </div>
 <div class="card card-content">
   <% for(const postList of site.categories.data) { %>
-    <a href="/categories/<%= postList.name %>" class="categories-page-list-item">
-      <span><%= postList.name %></span>
-      <span class="categories-page-list-item-total"><%= __('categories.total').split(' ')[0] %><%= postList.posts.length %><%= __('categories.total').split(' ')[1] %></span>
-    </a>
+  <a href="/categories/<%= postList.name %>" class="categories-page-list-item">
+    <span><%= postList.name %></span>
+    <span
+      class="categories-page-list-item-total"><%= __('categories.total').split(' ')[0] %>&nbsp;<%= postList.posts.length %>&nbsp;<%= __('categories.total').split(' ')[1] %></span>
+  </a>
   <% } %>
 </div>

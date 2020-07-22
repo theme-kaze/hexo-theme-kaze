@@ -1,10 +1,18 @@
 <div class="sticky-widescreen">
+  <%# toc card %>
+  <% if(is_post() && page.toc !== false) { %>
+  <div class="card card-content toc-card">
+    <%- partial('_partial/toc-card') %>
+  </div>
+  <% } %>
   <%# recent post %>
   <div class="card card-content">
     <%- partial('_partial/recent-post') %>
   </div>
   <%# archives card %>
+  <% if(!is_post()) { %>
   <div class="card card-content">
     <%- partial('_partial/archives') %>
   </div>
+  <% } %>
 </div>
