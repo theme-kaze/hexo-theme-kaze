@@ -1,6 +1,7 @@
 .archive-timeline
   .archive-timeline-tag
     background-color: $blue-tag-color
+    transition: background-color 0.3s
     border-radius: 0.3rem
     max-width: 66px
     height: 32px
@@ -14,6 +15,7 @@
     &::before
       content: ""
       background-color: var(--divider-color)
+      transition: background-color 0.3s
       position: absolute
       top: 0
       width: 2px
@@ -24,3 +26,5 @@
       .archive-timeline-post-content
         margin-top: 12px
         font-size: $ml-font-size
+        .archive-timeline-post-item
+          color: var(--text-font-color)

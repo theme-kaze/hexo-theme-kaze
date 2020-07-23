@@ -5,6 +5,7 @@
     margin-top: 1px
     &::after
       background-color: var(--widget-background-color)
+      transition: background-color 0.3s
       color: var(--text-light-color)
       content: attr(data-content)
       font-size: $sm-font-size
@@ -26,6 +27,7 @@
       border-radius: 4px
       &:hover
         background-color: var(--badge-background-color)
+        transition: background-color 0.3s
     .toc-child
       margin-left: 0.8rem
       position: relative
@@ -35,6 +37,7 @@
         top: 0
         width: 1px
         background-color: var(--badge-background-color)
+        transition: background-color 0.3s
         height: 100%
       > li
         margin-left: 0.7rem

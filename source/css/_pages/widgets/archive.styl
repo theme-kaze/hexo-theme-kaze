@@ -5,6 +5,7 @@
   margin-bottom: 1px
   &::after
     background-color: var(--widget-background-color)
+    transition: background-color 0.3s
     color: var(--text-light-color)
     content: attr(data-content)
     font-size: $sm-font-size
@@ -23,10 +24,12 @@
       cursor: pointer
       border-radius: 0.3rem
       background-color: var(--badge-background-color)
-      transition-duration: 0.2s
+      transition: background-color 0.3s
+      transition-duration: 0.3s
       transition-timing-function: ease-in-out
       .archive-card-list-item-badge
         background-color: var(--badge-hover-background-color)
+        transition: background-color 0.3s
     + .archive-card-list-item
       margin-top: 3px
     .archive-card-list-item-badge
@@ -34,6 +37,7 @@
       margin-right: 10px
       font-size: $sm-font-size
       background-color: var(--badge-background-color)
+      transition: background-color 0.3s
       padding: 3px 7px
       text-align: center
       border-radius: 0.3rem
