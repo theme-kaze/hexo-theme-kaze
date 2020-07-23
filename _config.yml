@@ -142,7 +142,7 @@ latex:
 #------------------------
 # plugins config
 #------------------------
-fancyBox:
+fslightbox:
   enable: true
 
 #------------------------
@@ -174,14 +174,11 @@ font:
 # cdn config
 #------------------------
 cdn:
-  mathjax: https://cdn.jsdelivr.net/npm/mathjax@3.0.5/es5/tex-svg.js
-  katex: https://cdn.jsdelivr.net/npm/katex@0.11.1/dist/katex.min.css
+  mathjax: //cdn.jsdelivr.net/npm/mathjax@3.0.5/es5/tex-svg.js
+  katex: //cdn.jsdelivr.net/npm/katex@0.11.1/dist/katex.min.css
   gitalk:
-    css: https://cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.css
-    js: https://cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.min.js
-  valine: https://unpkg.com/valine/dist/Valine.min.js
-  prismjs: https://cdn.jsdelivr.net/npm/prismjs@1.19.0
-  jQuery: https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.min.js
-  fancyBox:
-    css: https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css
-    js: https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.js
+    css: //cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.css
+    js: //cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.min.js
+  valine: //unpkg.com/valine/dist/Valine.min.js
+  livere: //cdn-city.livere.com/js/embed.dist.js
+  fslightbox: //cdn.jsdelivr.net/npm/fslightbox@3.1.0/index.min.js

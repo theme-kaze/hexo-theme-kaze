@@ -8,4 +8,6 @@ function smoothScrollToTop() {
     scrollTo(0, 0);
   }
 }
-document.getElementById('scrollbutton').onclick = smoothScrollToTop;
+setTimeout(() => {
+  document.getElementById('scrollbutton').onclick = smoothScrollToTop;
+}, 0);

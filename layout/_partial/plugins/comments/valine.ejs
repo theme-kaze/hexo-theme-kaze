@@ -1,6 +1,6 @@
 <% if(theme.comment.valine.appId && theme.comment.valine.appKey) { %>
   <div id="vcomments"></div>
-  <%- js(theme.cdn.valine) %>
+  <%- loadScript(theme.cdn.valine) %>
   <script>
     var oldLoadVa = window.onload;
     window.onload = function () {

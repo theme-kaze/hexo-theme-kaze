@@ -5,7 +5,9 @@ hexo.extend.filter.register('after_render:html', function(str){
     collapseWhitespace: true,
     minifyURLs: true,
     sortAttributes: true,
-    sortClassName: true
+    sortClassName: true,
+    minifyJS: true,
+    minifyCSS: true
   });
   return result;
 });

@@ -33,16 +33,15 @@
   <% if(theme.latex.enable) { %>
   <%- partial('_partial/plugins/latex.ejs') %>
   <% } %>
-  <% if(theme.fancyBox.enable) { %>
-  <%- partial('_partial/plugins/fancyBox.ejs') %>
+  <% if(theme.fslightbox.enable) { %>
+  <%- partial('_partial/plugins/fslightbox.ejs') %>
   <% } %>
   <%# javascript %>
   <%- js('js/main.js') %>
-  <%# dark mode script %>
-  <%- js('js/darkmode.js') %>
   <%# console script %>
   <%- js('js/console.js') %>
-
+  <%# darkmode js %>
+  <%- js('js/darkmode.js') %>
   <%# scroll-up animation %>
   <% if(theme.scrollUpAnimation) { %>
   <%- js('js/scroll-up.js') %>
