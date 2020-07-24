@@ -9,7 +9,7 @@
     </picture>
   </a>
   <% } %>
-  <article class="card-content">
+  <article class="card card-content">
     <a href="/<%= post.path %>">
       <h1 class="post-title">
         <%= post.title %>
@@ -37,6 +37,5 @@
       </div>
       <a href="<%= url_for(post.path) %>"><%- __('readmore.title') %> </a>
     </div>
-  </article>
-</div>
+</article>
 <% }); %>

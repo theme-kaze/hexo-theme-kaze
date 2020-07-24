@@ -5,6 +5,7 @@
   margin-bottom: 1px
   &::after
     background-color: var(--widget-background-color)
+    transition: background-color 0.3s
     color: var(--text-light-color)
     content: attr(data-content)
     font-size: $sm-font-size
@@ -21,11 +22,13 @@
     margin: 0 7px 8px 7px 
     font-size: $md-font-size
     background-color: var(--badge-background-color)
+    transition: background-color 0.3s
     padding: 3px 7px
     text-align: center
     border-radius: 0.3rem
     &:hover
       cursor: pointer
       background-color: var(--badge-hover-background-color)
+      transition: background-color 0.3s
 .tag-page-card
   margin-bottom: 24px
