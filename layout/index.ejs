@@ -1,11 +1,9 @@
 <% site.posts.sort('date', -1).forEach(post => { %>
-<div class="card card-content">
+<div class="card">
   <% if(post.banner_img) { %>
   <a href="/<%= post.path %>" class="card-image image thumb-index">
     <picture>
-      <img data-src="<%= post.banner_img %>"
-        src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%20700%20220'%3E%3C/svg%3E"
-        alt="<%= post.title %>" class="lazy thumb thumb-img">
+      <img data-src="<%= post.banner_img %>" class="lazy thumb thumb-img">
     </picture>
   </a>
   <% } %>

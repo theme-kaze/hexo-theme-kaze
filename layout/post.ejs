@@ -1,3 +1,10 @@
+<% if(page.banner_img) { %>
+<div class="card-image image thumb-post">
+  <picture>
+    <img data-src="<%= page.banner_img %>" class="lazy thumb thumb-img">
+  </picture>
+</div>
+<% } %>
 <article class="card card-content">
   <header>
     <h1 class="post-title">

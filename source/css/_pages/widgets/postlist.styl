@@ -13,11 +13,16 @@
   left: 0
   right: 0
   position: absolute
+a.card-image
+  border-style: none
 .card-image
   overflow: hidden
   border-radius: 4px 4px 0 0
 .post-img.lazy:not(.loaded), .thumb-img.lazy:not(.loaded)
   visibility: hidden
 @media screen and (min-width: 768px)
-  .thumb-index
+  .thumb-index, .thumb-post
     padding-top: 300px
+@media screen and (max-width: 767px)
+  .thumb-index, .thumb-post
+    height: 16.48rem
