@@ -15,3 +15,12 @@
     <span><%- __("tags.title") %></span>
   </a>
 </div>
+<div class="author-card-society">
+  <% for(const item of theme.page.about.social_links) { %>
+    <div class="author-card-society-icon">
+      <a href="<%= item.link %>">
+        <i class="iconfont <%= item.icon %> society-icon"></i>
+      </a>
+    </div>
+  <% } %>
+</div>
