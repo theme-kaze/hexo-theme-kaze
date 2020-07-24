@@ -1,11 +1,12 @@
 <script>
-  var addImgLayout = function() {
+  var addImgLayout = function () {
     var img = document.querySelectorAll('.post-content img');
     var i;
-    for(i = 0; i < img.length; i++) {
+    for (i = 0; i < img.length; i++) {
       var wrapper = document.createElement('a');
       wrapper.setAttribute('data-fslightbox', 'gallery');
-      wrapper.setAttribute('href', img[i].getAttribute('src'));
+      wrapper.setAttribute('class', 'thumb-post');
+      wrapper.setAttribute('href', img[i].getAttribute('data-original'));
       img[i].parentElement.insertBefore(wrapper, img[i]);
       wrapper.appendChild(img[i]);
     }
