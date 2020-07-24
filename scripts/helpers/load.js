@@ -1,5 +1,5 @@
 /* eslint-disable no-undef */
-hexo.extend.helper.register('preload_css', url => `<link rel="preload" href="${url}" as="style">`);
+hexo.extend.helper.register('preload_css', (url, isCross) => `<link rel="preload" href="${url}" as="style" ${isCross ? 'crossorigin' : ''}>`);
 
 hexo.extend.helper.register('preload_js', url => `<link rel="preload" href="${url}" as="script">`);
 

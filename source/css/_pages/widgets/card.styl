@@ -12,17 +12,18 @@
   transition: background-color 0.3s
   padding: 1.5rem
 .post-title, .card-excerpt
-  margin-bottom: 1rem
+  margin-bottom: 0.85rem
 .post-title
   font-size: 1.5rem
   font-weight: 400
   color: var(--title-color)
   line-height: 1.125
+  &:hover
+    color: $link-hover-color
 .card-post-footer
   display: flex
   justify-content: space-between
-  border-top: 0.05rem solid var(--divider-color)
-  padding: 1rem 0 0
+  padding: 0
   a:hover
     color: var(--link-hover-color)
 .post-meta, .post-meta-link
