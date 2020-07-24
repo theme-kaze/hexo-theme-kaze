@@ -1,5 +1,5 @@
 <% site.posts.sort('date', -1).forEach(post => { %>
-<div class="card">
+<div class="card card-content">
   <% if(post.banner_img) { %>
   <a href="/<%= post.path %>" class="card-image image thumb-index">
     <picture>
@@ -37,5 +37,6 @@
       </div>
       <a href="<%= url_for(post.path) %>"><%- __('readmore.title') %> </a>
     </div>
-</article>
+  </article>
+</div>
 <% }); %>
