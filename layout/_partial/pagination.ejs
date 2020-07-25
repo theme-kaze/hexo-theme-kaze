@@ -1,0 +1,28 @@
+<div class="nav">
+  <% if(page.prev) {%>
+  <div class="nav-item-prev">
+    <a href="/<%= prev_link %>" class="nav-link">
+      <div class="nav-prev-icon"><i class="iconfont icon-left"></i></div>
+      <div>
+        <div class="nav-label"><%= prev_label%></div>
+        <% if(prev_title) { %>
+        <div class="nav-title"><%= prev_title %> </div>
+        <% } %>
+      </div>
+    </a>
+  </div>
+  <% } %>
+  <% if(page.next) {%>
+  <div class="nav-item-next">
+    <a href="/<%= next_link %>" class="nav-link">
+      <div>
+        <div class="nav-label"><%= next_label %></div>
+        <% if(next_title) { %>
+        <div class="nav-title"><%= next_title %> </div>
+        <% } %>
+      </div>
+      <div class="nav-next-icon"><i class="iconfont icon-right"></i></div>
+    </a>
+  </div>
+  <% } %>
+</div>

@@ -1,4 +1,4 @@
-<% site.posts.sort('date', -1).forEach(post => { %>
+<% page.posts.sort('date', -1).forEach(post => { %>
 <div class="card">
   <% if(post.banner_img) { %>
   <a href="/<%= post.path %>" class="card-image image thumb-index">
@@ -38,3 +38,10 @@
   </article>
 </div>
 <% }); %>
+<% if(page.total > 1 ) { %>
+<%- partial('_partial/pagination',{ 
+  prev_label: __("prev_page.title"), next_label:__("next_page.title"),
+  prev_link: page.prev_link, next_link: page.next_link,
+  prev_title: null, next_title: null
+ })%>
+<% } %>

@@ -32,3 +32,15 @@ recentposts:
 
 toc:
   title: TOC
+
+prev_page:
+  title: Prev
+
+next_page:
+  title: Next
+
+prev_post:
+  title: Prev
+
+next_post:
+  title: Next

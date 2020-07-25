@@ -28,6 +28,11 @@
     <%- page.content %>
   </div>
 </article>
+<%- partial('_partial/pagination',{ 
+  prev_label: __("prev_post.title"), next_label:__("next_post.title"),
+  prev_link: page.prev ? page.prev.path : '', next_link: page.next ? page.next.path : '',
+  prev_title: page.prev ? page.prev.title : '', next_title: page.next ? page.next.title : ''
+ })%>
 <% if(theme.comment.enable && page.comment !== false) { %>
 <div class="card card-content comment-card">
   <div class="comment-card-title">评论</div>
