@@ -1,6 +1,7 @@
 .archive-timeline
   .archive-timeline-tag
-    background-color: $blue-tag-color
+    box-shadow: var(--tag-shadow-style)
+    background-color: blue-tag-color
     transition: background-color 0.3s
     border-radius: 0.3rem
     max-width: 66px
@@ -9,20 +10,13 @@
     justify-content: center
     align-items: center
     color: var(--text-white-color)
+    margin: 12px 0
   .archive-timeline-item
     position: relative
-    margin-left: 32px
-    &::before
-      content: ""
-      background-color: var(--divider-color)
-      transition: background-color 0.3s
-      position: absolute
-      top: 0
-      width: 2px
-      height: 100%
+    margin-left: 12px
     .archive-timeline-post
-      margin-left: 20px
-      padding: 16px 6px
+      margin-left: 10px
+      padding: 6px 6px
       .archive-timeline-post-content
         margin-top: 12px
         font-size: $ml-font-size

@@ -37,6 +37,8 @@
   --highlight-keyword-color: $highlight-keyword-color
   --highlight-string-color: $highlight-string-color
   --highlight-builtin-color: $highlight-builtin-color
+  --around-shadow-style: $around-shadow-style
+  --tag-shadow-style: $tag-shadow-style
 // dark-mode color
 dark-mode()
   --text-color: $dark-text-color
@@ -69,6 +71,8 @@ dark-mode()
   --note-warning-color: $dark-note-warning-color
   --note-danger-border-color: $dark-note-danger-border-color
   --note-danger-color: $dark-note-danger-color
+  --around-shadow-style: $dark-around-shadow-style
+  --tag-shadow-style: $dark-tag-shadow-style
 @media (prefers-color-scheme: dark)
   :root:not([data-user-color-scheme])
     dark-mode()
