@@ -140,6 +140,13 @@ latex:
   # so when you choose false, you can use latex by `latex: true` in post front-matter
 
 #------------------------
+# lazyload config
+#------------------------
+lazyload:
+  enable: true
+  loadingImg:
+
+#------------------------
 # plugins config
 #------------------------
 fslightbox:

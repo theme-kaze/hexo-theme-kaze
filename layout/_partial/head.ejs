@@ -58,6 +58,9 @@
   <% if(theme.fslightbox.enable) { %>
   <%- preload_js(theme.cdn.fslightbox) %>
   <% } %>
+  <% if(theme.lazyload.enable) { %>
+  <% console.log('hh'); %>
+  <% } %>
   <%# end preload %>
   <%# prefetch %>
   <% if(theme.latex.enable) { %>

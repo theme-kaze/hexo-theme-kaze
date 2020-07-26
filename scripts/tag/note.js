@@ -1,4 +1,5 @@
 /* eslint-disable no-undef */
+'use strict';
 hexo.extend.tag.register('note', (args, content) => {
   if(!args) {
     args = ['default'];
