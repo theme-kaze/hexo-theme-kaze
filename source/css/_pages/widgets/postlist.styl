@@ -1,32 +1,30 @@
-.image
+.image-wrapper
   display: block
+  width: 100%
+  height: 0
   position: relative
-  img
-    display: block
+  .image
+    object-fit: cover
     width: 100%
-    height: 300px
-.thumb
-  object-fit: cover
-.thumb-img
-  bottom: 0
-  top: 0
-  left: 0
-  right: 0
-  position: absolute
-.thumb-post
-  position: relative
-  img
-    height: 300px
-    width: 100%
-    display: block
-a.card-image
-  border-style: none
-.card-image
-  overflow: hidden
-  border-radius: 4px 4px 0 0
+    position: absolute
+    transition: filter 0.4s ease 0s;
+    &:not(.loaded)
+      filter: blur(5px)
+.post-image
+  transition: filter 0.4s ease 0s;
+  &:not(.loaded)
+    filter: blur(5px)
 @media screen and (min-width: 768px)
-  .thumb-index, .thumb-post
-    padding-top: 300px
+  .image-wrapper
+    padding-bottom: 300px
+    .image
+      height: 300px
+  .post-image
+    height: 300px
 @media screen and (max-width: 767px)
-  .thumb-index, .thumb-post
+  .image-wrapper
     height: 16.48rem
+    .image
+      height: 16.48rem
+  .post-image
+    height: 300px

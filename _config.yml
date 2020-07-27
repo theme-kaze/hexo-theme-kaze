@@ -189,3 +189,4 @@ cdn:
   valine: //unpkg.com/valine/dist/Valine.min.js
   livere: //cdn-city.livere.com/js/embed.dist.js
   fslightbox: //cdn.jsdelivr.net/npm/fslightbox@3.1.0/index.min.js
+  lozad: /js/lib/lozad.min.js

@@ -5,8 +5,7 @@
     for (i = 0; i < img.length; i++) {
       var wrapper = document.createElement('a');
       wrapper.setAttribute('data-fslightbox', 'gallery');
-      wrapper.setAttribute('class', 'thumb-post');
-      wrapper.setAttribute('href', img[i].getAttribute('data-original'));
+      wrapper.setAttribute('href', img[i].getAttribute('data-src'));
       img[i].parentElement.insertBefore(wrapper, img[i]);
       wrapper.appendChild(img[i]);
     }

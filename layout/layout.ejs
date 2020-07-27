@@ -38,6 +38,20 @@
   <% } %>
   <%# javascript %>
   <%- js('js/main.js') %>
+  <script>
+    var addLazyload = function() {
+      var observer = lozad('.lozad', {
+        load: function(el) {
+          el.srcset = el.getAttribute('data-src');
+        },
+        loaded: function(el) {
+          el.classList.add('loaded');
+        }
+      });
+      observer.observe();
+    }
+  </script>
+  <script>loadScript("<%= theme.cdn.lozad %>", addLazyload)</script>
 </body>
 
 </html>
