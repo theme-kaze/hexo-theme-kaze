@@ -2,7 +2,7 @@
 <div class="card">
   <% if(post.banner_img) { %>
   <a href="/<%= post.path %>" class="image-wrapper">
-    <img src="<%= post.banner_img %>" data-src="<%= post.banner_img %>" srcset="<%= theme.lazyload.loadingImg || "data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%20300%20300'%3E%3C/svg%3E" %>"class="image lozad">
+    <img src="<%= post.banner_img %>" data-src="<%= post.banner_img %>" srcset="<%= post.banner_img_set || theme.lazyload.loadingImg || "data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%20300%20300'%3E%3C/svg%3E" %>"class="image lozad">
   </a>
   <% } %>
   <article class="card card-content">

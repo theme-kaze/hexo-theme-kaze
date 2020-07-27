@@ -5,5 +5,5 @@ hexo.on('generateBefore', () => {
   require('../lib/lazyload')(hexo);
   require('../lib/minify/minifyCSS')(hexo);
   require('../lib/minify/minifyJS')(hexo);
-  // require('../lib/minify/minifyHTML')(hexo);
+  require('../lib/minify/minifyHTML')(hexo);
 });
