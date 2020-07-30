@@ -39,6 +39,7 @@
   --highlight-builtin-color: $highlight-builtin-color
   --around-shadow-style: $around-shadow-style
   --tag-shadow-style: $tag-shadow-style
+  --image-filter-style: $image-filter-style
 // dark-mode color
 dark-mode()
   --text-color: $dark-text-color
@@ -73,6 +74,7 @@ dark-mode()
   --note-danger-color: $dark-note-danger-color
   --around-shadow-style: $dark-around-shadow-style
   --tag-shadow-style: $dark-tag-shadow-style
+  --image-filter-style: $dark-image-filter-style
 @media (prefers-color-scheme: dark)
   :root:not([data-user-color-scheme])
     dark-mode()
