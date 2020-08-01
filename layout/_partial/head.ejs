@@ -3,6 +3,7 @@
   <meta name="viewport"
     content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <meta name="theme-color" content="#fff" id="theme-color">
   <link rel="icon" href="<%= theme.logo_img %>">
   <title><%- theme.title %></title>
   <script>
@@ -10,7 +11,11 @@
     var reverseDarkList = {
       dark: 'light',
       light: 'dark'
-    }; 
+    };
+    var themeColor = {
+      dark: '#1c1c1e',
+      light: '#fff'
+    }
     // get the data of css prefers-color-scheme
     var getCssMediaQuery = function() {
       return window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
@@ -34,11 +39,14 @@
       if(setting === getCssMediaQuery()) {
         document.documentElement.removeAttribute('data-user-color-scheme');
         localStorage.removeItem('user-color-scheme');
+        document.getElementById('theme-color').content = themeColor[setting];
       } else if(reverseDarkList[setting]) {
         document.documentElement.setAttribute('data-user-color-scheme', setting);
+        document.getElementById('theme-color').content = themeColor[setting];
       } else {
         document.documentElement.removeAttribute('data-user-color-scheme');
         localStorage.removeItem('user-color-scheme');
+        document.getElementById('theme-color').content = themeColor[getCssMediaQuery()];
       }
     };
     setDarkmode();

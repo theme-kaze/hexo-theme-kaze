@@ -4,7 +4,7 @@
     <%=__('categories.total').split(' ')[0] %>&nbsp;<%= site.posts.data.length %>&nbsp;<%= __('categories.total').split(' ')[1] %>
   </div>
 </div>
-<div class="card card-content">
+<div class="card card-content categories-page-card">
   <% for(const postList of site.categories.data) { %>
   <a href="/categories/<%= postList.name %>" class="categories-page-list-item">
     <span><%= postList.name %></span>
