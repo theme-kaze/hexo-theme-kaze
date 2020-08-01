@@ -1,24 +1,24 @@
 <div class="sticky-tablet">
   <%# display when two columns %>
   <% if(is_post()){ %>
-  <div class="display-when-two-columns spacer">
+  <article class="display-when-two-columns spacer">
     <div class="card card-content toc-card">
       <%- partial('_partial/toc-card') %>
     </div>
-  </div>
+  </article>
   <% } %>
   <%# categories card %>
-  <div class="card card-content">
+  <article class="card card-content">
     <%- partial('_partial/categories') %>
-  </div>
+  </article>
   <%# tags card %>
-  <div class="card card-content">
+  <article class="card card-content">
     <%- partial('_partial/tags') %>
-  </div>
+  </article>
   <%# display when is not in post %>
   <% if(!is_post()) { %>
-  <div class="card card-content widescreen-archive">
+  <article class="card card-content widescreen-archive">
     <%- partial('_partial/archives') %>
-  </div>
+  </article>
   <% } %>
 </div>
