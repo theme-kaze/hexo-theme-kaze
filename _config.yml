@@ -18,10 +18,10 @@ page:
   about:
     description: description
     social_links:
-      - { icon: icon-icon-test5, link: https://github.com }
-      - { icon: icon-icon-test, link: / }
-      - { icon: icon-icon-test1, link: / }
-      - { icon: icon-icon-test4, link: / }
+      - { icon: icon-youtube, link: https://github.com }
+      - { icon: icon-linkedin, link: / }
+      - { icon: icon-stackflow, link: / }
+      - { icon: icon-mail, link: / }
 
 
 ### Sidebar ###
@@ -52,11 +52,10 @@ links:
   #   avatar:
 
 ### Post ###
-post:
-  toc:
-    show_list_number: false
-    max_depth: 6
-    min_depth: 1
+toc:
+  show_list_number: false
+  max_depth: 6
+  min_depth: 1
 
 ### Footer ###
 footer:
@@ -151,6 +150,18 @@ lazyload:
 #------------------------
 fslightbox:
   enable: true
+
+#------------------------
+# plugins config
+# css minify uses autoprefixer and clean-css
+# javascript minify uses uglify-es
+# html minify uses html-minifier
+minify:
+  enable: true
+  css: true
+  js: true
+  html: true
+#------------------------
 
 #------------------------
 # theme design config
