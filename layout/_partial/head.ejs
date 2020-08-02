@@ -86,4 +86,14 @@
   <%- css('//at.alicdn.com/t/font_1946621_vpj3dq9ceqa.css') %>
   <%# social icon %>
   <%- css('//at.alicdn.com/t/font_1952792_89b4ac4k4up.css') %>
+  <% if(config.prismjs.enable && !config.highlight.enable) { %>
+  <% let prismTheme = theme.prism.theme || 'default' %>
+  <% prismTheme = (prismTheme === 'default') ? 'prism' : ('prism-' + prismTheme) %>
+  <% const themeUrl = theme.cdn.prism + prismTheme + '.min.css' %>
+  <%- css(themeUrl) %>
+  <% if(config.prismjs.line_number && config.prismjs.preprocess) { %>
+  <% const lineUrl = theme.cdn.prism + 'prism-line-number.min.css' %>
+  <%- css(lineUrl) %>
+  <% } %>
+  <% } %>
 </head>

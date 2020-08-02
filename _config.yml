@@ -150,18 +150,22 @@ lazyload:
 #------------------------
 fslightbox:
   enable: true
-
+# If your hexo version is below 5.0.0, please upgrade first to use this config
+# we support eight highlight themes, you can go to prism website (https://prismjs.com) for more information
+# theme: default | coy | dark | funky | okaidia | solarizedlight | tomorrow | twilight
+prism:
+  theme: tomorrow
 #------------------------
-# plugins config
+# minify config
 # css minify uses autoprefixer and clean-css
 # javascript minify uses uglify-es
 # html minify uses html-minifier
+#------------------------
 minify:
   enable: true
   css: true
   js: true
   html: true
-#------------------------
 
 #------------------------
 # theme design config
@@ -201,3 +205,4 @@ cdn:
   livere: //cdn-city.livere.com/js/embed.dist.js
   fslightbox: //cdn.jsdelivr.net/npm/fslightbox@3.1.0/index.min.js
   lozad: /js/lib/lozad.min.js
+  prism: /js/lib/prism/

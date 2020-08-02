@@ -1,4 +1,7 @@
 /* eslint-disable */
+/*
+TODO: add highlight.js config 
+*/
 'use strict';
 hexo.extend.filter.register('after_post_render', (data) => {
   // delete <figure>, remain the <pre><code>...</code></pre>
