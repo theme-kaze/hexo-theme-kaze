@@ -31,7 +31,7 @@ darkControlButton.addEventListener('click', () => {
   setDarkmode(reverseDarkModeSetting());
 });
 // scroll-up.js
-function smoothScrollToTop() {
+const smoothScrollToTop = () => {
   let yTopValve = (window.pageYOffset || document.body.scrollTop || document.documentElement.scrollTop);
   if (yTopValve > 1) {
     window.requestAnimationFrame(smoothScrollToTop);
@@ -39,7 +39,70 @@ function smoothScrollToTop() {
   } else {
     scrollTo(0, 0);
   }
-}
+};
 setTimeout(() => {
   document.getElementById('scrollbutton').onclick = smoothScrollToTop;
+}, 0);
+// popbutton.js
+const reversePopButton = () => {
+  const scrollButton = document.getElementById('scrollbutton');
+  const menuButton = document.getElementById('menubutton');
+  const reverseButton = document.getElementById('popbutton');
+  const scrollWidth = document.body.scrollWidth || document.documentElement.scrollWidth;
+  if(scrollButton.style.display === 'flex') {
+    scrollButton.style.bottom = '32px';
+    scrollButton.style.opacity = '0';
+    reverseButton.style.transform = 'none';
+    setTimeout(() => {
+      scrollButton.style.display = 'none';
+    }, 100);
+  } else {
+    scrollButton.style.display = 'flex';
+    reverseButton.style.transform = 'rotate(-90deg)';
+    setTimeout(() => {
+      scrollButton.style.bottom = '85px';
+      scrollButton.style.opacity = '1';
+    }, 100);
+  }
+  if(scrollWidth <= 862) {
+    if(menuButton.style.display === 'flex') {
+      menuButton.style.right = '32px';
+      menuButton.style.opacity = '0';
+      setTimeout(() => {
+        menuButton.style.display = 'none';
+      }, 100);
+    } else {
+      menuButton.style.display = 'flex';
+      setTimeout(() => {
+        menuButton.style.right = '85px';
+        menuButton.style.opacity = '1';
+      }, 100);
+    }
+  }
+};
+setTimeout(() => {
+  document.getElementById('popbutton').onclick = reversePopButton;
+}, 0);
+// menuButton.js
+function menuClick(event) {
+  const target = event.target;
+  const mobileToc = document.getElementById('mobiletoc');
+  if(!mobileToc.contains(target)) {
+    mobileToc.style.display = 'none';
+    document.body.removeChild(mask);
+    document.removeEventListener('click', menuClick);
+  }
+}
+const clickMenuButton = () => {
+  const mobileToc = document.getElementById('mobiletoc');
+  mobileToc.style.display = 'block';
+  const mask = document.createElement('div');
+  mask.id = 'mask';
+  document.body.appendChild(mask);
+  setTimeout(() => {
+    document.addEventListener('click', menuClick);
+  }, 0);
+};
+setTimeout(() => {
+  document.getElementById('menubutton').onclick = clickMenuButton;
 }, 0);

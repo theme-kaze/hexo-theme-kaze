@@ -1,0 +1,32 @@
+.basebutton
+  display: flex
+  cursor: pointer
+  position: fixed
+  width: 44px
+  height: 44px
+  border-radius: 50%
+  box-shadow: var(--around-shadow-style)
+  justify-content: center
+  align-items: center
+  background-color: var(--widget-background-color)
+  transition: all .3s
+#scrollbutton
+  transform: rotate(90deg)
+  display: none
+  opacity: 0
+  bottom: 32px
+  right: 32px
+  .button-icon
+    font-size: $md-font-size
+#menubutton
+  display: none
+  opacity: 0
+  bottom: 32px
+  right: 32px
+  .button-icon
+    font-size: $md-font-size
+#popbutton
+  bottom: 32px
+  right: 32px
+  .button-icon
+    font-size: $sm-font-size
