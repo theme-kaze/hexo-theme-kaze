@@ -58,13 +58,14 @@ const reversePopButton = () => {
     }, 100);
   } else {
     scrollButton.style.display = 'flex';
-    reverseButton.style.transform = 'rotate(-90deg)';
+    reverseButton.style.transform = 'rotate(90deg)';
     setTimeout(() => {
       scrollButton.style.bottom = '85px';
       scrollButton.style.opacity = '1';
     }, 100);
   }
-  if (scrollWidth <= 862) {
+  const mobileToc = document.getElementById('mobiletoc');
+  if (scrollWidth <= 862 && mobileToc) {
     if (menuButton.style.display === 'flex') {
       menuButton.style.right = '32px';
       menuButton.style.opacity = '0';
