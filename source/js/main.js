@@ -49,7 +49,7 @@ const reversePopButton = () => {
   const menuButton = document.getElementById('menubutton');
   const reverseButton = document.getElementById('popbutton');
   const scrollWidth = document.body.scrollWidth || document.documentElement.scrollWidth;
-  if(scrollButton.style.display === 'flex') {
+  if (scrollButton.style.display === 'flex') {
     scrollButton.style.bottom = '32px';
     scrollButton.style.opacity = '0';
     reverseButton.style.transform = 'none';
@@ -64,8 +64,8 @@ const reversePopButton = () => {
       scrollButton.style.opacity = '1';
     }, 100);
   }
-  if(scrollWidth <= 862) {
-    if(menuButton.style.display === 'flex') {
+  if (scrollWidth <= 862) {
+    if (menuButton.style.display === 'flex') {
       menuButton.style.right = '32px';
       menuButton.style.opacity = '0';
       setTimeout(() => {
@@ -87,7 +87,10 @@ setTimeout(() => {
 function menuClick(event) {
   const target = event.target;
   const mobileToc = document.getElementById('mobiletoc');
-  if(!mobileToc.contains(target)) {
+  if (!mobileToc) {
+    return false;
+  }
+  if (!mobileToc.contains(target)) {
     mobileToc.style.display = 'none';
     document.body.removeChild(mask);
     document.removeEventListener('click', menuClick);
@@ -95,6 +98,9 @@ function menuClick(event) {
 }
 const clickMenuButton = () => {
   const mobileToc = document.getElementById('mobiletoc');
+  if (!mobileToc) {
+    return false;
+  }
   mobileToc.style.display = 'block';
   const mask = document.createElement('div');
   mask.id = 'mask';
