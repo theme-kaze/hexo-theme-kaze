@@ -44,3 +44,9 @@ prev_post:
 
 next_post:
   title: 下一篇
+
+words_count:
+  title: 字
+
+min2read:
+  title: 分钟

@@ -44,3 +44,9 @@ prev_post:
 
 next_post:
   title: Next
+
+words_count:
+  title: words
+
+min2read:
+  title: mins
