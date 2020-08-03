@@ -88,7 +88,7 @@ function menuClick(event) {
   const target = event.target;
   const mobileToc = document.getElementById('mobiletoc');
   if (!mobileToc) {
-    return false;
+    return;
   }
   if (!mobileToc.contains(target)) {
     mobileToc.style.display = 'none';
@@ -99,7 +99,7 @@ function menuClick(event) {
 const clickMenuButton = () => {
   const mobileToc = document.getElementById('mobiletoc');
   if (!mobileToc) {
-    return false;
+    return;
   }
   mobileToc.style.display = 'block';
   const mask = document.createElement('div');
