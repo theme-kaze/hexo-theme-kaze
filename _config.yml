@@ -23,7 +23,6 @@ page:
       - { icon: icon-stackflow, link: / }
       - { icon: icon-mail, link: / }
 
-
 ### Sidebar ###
 sidebar: right
 widgets:
@@ -155,6 +154,9 @@ fslightbox:
 # theme: default | coy | dark | funky | okaidia | solarizedlight | tomorrow | twilight
 prism:
   theme: tomorrow
+# show the number of words in posts
+wordcount:
+  enable: true
 #------------------------
 # minify config
 # css minify uses autoprefixer and clean-css

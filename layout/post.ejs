@@ -22,8 +22,10 @@
     <a href="<%= item.path %>" class="post-meta-link"><%= item.name %></a>
     <% } %>
     <% } %>
+    <% if(theme.wordcount.enable) { %>
     <span class="dot"></span>
     <span><%= wordcount(page.content) %> <%= __('words_count.title') %></span>
+    <% } %>
   </div>
   </header>
   <div id="section" class="post-content">
