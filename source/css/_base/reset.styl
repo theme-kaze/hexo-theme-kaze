@@ -75,7 +75,7 @@ li>p
   margin-top: 1rem
 li+li
   margin-top: 0.25rem
-code.highlight
+code
   color: var(--code-color)
   background-color: var(--code-background-color)
   margin: auto 0.2rem
@@ -84,6 +84,11 @@ code.highlight
   word-wrap: break-word
   border-radius: 0.25rem
   vertical-align: 0.1rem
+code[class*=language-]
+  margin: 0
+  padding: 0
+  border-radius: 0
+  vertical-align: 0
 table
   display: block
   overflow: auto
