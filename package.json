@@ -22,22 +22,23 @@
   },
   "homepage": "https://github.com/theme-kaze/hexo-theme-Kaze#readme",
   "devDependencies": {
-    "autoprefixer": "^9.8.5",
-    "clean-css": "^4.2.3",
     "ejs-lint": "^1.1.0",
     "eslint": "^7.4.0",
     "gulp": "^4.0.2",
     "gulp-eslint": "^6.0.0",
-    "gulp-shell": "^0.8.0",
-    "html-minifier": "^4.0.0",
     "husky": "^4.2.5",
-    "postcss": "^7.0.32",
-    "uglify-es": "^3.3.9"
+    "gulp-shell": "^0.8.0"
   },
   "husky": {
     "hooks": {
       "pre-commit": "npm run lint"
     }
   },
-  "dependencies": {}
+  "dependencies": {
+    "autoprefixer": "^9.8.5",
+    "clean-css": "^4.2.3",
+    "html-minifier": "^4.0.0",
+    "postcss": "^7.0.32",
+    "uglify-es": "^3.3.9"
+  }
 }

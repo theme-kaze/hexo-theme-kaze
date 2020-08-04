@@ -22,28 +22,13 @@ page:
   about:
     description: description
     social_links:
-      - { icon: icon-youtube, link: https://github.com }
-      - { icon: icon-linkedin, link: / }
-      - { icon: icon-stackflow, link: / }
-      - { icon: icon-mail, link: / }
+      # - { icon: icon, link: your link }
 
 #------------------------
 # Links
 #------------------------
 links:
-  friend1:
-    url: /
-    avatar: /img/Kaze.png
-    description: test1
-  friend2:
-    url: /
-    avatar: /img/Kaze.png
-    description: test2
-  friend3:
-    url: /
-    avatar: /img/Kaze.png
-    description: test3
-  # name1:
+  # name:
   #   url: https://example.com
   #   avatar:
 
@@ -147,7 +132,7 @@ wordcount:
 # html minify uses html-minifier
 #------------------------
 minify:
-  enable: true
+  enable: false
   css: true
   js: true
   html: true
