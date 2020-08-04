@@ -1,10 +1,14 @@
-### Header ###
+#------------------------
+# Header config
+#------------------------
 title: theme-kaze demo
 author: theme-kaze
 logo_img: /img/Kaze.png # put the logo on the ${blog_path}/source/img/${picname}.png or use urls
 author_img: /img/Kaze.png
 author_description: designed by theme-kaze
-### navebar ###
+#------------------------
+# navbar config
+#------------------------
 menus:
   home: /
   archive: /archives
@@ -23,16 +27,9 @@ page:
       - { icon: icon-stackflow, link: / }
       - { icon: icon-mail, link: / }
 
-### Sidebar ###
-sidebar: right
-widgets:
-  - category
-  - tag
-  - tagcloud
-  - archive
-  - recent_posts
-
-### Links ###
+#------------------------
+# Links
+#------------------------
 links:
   friend1:
     url: /
@@ -50,42 +47,28 @@ links:
   #   url: https://example.com
   #   avatar:
 
-### Post ###
+#------------------------
+# Post
+#------------------------
 toc:
-  show_list_number: false
-  max_depth: 6
-  min_depth: 1
-
-### Footer ###
+  showListNumber: false
+  maxDepth: 6
+  minDepth: 1
+#------------------------
+# Footer
+#------------------------
 footer:
-  copy_year: 2019
+  copyYear: 2020
   # if showPoweredBy is ture, 'Powered by Hexo' will be seen on the footer
   showPoweredBy: true
   # if showThemeName is ture, 'Theme - Kaze' will be seen on the footer
   showThemeName: true
 
-### Up to top ###
+#------------------------
+# Up to top
+#------------------------
 # if scrollUpAnimation is true, there will be scroll-up animation.
 scrollUpAnimation: true
-
-# display widgets at the bottom of index pages (pagination == 2)
-index_widgets:
-# - category
-# - tagcloud
-# - archive
-
-# widget behavior
-archive_type: "monthly"
-show_count: false
-
-# Miscellaneous
-google_analytics:
-gauges_analytics:
-favicon: /favicon.png
-twitter:
-google_plus:
-fb_admins:
-fb_app_id:
 
 #------------------------
 # comment config
@@ -127,15 +110,15 @@ comment:
 # latex config
 #------------------------
 # choose true to use latex by mathjax or katex
-latex:
+# warning: latex rendering will put lots of loading burden on page loading
+latex: 
   enable: false
-  engine: mathjax # mathjax | katex
+  engine: katex # mathjax | katex
   # for better rendering effect, when you choose mathjax, you can use it directly but you will lose some effect
   # so you can use hexo-renderer-kramed
-  # when you choose katex, you should use hexo-renderer-markdown-it-plus or other render engine
+  # when you choose katex, you must use hexo-renderer-markdown-it-plus or other render engine
   global: false
-  # because latex rendering will put lots of loading burden on page loading
-  # so when you choose false, you can use latex by `latex: true` in post front-matter
+  # when you choose false, you can use latex by `latex: true` in post front-matter
 
 #------------------------
 # lazyload config
@@ -168,7 +151,6 @@ minify:
   css: true
   js: true
   html: true
-
 #------------------------
 # theme design config
 #------------------------
