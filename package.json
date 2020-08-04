@@ -8,14 +8,14 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/0x4qE/hexo-theme-Kaze.git"
+    "url": "git+https://github.com/theme-kaze/hexo-theme-Kaze.git"
   },
   "keywords": [
     "hexo",
     "theme",
     "Kaze"
   ],
-  "author": "theme-kaze",
+  "author": "0x4qe",
   "license": "MIT",
   "bugs": {
     "url": "https://github.com/theme-kaze/hexo-theme-Kaze/issues"
@@ -40,5 +40,8 @@
     "html-minifier": "^4.0.0",
     "postcss": "^7.0.32",
     "uglify-es": "^3.3.9"
+  },
+  "directories": {
+    "lib": "lib"
   }
 }
