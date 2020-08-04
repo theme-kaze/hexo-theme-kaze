@@ -39,11 +39,9 @@ Kaze是一个简洁、响应式、快速的Hexo主题，由[theme-kaze](https://
 
 在Hexo5.0及以上版本中您可以直接通过输入
 
-\```bash
-
+```bash
 npm install hexo-theme-Kaze
-
-\```
+```
 
 直接安装主题
 
@@ -51,19 +49,13 @@ npm install hexo-theme-Kaze
 
 如果您有其他需要可以在`your site/themes`下输入
 
-\```bash
-
+```bash
 git clone https://github.com/theme-kaze/hexo-theme-Kaze.git
-
-\```
+```
 
 或者下载主题压缩包在`your site/themes`下解压，并且将`hexo-theme-Kaze`重命名为`Kaze`
 
-{% note %}
-
-重命名为`Kaze`是为了与通过`npm/yarn`下载保持一致性
-
-{% endnote %}
+> 重命名为`Kaze`是为了与通过`npm/yarn`下载保持一致性
 
 ## 配置说明
 
