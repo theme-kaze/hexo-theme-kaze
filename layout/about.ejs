@@ -4,12 +4,12 @@
   <% } %>
   <div class="about-card-content">
     <div class="about-card-author"><%= theme.author || config.author %></div>
-    <% if(theme.page.about.description) { %>
-      <div class="about-card-dsc"><%= theme.page.about.description %></div>
+    <% if(theme.about.description) { %>
+      <div class="about-card-dsc"><%= theme.about.description %></div>
     <% } %>
     <div class="about-card-society">
-      <% if(theme.page.about.social_links) { %>
-      <% for(const item of theme.page.about.social_links) { %>
+      <% if(theme.about.social_links) { %>
+      <% for(const item of theme.about.social_links) { %>
         <div class="about-card-society-icon">
           <a href="<%= item.link %>">
             <i class="iconfont <%= item.icon %> society-icon"></i>

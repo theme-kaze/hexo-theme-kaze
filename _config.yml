@@ -17,12 +17,10 @@ menus:
   about: /about
   friends: /links
 
-page:
-  # about page config
-  about:
-    description: description
-    social_links:
-      # - { icon: icon, link: your link }
+about:
+  description: description
+  social_links:
+    # - { icon: icon, link: your link }
 
 #------------------------
 # Links
