@@ -22,7 +22,7 @@ Kaze是一个简洁、响应式、快速的Hexo主题，由[theme-kaze](https://
 + 暗黑模式，享受黑夜的魅力
 + 代码高亮，支持prismjs
 + 公式渲染，支持`katex`和`mathjax`
-+ 评论系统，集成`valine`、`gittalk`和`livere`
++ 评论系统，集成`valine`、`gitalk`和`livere`
 
 ## Demo演示
 
