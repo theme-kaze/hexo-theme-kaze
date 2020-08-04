@@ -1,4 +1,6 @@
+<% if(theme.author_img) { %>
 <img src="<%- theme.author_img %>" class="author-img">
+<% } %>
 <p class="author-name"><%- theme.author || config.author %></p>
 <p class="author-description"><%- theme.author_description || config.description %></p>
 <div class="author-message">
@@ -15,6 +17,7 @@
     <span><%- __("tags.title") %></span>
   </a>
 </div>
+<% if(theme.page.about.social_links) { %>
 <div class="author-card-society">
   <% for(const item of theme.page.about.social_links) { %>
     <div class="author-card-society-icon">
@@ -24,3 +27,4 @@
     </div>
   <% } %>
 </div>
+<% } %>
