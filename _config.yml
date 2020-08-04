@@ -48,7 +48,7 @@ footer:
   showThemeName: true
 
 #------------------------
-# Up to top
+# animation config
 #------------------------
 # if scrollUpAnimation is true, there will be scroll-up animation.
 scrollUpAnimation: true

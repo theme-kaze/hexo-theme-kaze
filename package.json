@@ -1,6 +1,6 @@
 {
   "name": "hexo-theme-kaze",
-  "version": "0.0.1",
+  "version": "1.0.0",
   "description": "hexo-theme-kaze",
   "main": "index.js",
   "scripts": {
