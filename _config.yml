@@ -1,10 +1,14 @@
-### Header ###
+#------------------------
+# Header config
+#------------------------
 title: theme-kaze demo
 author: theme-kaze
 logo_img: /img/Kaze.png # put the logo on the ${blog_path}/source/img/${picname}.png or use urls
 author_img: /img/Kaze.png
 author_description: designed by theme-kaze
-### navebar ###
+#------------------------
+# navebar config
+#------------------------
 menus:
   home: /
   archive: /archives
@@ -22,15 +26,6 @@ page:
       - { icon: icon-linkedin, link: / }
       - { icon: icon-stackflow, link: / }
       - { icon: icon-mail, link: / }
-
-### Sidebar ###
-sidebar: right
-widgets:
-  - category
-  - tag
-  - tagcloud
-  - archive
-  - recent_posts
 
 ### Links ###
 links:
@@ -52,40 +47,23 @@ links:
 
 ### Post ###
 toc:
-  show_list_number: false
-  max_depth: 6
-  min_depth: 1
+  showListNumber: false
+  maxDepth: 6
+  minDepth: 1
 
 ### Footer ###
 footer:
-  copy_year: 2019
+  copyYear: 2020
   # if showPoweredBy is ture, 'Powered by Hexo' will be seen on the footer
   showPoweredBy: true
   # if showThemeName is ture, 'Theme - Kaze' will be seen on the footer
   showThemeName: true
 
-### Up to top ###
+#------------------------
+# Up to top
+#------------------------
 # if scrollUpAnimation is true, there will be scroll-up animation.
 scrollUpAnimation: true
-
-# display widgets at the bottom of index pages (pagination == 2)
-index_widgets:
-# - category
-# - tagcloud
-# - archive
-
-# widget behavior
-archive_type: "monthly"
-show_count: false
-
-# Miscellaneous
-google_analytics:
-gauges_analytics:
-favicon: /favicon.png
-twitter:
-google_plus:
-fb_admins:
-fb_app_id:
 
 #------------------------
 # comment config
@@ -128,12 +106,12 @@ comment:
 #------------------------
 # choose true to use latex by mathjax or katex
 latex:
-  enable: false
-  engine: mathjax # mathjax | katex
+  enable: true
+  engine: katex # mathjax | katex
   # for better rendering effect, when you choose mathjax, you can use it directly but you will lose some effect
   # so you can use hexo-renderer-kramed
-  # when you choose katex, you should use hexo-renderer-markdown-it-plus or other render engine
-  global: false
+  # when you choose katex, you must use hexo-renderer-markdown-it-plus or other render engine
+  global: true
   # because latex rendering will put lots of loading burden on page loading
   # so when you choose false, you can use latex by `latex: true` in post front-matter
 
@@ -149,25 +127,6 @@ lazyload:
 #------------------------
 fslightbox:
   enable: true
-# If your hexo version is below 5.0.0, please upgrade first to use this config
-# we support eight highlight themes, you can go to prism website (https://prismjs.com) for more information
-# theme: default | coy | dark | funky | okaidia | solarizedlight | tomorrow | twilight
-prism:
-  theme: tomorrow
-# show the number of words in posts
-wordcount:
-  enable: true
-#------------------------
-# minify config
-# css minify uses autoprefixer and clean-css
-# javascript minify uses uglify-es
-# html minify uses html-minifier
-#------------------------
-minify:
-  enable: true
-  css: true
-  js: true
-  html: true
 
 #------------------------
 # theme design config
@@ -192,7 +151,7 @@ color:
 
 font:
   font-size: 16px # global font-size
-  font-family: '-apple-system,BlinkMacSystemFont,"Segoe UI","Helvetica Neue","PingFang SC","Microsoft JhengHei","Microsoft YaHei",sans-serif' # global font-family
+  font-family: '-apple-system,BlinkMacSystemFont,"Segoe UI","Helvetica Neue","PingFang SC","Microsoft YaHei",sans-serif' # global font-family
 
 #------------------------
 # cdn config
@@ -206,5 +165,3 @@ cdn:
   valine: //unpkg.com/valine/dist/Valine.min.js
   livere: //cdn-city.livere.com/js/embed.dist.js
   fslightbox: //cdn.jsdelivr.net/npm/fslightbox@3.1.0/index.min.js
-  lozad: /js/lib/lozad.min.js
-  prism: /js/lib/prism/
