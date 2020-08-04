@@ -7,7 +7,7 @@ logo_img: /img/Kaze.png # put the logo on the ${blog_path}/source/img/${picname}
 author_img: /img/Kaze.png
 author_description: designed by theme-kaze
 #------------------------
-# navebar config
+# navbar config
 #------------------------
 menus:
   home: /
@@ -27,7 +27,9 @@ page:
       - { icon: icon-stackflow, link: / }
       - { icon: icon-mail, link: / }
 
-### Links ###
+#------------------------
+# Links
+#------------------------
 links:
   friend1:
     url: /
@@ -45,13 +47,16 @@ links:
   #   url: https://example.com
   #   avatar:
 
-### Post ###
+#------------------------
+# Post
+#------------------------
 toc:
   showListNumber: false
   maxDepth: 6
   minDepth: 1
-
-### Footer ###
+#------------------------
+# Footer
+#------------------------
 footer:
   copyYear: 2020
   # if showPoweredBy is ture, 'Powered by Hexo' will be seen on the footer
@@ -127,7 +132,25 @@ lazyload:
 #------------------------
 fslightbox:
   enable: true
-
+# If your hexo version is below 5.0.0, please upgrade first to use this config
+# we support eight highlight themes, you can go to prism website (https://prismjs.com) for more information
+# theme: default | coy | dark | funky | okaidia | solarizedlight | tomorrow | twilight
+prism:
+  theme: tomorrow
+# show the number of words in posts
+wordcount:
+  enable: true
+#------------------------
+# minify config
+# css minify uses autoprefixer and clean-css
+# javascript minify uses uglify-es
+# html minify uses html-minifier
+#------------------------
+minify:
+  enable: true
+  css: true
+  js: true
+  html: true
 #------------------------
 # theme design config
 #------------------------
@@ -165,3 +188,5 @@ cdn:
   valine: //unpkg.com/valine/dist/Valine.min.js
   livere: //cdn-city.livere.com/js/embed.dist.js
   fslightbox: //cdn.jsdelivr.net/npm/fslightbox@3.1.0/index.min.js
+  lozad: /js/lib/lozad.min.js
+  prism: /js/lib/prism/
