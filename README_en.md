@@ -33,11 +33,11 @@ Kaze is a simple, responsive and modern Hexo theme, designed by [theme-kaze](htt
 
 ### Installation
 
-** We recommend using Hexo 5.0.0 and above for a better experience **
+**We recommend using Hexo 5.0.0 and above for a better experience**
 
 ### Install by npm/yarn
 
-** Npm package has not been uploaded yet, please use other methods to install the theme **
+**Npm package has not been uploaded yet, please use other methods to install the theme**
 
 In version 5.0.0 and above, you can directly enter this command to install
 
