@@ -3,7 +3,7 @@
 </p>
 <p align="center">hexo-theme-Kaze</p>
 <p align="center">一个简洁，响应式的Hexo主题</p>
-<p align="center">中文 | <a href="README_en.md">英文</a></p>
+<p align="center">中文 | <a href="README_en.md">English</a></p>
 
 ---
 
@@ -37,8 +37,10 @@ Kaze是一个简洁、响应式、快速的Hexo主题，由[theme-kaze](https://
 
 ### 直接通过npm/yarn安装
 
-在Hexo5.0及以上版本中您可以直接通过输入
 **npm包暂时未上传，请先使用其他方式进行主题安装**
+
+在Hexo5.0及以上版本中您可以直接通过输入
+
 ```bash
 npm install hexo-theme-Kaze
 ```
@@ -53,9 +55,9 @@ npm install hexo-theme-Kaze
 git clone https://github.com/theme-kaze/hexo-theme-Kaze.git
 ```
 
-或者下载主题压缩包在`your site/themes`下解压，并且将`hexo-theme-Kaze`重命名为`Kaze`
+或者下载主题压缩包在`your site/themes`下解压，并且将`hexo-theme-Kaze`重命名为`kaze`
 
-> 重命名为`Kaze`是为了与通过`npm/yarn`下载保持一致性
+> 重命名为`kaze`是为了与通过`npm/yarn`下载保持一致性
 
 ## 配置说明
 
