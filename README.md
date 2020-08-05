@@ -29,7 +29,7 @@ Kaze是一个简洁、响应式、快速的Hexo主题，由[theme-kaze](https://
 + [Demo](https://demo.theme-kaze.top/)
 + [0x4qE's Blog](https://0727.site)
 
-![效果展示](https://github.com/theme-kaze/theme-kaze-demo/blob/master/source/img/gallery.png)
+![效果展示](https://img.songhn.com/img/gallery.png?imageslim)
 
 ## 安装
 
