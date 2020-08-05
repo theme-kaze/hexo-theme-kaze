@@ -29,6 +29,14 @@ links:
   # name:
   #   url: https://example.com
   #   avatar:
+  #   description:
+  #------------------------
+  # tip: if you want to use QQ avatar without giving away your QQ number,
+  # you can use this api to get an encrypted url:
+  # https://ptlogin2.qq.com/getface?appid=1006102&imgtype=3&uin=${yourQQNumber}
+  # and use the encrypted url in the json 
+  #------------------------
+  
 
 #------------------------
 # Post
