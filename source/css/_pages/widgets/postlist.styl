@@ -13,21 +13,22 @@
     &:not(.loaded)
       filter: blur(5px)
 .post-image
+  margin: auto
   filter: var(--image-filter-style)
   transition: filter 0.4s ease 0s
   &:not(.loaded)
     filter: blur(5px)
-@media screen and (min-width: 768px)
-  .image-wrapper
-    padding-bottom: 300px
-    .image
-      height: 300px
-  .post-image
-    height: 300px
-@media screen and (max-width: 767px)
-  .image-wrapper
-    height: 16.48rem
-    .image
-      height: 16.48rem
-  .post-image
-    height: 300px
+// @media screen and (min-width: 768px)
+//   .image-wrapper
+//     padding-bottom: 300px
+//     .image
+//       height: 300px
+//   .post-image
+//     height: 300px
+// @media screen and (max-width: 767px)
+//   .image-wrapper
+//     height: 16.48rem
+//     .image
+//       height: 16.48rem
+//   .post-image
+//     height: 300px
