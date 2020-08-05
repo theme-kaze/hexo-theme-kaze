@@ -6,14 +6,17 @@
 <p align="center">English | <a href="README_zh.md">中文</a></p>
 
 ---
+## Preview
 
-### Introduction
+![preview](https://img.songhn.com/img/gallery.png?imageslim)
+
+## Introduction
 
 Kaze is a simple, responsive and modern Hexo theme, designed by [theme-kaze](https://github.com/theme-kaze)
 
 > This theme references to the design of [SukkaW's blog](https://blog.skk.moe/)
 
-### Feature
+## Feature
 
 + Responsive design, adapt to mobile phones, tablets, computers and other devices
   + Front-end performance optimization, the design is lightweight and modern, minimize the use of JS libraries such as Jquery
@@ -29,9 +32,7 @@ Kaze is a simple, responsive and modern Hexo theme, designed by [theme-kaze](htt
 + [Demo](https://demo.theme-kaze.top/)
 + [0x4qE's Blog](https://0727.site)
 
-![preview](https://img.songhn.com/img/gallery.png?imageslim)
-
-### Installation
+## Installation
 
 **We recommend using Hexo 5.0.0 and above for a better experience**
 
