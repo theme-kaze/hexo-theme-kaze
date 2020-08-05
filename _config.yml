@@ -55,7 +55,6 @@ footer:
   showThemeName: true
   #------------------------
   # Record config
-  # if showRecordInfo is true, your record will be seen on the footer
   # please put the gov image in ${yoursite}/img/beian.png
   RecordInfo: "" # your Record info such as '某ICP备xxx号'
   govRecordInfo: "" # your gov record info such as '某公网安备xxx号'
