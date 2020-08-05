@@ -3,7 +3,7 @@
 </p>
 <p align="center">hexo-theme-Kaze</p>
 <p align="center">一个简洁，响应式的Hexo主题</p>
-<p align="center">中文 | <a href="README_en.md">英文</a></p>
+<p align="center">中文 | <a href="README_en.md">English</a></p>
 
 ---
 
