@@ -11,7 +11,7 @@
 
 Kaze is a simple, responsive and modern Hexo theme, designed by [theme-kaze](https://github.com/theme-kaze)
 
-> This theme refers to the design of [SukkaW's blog](https://blog.skk.moe/)
+> This theme references to the design of [SukkaW's blog](https://blog.skk.moe/)
 
 ### Feature
 
