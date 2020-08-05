@@ -25,8 +25,23 @@
       <%# showThemeName %>
       <% if(theme.footer.showThemeName) { %>
       Theme -
-      <a href="https://github.com/theme-kaze" class="footer-link" target="_blank" rel="nofollow noopener noreferrer">&nbsp;Kaze</a>
+      <a href="https://github.com/theme-kaze" class="footer-link" target="_blank"
+        rel="nofollow noopener noreferrer">&nbsp;Kaze</a>
       <% } %>
     </div>
+    <% } %>
+    <%# Record Info %>
+    <% if(theme.footer.RecordInfo) { %>
+    <div class="BbeiAn-info">
+      <a href="http://www.beian.miit.gov.cn/"><%= theme.footer.RecordInfo %> </a>
+    </div>
+    <% if(theme.footer.govRecordInfo) { %>
+    <div class="BbeiAn-info">
+      <span style="padding-left: 25px;background: url(/img/beian.png) no-repeat left center"></span>
+      <a href="<%= theme.footer.govRecordUrl %> "><%= theme.footer.govRecordInfo %>
+      </a>
+      <br />
+    </div>
+    <% } %>
     <% } %>
 </footer>
