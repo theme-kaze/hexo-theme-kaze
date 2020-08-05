@@ -13,12 +13,21 @@
         display: flex
         align-items: center
         .friend-text
+          width: 100% - 44px
           display: flex
           flex-direction: column
           .friend-name
+            max-width: 100%
+            overflow: hidden;
+            text-overflow: ellipsis;
+            white-space: nowrap;
             color: var(--text-strong-color)
             font-size: $ml-font-size
           .friend-dsc
+            max-width: 100%
+            overflow: hidden;
+            text-overflow: ellipsis;
+            white-space: nowrap;
             color: var(--info-text-color)
             font-size: $sm-font-size
         .friend-avatar

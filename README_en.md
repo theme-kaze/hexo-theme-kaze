@@ -3,14 +3,78 @@
 </p>
 <p align="center">hexo-theme-Kaze</p>
 <p align="center">A simple, responsive Hexo theme</p>
-<p align="center">English | <a href="README_zh.md">Chinese</a></p>
+<p align="center">English | <a href="README.md">中文</a></p>
 
 ---
 
-> TODO
-
 ### Introduction
+
+Kaze is a simple, responsive and modern Hexo theme, designed by [theme-kaze](https://github.com/theme-kaze)
+
+> This theme refers to the design of [SukkaW's blog](https://blog.skk.moe/)
 
 ### Feature
 
-### installation
++ Responsive design, adapt to mobile phones, tablets, computers and other devices
+  + Front-end performance optimization, the design is lightweight and modern, minimize the use of JS libraries such as Jquery
+  + Image lazy loading, can be used with thumbnails to get a better experience
++ Support resource compression, reduce resource volume and speed up access
++ Dark mode, enjoy the comfort of the night
++ Code highlight, support prismjs
++ Formula rendering, support `katex` and `mathjax`
++ Support comment, integrated `valine`, `gitalk`, `livere`
+
+## Demo
+
++ [Demo](https://demo.theme-kaze.top/)
++ [0x4qE's Blog](https://0727.site)
+
+![preview](https://github.com/theme-kaze/theme-kaze-demo/blob/master/source/img/gallery.png)
+
+### Installation
+
+**We recommend using Hexo 5.0.0 and above for a better experience**
+
+### Install by npm/yarn
+
+**Npm package has not been uploaded yet, please use other methods to install the theme**
+
+In version 5.0.0 and above, you can directly enter this command to install
+
+```bash
+npm install hexo-theme-Kaze
+```
+
+### Other method
+
+Enter this command under `your site/themes`
+
+```bash
+git clone https://github.com/theme-kaze/hexo-theme-Kaze.git
+```
+
+Or download compression package and unzip under `your site/themes`, rename `hexo-theme-Kaze` to `kaze`
+
+> Renamed to `kaze` is to maintain consistency with installation by `npm/yarn`
+
+## Configuration document
+
+[Configuration document](https://demo.theme-kaze.top/document/)
+
+## Issue template
+
+If you have any `bug` or suggestion, please send us `issue`!
+
+```markdown
+## Hexo version and the problems you encountered
+TODO
+## Reproduction method
+TODO
+## other problems
+TODO
+```
+
+## Contributors
+
++ [@0x4qE](https://github.com/0x4qE)
++ [@songhn233](https://github.com/songhn233)

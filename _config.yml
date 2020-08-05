@@ -1,6 +1,6 @@
+--- #------------------------
 #------------------------
 # Header config
-#------------------------
 title: theme-kaze demo
 author: theme-kaze
 logo_img: /img/Kaze.png # put the logo on the ${blog_path}/source/img/${picname}.png or use urls
@@ -29,6 +29,13 @@ links:
   # name:
   #   url: https://example.com
   #   avatar:
+  #   description:
+  #------------------------
+  # tip: if you want to use QQ avatar without giving away your QQ number,
+  # you can use this api to get an encrypted url:
+  # https://ptlogin2.qq.com/getface?appid=1006102&imgtype=3&uin=${yourQQNumber}
+  # and use the encrypted url in the json
+  #------------------------
 
 #------------------------
 # Post
@@ -46,6 +53,13 @@ footer:
   showPoweredBy: true
   # if showThemeName is ture, 'Theme - Kaze' will be seen on the footer
   showThemeName: true
+  #------------------------
+  # Record config
+  # please put the gov image in ${yoursite}/img/beian.png
+  RecordInfo: "" # your Record info such as '某ICP备xxx号'
+  govRecordInfo: "" # your gov record info such as '某公网安备xxx号'
+  govRecordUrl: "" # your gov record url
+  #------------------------
 
 #------------------------
 # animation config
@@ -94,7 +108,7 @@ comment:
 #------------------------
 # choose true to use latex by mathjax or katex
 # warning: latex rendering will put lots of loading burden on page loading
-latex: 
+latex:
   enable: false
   engine: katex # mathjax | katex
   # for better rendering effect, when you choose mathjax, you can use it directly but you will lose some effect
