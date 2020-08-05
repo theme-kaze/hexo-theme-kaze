@@ -37,12 +37,10 @@ Kaze is a simple, responsive and modern Hexo theme, designed by [theme-kaze](htt
 
 ### Install by npm/yarn
 
-**Npm package has not been uploaded yet, please use other methods to install the theme**
-
 In version 5.0.0 and above, you can directly enter this command to install
 
 ```bash
-npm install hexo-theme-Kaze
+npm install hexo-theme-kaze
 ```
 
 ### Other method

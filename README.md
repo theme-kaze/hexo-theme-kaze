@@ -37,12 +37,10 @@ Kaze是一个简洁、响应式、快速的Hexo主题，由[theme-kaze](https://
 
 ### 直接通过npm/yarn安装
 
-**npm包暂时未上传，请先使用其他方式进行主题安装**
-
 在Hexo5.0及以上版本中您可以直接通过输入
 
 ```bash
-npm install hexo-theme-Kaze
+npm install hexo-theme-kaze
 ```
 
 直接安装主题
