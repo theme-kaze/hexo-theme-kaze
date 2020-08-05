@@ -3,7 +3,7 @@
 </p>
 <p align="center">hexo-theme-Kaze</p>
 <p align="center">A simple, responsive Hexo theme</p>
-<p align="center">English | <a href="README.md">中文</a></p>
+<p align="center">English | <a href="README_zh.md">中文</a></p>
 
 ---
 
@@ -29,7 +29,7 @@ Kaze is a simple, responsive and modern Hexo theme, designed by [theme-kaze](htt
 + [Demo](https://demo.theme-kaze.top/)
 + [0x4qE's Blog](https://0727.site)
 
-![preview](https://github.com/theme-kaze/theme-kaze-demo/blob/master/source/img/gallery.png)
+![preview](https://img.songhn.com/img/gallery.png?imageslim)
 
 ### Installation
 
