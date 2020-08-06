@@ -4,6 +4,20 @@
 <p align="center">hexo-theme-Kaze</p>
 <p align="center">A simple, responsive Hexo theme</p>
 <p align="center">English | <a href="README_zh.md">中文</a></p>
+<p align="center">
+  <a href="https://www.npmjs.com/package/hexo-theme-kaze/v/latest">
+    <img src="https://img.shields.io/npm/v/hexo-theme-kaze">
+  </a>
+  <a href="https://github.com/theme-kaze/hexo-theme-kaze/blob/master/LICENSE">
+    <img src="https://img.shields.io/npm/l/hexo-theme-kaze">
+  </a>
+  <a href="https://github.com/theme-kaze/hexo-theme-kaze/commits/master">
+    <img src="https://img.shields.io/github/commit-activity/w/theme-kaze/hexo-theme-kaze?color=red">
+  </a>
+  <a href="https://github.com/theme-kaze/hexo-theme-kaze/commits/master">
+    <img src="https://img.shields.io/github/last-commit/theme-kaze/hexo-theme-kaze/master">
+  </a>
+</p>
 
 ---
 ## Preview
