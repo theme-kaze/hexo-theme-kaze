@@ -11,14 +11,14 @@
         appId: '<%= theme.comment.valine.appId %>',
         appKey: '<%= theme.comment.valine.appKey %>',
         placeholder: '<%= theme.comment.valine.placeholder %>',
-        path: '<%= theme.comment.valine.path %>',
+        path: <%= theme.comment.valine.path %>,
         avatar: '<%= theme.comment.valine.avatar %>',
         meta: <%- JSON.stringify(theme.comment.valine.meta || []) %>,
         pageSize: '<%= theme.comment.valine.pageSize %>',
         lang: '<%= theme.comment.valine.lang %>',
         visitor: '<%= theme.comment.valine.visitor %>',
-        highlight: '<%= theme.comment.valine.highlight %>',
-        recordIP: '<%= theme.comment.valine.recordIP %>',
+        highlight: <%= theme.comment.valine.highlight %>,
+        recordIP: <%= theme.comment.valine.recordIP %>,
         <% if(theme.comment.valine.serverURLs) { %>
         serverURLs: '<%= theme.comment.valine.serverURLs %>',
         <% } %>
