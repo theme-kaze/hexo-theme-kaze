@@ -52,7 +52,7 @@ Enter this command under `your site/themes`
 git clone https://github.com/theme-kaze/hexo-theme-Kaze.git
 ```
 
-Or download compression package and unzip under `your site/themes`, rename `hexo-theme-Kaze` to `kaze`
+Or download compression package and unzip under `your site/themes`, rename `hexo-theme-kaze` to `kaze`
 
 > Renamed to `kaze` is to maintain consistency with installation by `npm/yarn`
 

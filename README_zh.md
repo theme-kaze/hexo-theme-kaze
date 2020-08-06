@@ -54,7 +54,7 @@ npm install hexo-theme-kaze
 git clone https://github.com/theme-kaze/hexo-theme-Kaze.git
 ```
 
-或者下载主题压缩包在`your site/themes`下解压，并且将`hexo-theme-Kaze`重命名为`kaze`
+或者下载主题压缩包在`your site/themes`下解压，并且将`hexo-theme-kaze`重命名为`kaze`
 
 > 重命名为`kaze`是为了与通过`npm/yarn`下载保持一致性
 
