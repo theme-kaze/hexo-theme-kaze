@@ -28,14 +28,15 @@
 
 Kaze is a simple, responsive and modern Hexo theme, designed by [theme-kaze](https://github.com/theme-kaze)
 
-> This theme references to the design of [SukkaW's blog](https://blog.skk.moe/)
 
 ## Feature
 
 + Responsive design, adapt to mobile phones, tablets, computers and other devices
-  + Front-end performance optimization, the design is lightweight and modern, minimize the use of JS libraries such as Jquery
++ Front-end performance optimization
   + Image lazy loading, can be used with thumbnails to get a better experience
-+ Support resource compression, reduce resource volume and speed up access
+  + Support resource compression, reduce resource volume and speed up access
+  + minimize the use of JS libraries such as Jquery
++ Support sidebar widgets, such as recent articles, author cards
 + Dark mode, enjoy the comfort of the night
 + Code highlight, support prismjs
 + Formula rendering, support `katex` and `mathjax`
@@ -70,7 +71,7 @@ Or download compression package and unzip under `your site/themes`, rename `hexo
 
 > Renamed to `kaze` is to maintain consistency with installation by `npm/yarn`
 
-## Configuration document
+## document
 
 [Configuration document](https://demo.theme-kaze.top/document/)
 
@@ -91,3 +92,11 @@ TODO
 
 + [@0x4qE](https://github.com/0x4qE)
 + [@songhn233](https://github.com/songhn233)
+
+### Special Thanks
+
+This theme references to the design of [SukkaW's blog](https://blog.skk.moe/)
+
+## License
+
+Open sourced under the MIT License

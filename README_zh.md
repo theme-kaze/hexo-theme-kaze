@@ -22,6 +22,8 @@ Kaze是一个简洁、响应式、快速的Hexo主题，由[theme-kaze](https://
 + 前端性能优化，加载快速，眨眼之间即可加载完成
   + 图片懒加载，应用懒加载技术加快页面的生成速度
   + 资源压缩，提升了本地资源约20%的请求速度
+  + 精简设计，不包含Jquery等额外库
++ 支持侧边栏小组件，例如最近文章，作者卡片
 + 暗黑模式，享受黑夜的魅力
 + 代码高亮，支持prismjs
 + 公式渲染，支持`katex`和`mathjax`
@@ -79,3 +81,11 @@ TODO
 
 + [@0x4qE](https://github.com/0x4qE)
 + [@songhn233](https://github.com/songhn233)
+
+### 特别感谢
+
+主题样式设计参考了[SukkaW's blog](https://blog.skk.moe/)
+
+## 开源许可
+
+根据MIT许可开源
