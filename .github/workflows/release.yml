@@ -1,8 +1,6 @@
 name: ReleaseWorkflow
 on:
   push:
-    branches:
-      - master
     tags:
       - v*
 
@@ -25,27 +23,5 @@ jobs:
           npm publish
         env:
           NODE_AUTH_TOKEN: '${{ secrets.npm_token }}'
-  github-release:
-    runs-on: ubuntu-latest
-    steps:
-      - name: Checkout
-        uses: actions/checkout@v2
-        with:
-          ref: master
-      - name:  Stepup Node
-        uses: actions/setup-node@v1
-        with:
-          node-version: '12.x'
-      - name: Create Release
-        id: create_release
-        uses: actions/create-release@v1
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-        with:
-          tag_name: ${{ github.ref }}
-          release_name: ${{ github.ref }}
-          body_path: https://github.com/theme-kaze/hexo-theme-kaze/blob/master/version.md
-          draft: false
-          prerelease: false
 
         
