@@ -1,8 +1,6 @@
 name: ReleaseWorkflow
 on:
   push:
-    branches:
-      - master
     tags:
       - v*
 
@@ -44,7 +42,7 @@ jobs:
         with:
           tag_name: ${{ github.ref }}
           release_name: ${{ github.ref }}
-          body_path: https://github.com/theme-kaze/hexo-theme-kaze/blob/master/version.md
+          body_path: ./version.md
           draft: false
           prerelease: false
 
