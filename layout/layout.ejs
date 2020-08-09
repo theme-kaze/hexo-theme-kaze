@@ -40,6 +40,10 @@
   <% } %>
   <%# javascript %>
   <%- js('js/main.js') %>
+  <% if(theme.footer.statistics.enable && theme.footer.statistics.type === 'busuanzi') { %>
+  <script>loadScript("<%= theme.cdn.busuanzi %>")</script>
+  <% } %>
+  <% if(theme.lazyload.enable) { %>
   <script>
     var addLazyload = function () {
       var observer = lozad('.lozad', {
@@ -54,6 +58,18 @@
     }
   </script>
   <script>loadScript("<%= theme.cdn.lozad %>", addLazyload)</script>
+  <% } %>
+  <% if(theme.analytics.enable && theme.analytics.type === 'google' && theme.analytics.google.id) { %>
+  <script>
+    var googleAnalytics = function() {
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', '<%= theme.analytics.google.id %>');
+    }
+  </script>
+  <script>loadScript("https://www.googletagmanager.com/gtag/js?id=" + "<%= theme.analytics.google.id %>", googleAnalytics)</script>
+  <% } %>
 </body>
 
 </html>

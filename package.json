@@ -1,6 +1,6 @@
 {
   "name": "hexo-theme-kaze",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "hexo-theme-kaze",
   "main": "index.js",
   "scripts": {
@@ -20,7 +20,7 @@
   "bugs": {
     "url": "https://github.com/theme-kaze/hexo-theme-Kaze/issues"
   },
-  "homepage": "https://github.com/theme-kaze/hexo-theme-Kaze#readme",
+  "homepage": "https://demo.theme-kaze.top/",
   "devDependencies": {
     "ejs-lint": "^1.1.0",
     "eslint": "^7.4.0",
