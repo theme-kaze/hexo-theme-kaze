@@ -1,4 +1,3 @@
---- #------------------------
 #------------------------
 # Header config
 title: theme-kaze demo
@@ -7,7 +6,7 @@ logo_img: /img/Kaze.png # put the logo on the ${blog_path}/source/img/${picname}
 author_img: /img/Kaze.png
 author_description: designed by theme-kaze
 #------------------------
-# navbar config
+# Navbar config
 #------------------------
 menus:
   home: /
@@ -60,6 +59,17 @@ footer:
   govRecordInfo: "" # your gov record info such as '某公网安备xxx号'
   govRecordUrl: "" # your gov record url
   #------------------------
+  # pv / uv statistics config
+  #------------------------
+  statistics:
+    enable: false
+    type: busuanzi # now version only supports busuanzi
+    pv:
+      enable: true
+      style: 本站总访问量{}次 # the style will be shown as $1{pv}$2
+    uv:
+      enable: true
+      style: 本站总访客数{}次 # the style will be shown as $1{uv}$2
 
 #------------------------
 # animation config
@@ -110,7 +120,7 @@ comment:
 # warning: latex rendering will put lots of loading burden on page loading
 latex:
   enable: false
-  engine: katex # mathjax | katex
+  engine: mathjax # mathjax | katex
   # for better rendering effect, when you choose mathjax, you can use it directly but you will lose some effect
   # so you can use hexo-renderer-kramed
   # when you choose katex, you must use hexo-renderer-markdown-it-plus or other render engine
@@ -137,6 +147,12 @@ prism:
 # show the number of words in posts
 wordcount:
   enable: true
+# Analytics config
+analytics:
+  enable: false
+  type: google # google
+  google:
+    id: # you can see more information in https://analytics.google.com/
 #------------------------
 # minify config
 # css minify uses autoprefixer and clean-css
@@ -187,3 +203,4 @@ cdn:
   fslightbox: //cdn.jsdelivr.net/npm/fslightbox@3.1.0/index.min.js
   lozad: /js/lib/lozad.min.js
   prism: /js/lib/prism/
+  busuanzi: /js/lib/busuanzi.min.js

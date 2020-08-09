@@ -34,14 +34,14 @@ Kaze is a simple, responsive and modern Hexo theme, designed by [theme-kaze](htt
 + Responsive design, adapt to mobile phones, tablets, computers and other devices
 + Front-end performance optimization
   + Image lazy loading, can be used with thumbnails to get a better experience
-  + Support resource compression, reduce resource volume and speed up access
+  + Resource minify, speed up access speed
   + minimize the use of JS libraries such as Jquery
-+ Support sidebar widgets, such as recent articles, author cards
++ Sidebar widgets, such as recent articles, author cards
 + Dark mode, enjoy the comfort of the night
 + Code highlight, support prismjs
 + Formula rendering, support `katex` and `mathjax`
-+ Support comment, integrated `valine`, `gitalk`, `livere`
-
++ Comments, integrated `valine`, `gitalk`, `livere`
++ PV/UV statistics and google analytics support
 ## Demo
 
 + [Demo](https://demo.theme-kaze.top/)
@@ -59,12 +59,17 @@ In version 5.0.0 and above, you can directly enter this command to install
 npm install hexo-theme-kaze
 ```
 
+then change `your site/_config.yml`
+
+```yaml
+theme: kaze
+```
 ### Other method
 
 Enter this command under `your site/themes`
 
 ```bash
-git clone https://github.com/theme-kaze/hexo-theme-Kaze.git
+git clone https://github.com/theme-kaze/hexo-theme-kaze.git
 ```
 
 Or download compression package and unzip under `your site/themes`, rename `hexo-theme-kaze` to `kaze`

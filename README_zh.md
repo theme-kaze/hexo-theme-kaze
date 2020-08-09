@@ -21,14 +21,14 @@ Kaze是一个简洁、响应式、快速的Hexo主题，由[theme-kaze](https://
 + 响应式设计，适配桌面端、平板、手机等各种设备
 + 前端性能优化，加载快速，眨眼之间即可加载完成
   + 图片懒加载，应用懒加载技术加快页面的生成速度
-  + 资源压缩，提升了本地资源约20%的请求速度
+  + 资源压缩，提升本地资源请求速度
   + 精简设计，不包含Jquery等额外库
 + 支持侧边栏小组件，例如最近文章，作者卡片
 + 暗黑模式，享受黑夜的魅力
 + 代码高亮，支持prismjs
 + 公式渲染，支持`katex`和`mathjax`
 + 评论系统，集成`valine`、`gitalk`和`livere`
-
++ 访问量统计和谷歌分析支持
 ## Demo演示
 
 + [Demo](https://demo.theme-kaze.top/)
@@ -46,14 +46,18 @@ Kaze是一个简洁、响应式、快速的Hexo主题，由[theme-kaze](https://
 npm install hexo-theme-kaze
 ```
 
-直接安装主题
+直接安装主题，接着修改`your site/_config.yml`
+
+```yaml
+theme: kaze
+```
 
 ### 其他方式
 
 如果您有其他需要可以在`your site/themes`下输入
 
 ```bash
-git clone https://github.com/theme-kaze/hexo-theme-Kaze.git
+git clone https://github.com/theme-kaze/hexo-theme-kaze.git
 ```
 
 或者下载主题压缩包在`your site/themes`下解压，并且将`hexo-theme-kaze`重命名为`kaze`
