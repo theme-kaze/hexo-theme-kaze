@@ -44,6 +44,15 @@
   <div id="section" class="post-content">
     <%- page.content %>
   </div>
+  <div>
+  <% if(theme.copyright.enable) { %>
+  <div class="post-note note-<%= theme.copyright.style || "warning" %> copyright" style="margin-top: 42px">
+    <p><span style="font-weight: bold;">作者：</span><a target="_blank" rel="nofollow noopener noreferrer" href="<%= config.url + '/about' %>"><%= theme.copyright.writer || theme.author || config.author%></a></p>
+    <p><span style="font-weight: bold;">文章链接：</span><a target="_blank" rel="nofollow noopener noreferrer" href="<%= page.permalink %>"><%= page.permalink %></a></p>
+    <p><span style="font-weight: bold;">版权声明：</span><%- theme.copyright.declare %></p>
+  </div>
+  <% } %>
+  </div>
 </article>
 <%- partial('_partial/pagination',{ 
   prev_label: __("prev_post.title"), next_label:__("next_post.title"),

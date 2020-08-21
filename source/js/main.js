@@ -26,7 +26,14 @@ see theme at https://github.com/0x4qE/hexo-theme-Kaze
 `);
 // darkmode.js
 // reverse button
-const darkControlButton = document.getElementById('dark');
+const scrollWidth = document.body.scrollWidth || document.documentElement.scrollWidth;
+let darkControlButton = null;
+if (scrollWidth <= 742) {
+  darkControlButton = document.querySelector('.darkwidget');
+} else {
+  darkControlButton = document.querySelector('.darknavbar');
+}
+
 darkControlButton.addEventListener('click', () => {
   setDarkmode(reverseDarkModeSetting());
 });
@@ -80,6 +87,24 @@ const reversePopButton = () => {
       }, 100);
     }
   }
+  const darkButton = document.querySelector('.darkwidget');
+  if (scrollWidth <= 742) {
+    if (darkButton.style.display === 'flex') {
+      darkButton.style.bottom = '32px';
+      darkButton.style.opacity = '0';
+      darkButton.style.transform = 'none';
+      setTimeout(() => {
+        darkButton.style.display = 'none';
+      }, 100);
+    } else {
+      darkButton.style.display = 'flex';
+      reverseButton.style.transform = 'rotate(90deg)';
+      setTimeout(() => {
+        darkButton.style.bottom = '138px';
+        darkButton.style.opacity = '1';
+      }, 100);
+    }
+  } 
 };
 setTimeout(() => {
   document.getElementById('popbutton').onclick = reversePopButton;
