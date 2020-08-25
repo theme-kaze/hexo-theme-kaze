@@ -9,7 +9,13 @@
   </div>
   <div class="navbar-menu">
     <% for(const menu in theme.menus) { %>
-    <a href="<%= theme.menus[menu] %>" class="navbar-menu-item"><%- __(menu + '.title') %> </a>
+    <a href="<%= theme.menus[menu] %>" class="navbar-menu-item">
+    <% if(__(menu + '.title') === menu + '.title') { %>
+    <%- menu %>
+    <% } else { %>
+    <%- __(menu + '.title') %>
+    <% } %>
+    </a>
     <% } %>
     <a class="navbar-menu-item darknavbar" id="dark"><i class="iconfont icon-weather"></i></a>
   </div>

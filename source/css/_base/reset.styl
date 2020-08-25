@@ -27,8 +27,6 @@ ul
   list-style: none
 button, input, select, textarea
   margin: 0
-html
-  box-sizing: border-box
 *, *::before, *::after
   box-sizing: inherit
 img
@@ -54,12 +52,14 @@ div
   display: block
 *
   box-sizing: border-box
-body
+html, body
   height: 100vh
   font-size: $base-font-size
   font-family: $font-family
   color: var(--text-color)
   background-color: var(--body-background-color)
+  box-sizing: border-box
+  overflow-wrap: break-word
 ol ol, ul ol, ul ul
   margin-top: 0
   margin-bottom: 0
