@@ -204,7 +204,7 @@ const localSearch = function (path) {
           }
           if (isMatch) {
             str += '<li><a href=\'' + data.url + '\' class=\'search-result-title\'>' + dataTitle + '</a>';
-            const content = data.content.trim().replace(/<[^>]+>/g, '');
+            const content = data.content;
             if (firstOccur >= 0) {
               const start = Math.max(0, firstOccur - 12);
               const end = Math.min(content.length, firstOccur + 12);

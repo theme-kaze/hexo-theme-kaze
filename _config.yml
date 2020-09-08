@@ -55,6 +55,14 @@ search:
   path: search.json
   field: posts
   searchContent: true
+
+og:
+  enable: true
+  title: true
+  url: true
+  image: true
+  description: true
+  article: true
 #------------------------
 # Footer
 #------------------------

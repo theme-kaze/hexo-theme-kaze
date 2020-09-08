@@ -6,6 +6,31 @@
   <meta name="theme-color" content="#fff" id="theme-color">
   <link rel="icon" href="<%= theme.logo_img %>">
   <title><%- theme.title %></title>
+  <% if(theme.og && theme.og.enable) { %>
+  <% if(theme.og.title) { %>
+  <meta property="og:title" content="<%= page.title || theme.title || config.title %>">
+  <% } %>
+  <% if(theme.og.url) { %>
+  <meta property="og:url" content="<%= url %>">
+  <% } %>
+  <% if(theme.og.image && (page.banner_img || theme.author_img)) { %>
+  <meta property="og:img" content="<%= page.banner_img || theme.author_img %>">
+  <% } %>
+  <% if(theme.og.description && (page.excerpt || theme.description || config.description)) { %>
+  <meta property="og:img" content="<%= page.excerpt || theme.description || config.description %>">
+  <% } %>
+  <% if(theme.og.article && is_post()) { %>
+  <meta property="og:type" content="article">
+  <meta property="og:article:published_time" content="<%= date(page.date) %>">
+  <meta property="og:article:modified_time" content="<%= date(page.updated) %>">
+  <meta property="og:article:author" content="<%= theme.author || config.author %>">
+  <% if(page.tags.data) { %>
+  <% for(let item of page.tags.data) { %>
+  <meta property="og:article:tag" content="<%= item.name %>">
+  <% } %>
+  <% } %>
+  <% } %>
+  <% } %>
   <script>
     // control reverse button
     var reverseDarkList = {
