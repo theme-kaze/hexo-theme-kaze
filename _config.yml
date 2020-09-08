@@ -49,6 +49,12 @@ copyright:
   writer: # if writer is empty we will use config.author as writer
   declare: 本博客所有文章除特别声明外，均采用<a target="_blank" rel="noopener" href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh">CC BY-NC-SA 4.0 协议</a>。转载请注明出处！
   style: warning # the style uses note warning | danger | primary | info | success
+
+search:
+  enable: true
+  path: search.json
+  field: posts
+  searchContent: true
 #------------------------
 # Footer
 #------------------------
