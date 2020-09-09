@@ -1,0 +1,25 @@
+name: BetaReleaseWorkflow
+on:
+  push:
+    tags:
+      - beta*
+
+jobs:
+  publish-npm:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v2
+        with:
+          ref: master
+      - name:  Stepup Node
+        uses: actions/setup-node@v1
+        with:
+          node-version: '12.x'
+          registry-url: 'https://registry.npmjs.org/'
+      - name: NPM Publish
+        run: |
+          npm install
+          npm publish --tag beta
+        env:
+          NODE_AUTH_TOKEN: '${{ secrets.npm_token }}'
