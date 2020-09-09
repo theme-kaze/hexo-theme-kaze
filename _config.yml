@@ -91,6 +91,8 @@ footer:
       enable: true
       style: 本站总访客数{}次 # the style will be shown as $1{uv}$2
 
+widgets:
+  showWidgetsMobiles: "none"
 #------------------------
 # animation config
 #------------------------

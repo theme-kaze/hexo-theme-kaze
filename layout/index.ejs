@@ -32,10 +32,6 @@
         <a href="<%= item.path %>" class="post-meta-link"><%= item.name %></a>
         <% } %>
         <% } %>
-        <% if(theme.wordcount.enable) { %>
-        <span class="dot"></span>
-        <span><%= wordcount(post.content) %> <%= __('words_count.title') %></span>
-        <% } %>
       </div>
       <a href="<%= url_for(post.path) %>"><%- __('readmore.title') %> </a>
     </div>
