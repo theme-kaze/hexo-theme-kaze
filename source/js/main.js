@@ -1,5 +1,6 @@
 /* eslint-disable no-undef */
 // console.js
+'use strict';
 console.log(String.raw`
           _____                    _____                    _____                    _____          
          /\    \                  /\    \                  /\    \                  /\    \         
@@ -22,16 +23,19 @@ console.log(String.raw`
        \::|   |                  /:::/    /              \:::\____\               \:::\____\        
         \:|   |                  \::/    /                \::/    /                \::/    /        
          \|___|                   \/____/                  \/____/                  \/____/         
-see theme at https://github.com/0x4qE/hexo-theme-Kaze
+see theme at https://github.com/theme-kaze/hexo-theme-kaze
 `);
 // darkmode.js
 // reverse button
 const scrollWidth = document.body.scrollWidth || document.documentElement.scrollWidth;
 let darkControlButton = null;
+let searchControlButton = null;
 if (scrollWidth <= 742) {
   darkControlButton = document.querySelector('.darkwidget');
+  searchControlButton = document.querySelector('.searchwidget');
 } else {
   darkControlButton = document.querySelector('.darknavbar');
+  searchControlButton = document.querySelector('.searchnavbar');
 }
 
 darkControlButton.addEventListener('click', () => {
@@ -88,6 +92,7 @@ const reversePopButton = () => {
     }
   }
   const darkButton = document.querySelector('.darkwidget');
+  const searchButton = document.querySelector('.searchwidget');
   if (scrollWidth <= 742) {
     if (darkButton.style.display === 'flex') {
       darkButton.style.bottom = '32px';
@@ -104,6 +109,22 @@ const reversePopButton = () => {
         darkButton.style.opacity = '1';
       }, 100);
     }
+
+    if (searchButton.style.display === 'flex') {
+      searchButton.style.bottom = '32px';
+      searchButton.style.opacity = '0';
+      searchButton.style.transform = 'none';
+      setTimeout(() => {
+        searchButton.style.display = 'none';
+      }, 100);
+    } else {
+      searchButton.style.display = 'flex';
+      searchButton.style.transform = 'rotate(90deg)';
+      setTimeout(() => {
+        searchButton.style.bottom = '191px';
+        searchButton.style.opacity = '1';
+      }, 100);
+    }
   } 
 };
 setTimeout(() => {
@@ -118,7 +139,7 @@ function menuClick(event) {
   }
   if (!mobileToc.contains(target)) {
     mobileToc.style.display = 'none';
-    document.body.removeChild(mask);
+    mask.remove();
     document.removeEventListener('click', menuClick);
   }
 }
@@ -130,11 +151,98 @@ const clickMenuButton = () => {
   mobileToc.style.display = 'block';
   const mask = document.createElement('div');
   mask.id = 'mask';
-  document.body.appendChild(mask);
+  document.body.append(mask);
   setTimeout(() => {
     document.addEventListener('click', menuClick);
   }, 0);
 };
 setTimeout(() => {
   document.getElementById('menubutton').onclick = clickMenuButton;
+}, 0);
+// search.js
+// search button
+
+function searchClick(event) {
+  const searchContent = document.querySelector('#local-search');
+  if(!searchContent.contains(event.target)) {
+    const searchInput = document.querySelector('#search-input');
+    const content = document.querySelector('#search-content');
+    searchInput.value = '';
+    searchContent.style.display = 'none';
+    content.innerHTML = '';
+    mask.remove();
+    document.removeEventListener('click', searchClick);
+  }
+}
+
+setTimeout(() => {
+  searchControlButton.addEventListener('click', () => {
+    const mask = document.createElement('div');
+    mask.id = 'mask';
+    document.body.append(mask);
+    const searchMain = document.querySelector('#local-search');
+    searchMain.style.display = 'block';
+    setTimeout(() => {
+      document.addEventListener('click', searchClick);
+    }, 0);
+  });
+});
+
+const localSearch = function (path) {
+  fetch(path)
+    .then(res => res.json())
+    .then(res => {
+      let input = document.getElementById('search-input');
+      let resultContent = document.getElementById('search-content');
+      
+      input.addEventListener('input', function () {
+        let str = '<ul class="search-result-list">';
+        let keyword = this.value.trim().toLowerCase();
+        resultContent.innerHTML = '';
+        if (this.value.trim().length <= 0) {
+          return;
+        }
+        res.forEach(function (data) {
+          let isMatch = true;
+          if (!data.title || data.title.trim() === '') {
+            data.title = 'Untitled';
+          }
+          const dataTitle = data.title.trim().toLowerCase();
+          const dataContent = data.content.trim().replace(/<[^>]+>/g, '').toLowerCase();
+          let firstOccur = -1;
+          if (dataContent !== '') {
+            const indexTitle = dataTitle.indexOf(keyword);
+            const indexContent = dataContent.indexOf(keyword);
+            firstOccur = indexContent;
+            if (indexTitle < 0 && indexContent < 0) {
+              isMatch = false;
+            } else if (indexContent < 0) {
+              firstOccur = 0;
+            }
+          } else {
+            isMatch = false;
+          }
+          if (isMatch) {
+            str += '<li><a href=\'' + data.url + '\' class=\'search-result-title\'>' + dataTitle + '</a>';
+            const content = data.content;
+            if (firstOccur >= 0) {
+              const start = Math.max(0, firstOccur - 12);
+              const end = Math.min(content.length, firstOccur + 12);
+              let matchContent = content.substr(start, end);
+              matchContent = matchContent.replace(new RegExp(keyword, 'gi'), '<em class="search-keyword">' + keyword + '</em>');
+              str += '<p class="search-result">' + matchContent + '...</p>';
+            }
+            str += '</li>';
+          }
+        });
+        str += '</ul>';
+        if (str.indexOf('<li>') === -1) {
+          return resultContent.innerHTML = '<ul><span class="local-search-empty">没有搜索到结果<span></ul>';
+        }
+        resultContent.innerHTML = str;
+      });
+    });
+};
+setTimeout(() => {
+  localSearch('/search.json');
 }, 0);

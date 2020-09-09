@@ -7,6 +7,11 @@
   <div class="wrapper">
     <%# navbar %>
     <%- partial('_partial/nav.ejs') %>
+    <%# search content %>
+    <div id="local-search" style="display: none;">
+      <input class="navbar-menu-item" id="search-input" placeholder="请输入搜索内容...">
+      <div id="search-content"></div>
+    </div>
     <%# main content %>
     <div class="section-wrap">
       <div class="container">

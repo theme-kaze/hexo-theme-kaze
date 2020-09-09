@@ -6,9 +6,9 @@
       var wrapper = document.createElement('a');
       wrapper.setAttribute('data-fslightbox', 'gallery');
       wrapper.setAttribute('href', img[i].getAttribute('data-src'));
-      wrapper.setAttribute('style', 'width: 100%; display: flex; justify-content: center;');
-      img[i].parentElement.insertBefore(wrapper, img[i]);
-      wrapper.appendChild(img[i]);
+      wrapper.style.cssText = 'width: 100%; display: flex; justify-content: center;';
+      img[i].before(wrapper);
+      wrapper.append(img[i]);
     }
     refreshFsLightbox();
   }

@@ -27,8 +27,6 @@ ul
   list-style: none
 button, input, select, textarea
   margin: 0
-html
-  box-sizing: border-box
 *, *::before, *::after
   box-sizing: inherit
 img
@@ -50,16 +48,27 @@ a
   cursor: pointer
   color: var(--link-color)
   text-decoration: none
+.post-content a:not([data-fslightbox])
+  font-weight: 500
+  cursor: pointer
+  color: var(--text-strong-color)
+  text-decoration: none
+  border-bottom: 1px solid var(--post-link-color)
+  transition: all .1s
+  &:hover
+    border-bottom: 2px solid var(--post-link-color)
 div
   display: block
 *
   box-sizing: border-box
-body
+html, body
   height: 100vh
   font-size: $base-font-size
   font-family: $font-family
   color: var(--text-color)
   background-color: var(--body-background-color)
+  box-sizing: border-box
+  overflow-wrap: break-word
 ol ol, ul ol, ul ul
   margin-top: 0
   margin-bottom: 0
@@ -121,4 +130,6 @@ pre
   border-radius: 0.3rem
 @media (max-width : 742px)
   #dark
+    display: none
+  #search
     display: none
