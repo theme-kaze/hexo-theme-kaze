@@ -29,10 +29,13 @@ see theme at https://github.com/theme-kaze/hexo-theme-kaze
 // reverse button
 const scrollWidth = document.body.scrollWidth || document.documentElement.scrollWidth;
 let darkControlButton = null;
+let searchControlButton = null;
 if (scrollWidth <= 742) {
   darkControlButton = document.querySelector('.darkwidget');
+  searchControlButton = document.querySelector('.searchwidget');
 } else {
   darkControlButton = document.querySelector('.darknavbar');
+  searchControlButton = document.querySelector('.searchnavbar');
 }
 
 darkControlButton.addEventListener('click', () => {
@@ -89,6 +92,7 @@ const reversePopButton = () => {
     }
   }
   const darkButton = document.querySelector('.darkwidget');
+  const searchButton = document.querySelector('.searchwidget');
   if (scrollWidth <= 742) {
     if (darkButton.style.display === 'flex') {
       darkButton.style.bottom = '32px';
@@ -103,6 +107,22 @@ const reversePopButton = () => {
       setTimeout(() => {
         darkButton.style.bottom = '138px';
         darkButton.style.opacity = '1';
+      }, 100);
+    }
+
+    if (searchButton.style.display === 'flex') {
+      searchButton.style.bottom = '32px';
+      searchButton.style.opacity = '0';
+      searchButton.style.transform = 'none';
+      setTimeout(() => {
+        searchButton.style.display = 'none';
+      }, 100);
+    } else {
+      searchButton.style.display = 'flex';
+      searchButton.style.transform = 'rotate(90deg)';
+      setTimeout(() => {
+        searchButton.style.bottom = '191px';
+        searchButton.style.opacity = '1';
       }, 100);
     }
   } 
@@ -156,7 +176,7 @@ function searchClick(event) {
 }
 
 setTimeout(() => {
-  document.querySelector('#search').addEventListener('click', () => {
+  searchControlButton.addEventListener('click', () => {
     const mask = document.createElement('div');
     mask.id = 'mask';
     document.body.append(mask);
