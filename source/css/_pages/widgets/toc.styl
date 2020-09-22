@@ -1,40 +1,40 @@
 .toc-card
   margin-bottom: 1.5rem
-  .toc-header
-    margin-bottom: 6px
-    font-size: $base-font-size
-    .iconfont
-      font-size: $ml-font-size
-  .toc
-    overflow: auto
-    max-height: calc(100vh - 30rem)
-    padding-right: 1rem
-    ol, li
-      list-style-type: none
-    a
-      color: var(--text-color)
-      display: block
-      padding: 0.3rem 0.65rem
-      border-radius: 4px
-      &:hover
-        background-color: var(--badge-background-color)
-        transition: background-color 0.3s
-    .toc-child
-      margin-left: 0.8rem
-      position: relative
-      &::before
-        content: ''
-        position: absolute
-        top: 0
-        width: 1px
-        background-color: var(--badge-background-color)
-        transition: background-color 0.3s
-        height: 100%
-      > li
-        margin-left: 0.7rem
-    .toc-item
-      margin-bottom: 0
-      margin-top: 0
+.toc-header
+  margin-bottom: 6px
+  font-size: $base-font-size
+  .iconfont
+    font-size: $ml-font-size
+.toc
+  overflow: auto
+  max-height: calc(100vh - 30rem)
+  padding-right: 1rem
+  ol, li
+    list-style-type: none
+  a
+    color: var(--text-color)
+    display: block
+    padding: 0.3rem 0.65rem
+    border-radius: 4px
+    &:hover
+      background-color: var(--badge-background-color)
+      transition: background-color 0.3s
+.toc-child
+  margin-left: 0.8rem
+  position: relative
+  &::before
+    content: ''
+    position: absolute
+    top: 0
+    width: 1px
+    background-color: var(--badge-background-color)
+    transition: background-color 0.3s
+    height: 100%
+  > li
+    margin-left: 0.7rem
+.toc-item
+  margin-bottom: 0
+  margin-top: 0
 #mobiletoc
   display: none
 #mask

@@ -1,30 +1,28 @@
-.archive-timeline
-  .archive-timeline-tag
-    box-shadow: var(--tag-shadow-style)
-    background-color: $blue-tag-color
-    transition: background-color 0.3s
-    border-radius: 0.3rem
-    max-width: 66px
-    height: 32px
-    display: flex
-    justify-content: center
-    align-items: center
-    color: var(--text-white-color)
-    margin: 12px 0
-  .archive-timeline-item
-    position: relative
-    margin-left: 12px
-    .archive-timeline-post
-      margin-left: 10px
-      padding: 6px 6px
-      .archive-timeline-post-content
-        margin-top: 12px
-        font-size: $ml-font-size
-        .archive-timeline-post-item
-            color: var(--text-font-color)
+.archive-timeline-tag
+  box-shadow: var(--tag-shadow-style)
+  background-color: $blue-tag-color
+  transition: background-color 0.3s
+  border-radius: 0.3rem
+  max-width: 66px
+  height: 32px
+  display: flex
+  justify-content: center
+  align-items: center
+  color: var(--text-white-color)
+  margin: 12px 0
+.archive-timeline-item
+  position: relative
+  margin-left: 12px
+.archive-timeline-post
+  margin-left: 10px
+  padding: 6px 6px
+.archive-timeline-post-content
+  margin-top: 12px
+  font-size: $ml-font-size
+.archive-timeline-post-item
+    color: var(--text-font-color)
 @media(max-width: 862px)
-  .archive-timeline
-    .archive-timeline-item
-      margin-left: 18px
-      .archive-timeline-post
-        margin-left: 8px
+  .archive-timeline-item
+    margin-left: 18px
+  .archive-timeline-post
+    margin-left: 8px

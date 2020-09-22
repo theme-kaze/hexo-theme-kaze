@@ -4,37 +4,35 @@
   margin-bottom: 24px
 .categories-page-card
   overflow: hidden
-  .categories-page-list-item
-    width: (1 / 3) * 100%
-    float: left
-    display: flex
-    color: var(--text-color)
-    font-size: $lg-font-size
-    flex-direction: column
-    align-items: center
-    justify-content: center
-    padding: 8px 20px
-    &:hover
-      cursor: pointer
-      border-radius: 0.3rem
-      background-color: var(--badge-background-color)
-      transition: background-color 0.3s
-      transition-duration: 0.3s
-      transition-timing-function: ease-in-out
-    + .categories-page-list-item
-      margin-top: 0.4rem
-    .categories-page-list-item-total
-      font-size: $sm-font-size
+.categories-page-list-item
+  width: (1 / 3) * 100%
+  float: left
+  display: flex
+  color: var(--text-color)
+  font-size: $lg-font-size
+  flex-direction: column
+  align-items: center
+  justify-content: center
+  padding: 8px 20px
+  &:hover
+    cursor: pointer
+    border-radius: 0.3rem
+    background-color: var(--badge-background-color)
+    transition: background-color 0.3s
+    transition-duration: 0.3s
+    transition-timing-function: ease-in-out
+  + .categories-page-list-item
+    margin-top: 0.4rem
+.categories-page-list-item-total
+  font-size: $sm-font-size
 
 @media (max-width : 968px)
-  .categories-page-card
-    .categories-page-list-item
-      width: (1 / 2) * 100%
+  .categories-page-list-item
+    width: (1 / 2) * 100%
 
 @media (max-width : 742px)
-  .categories-page-card
-    .categories-page-list-item
-      width: 100%
-      flex-direction: row
-      justify-content: space-between
-      align-content: center
+  .categories-page-list-item
+    width: 100%
+    flex-direction: row
+    justify-content: space-between
+    align-content: center

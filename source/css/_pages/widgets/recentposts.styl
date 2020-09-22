@@ -3,27 +3,27 @@
   font-size: $base-font-size
   .iconfont
     font-size: $base-font-size
-.recent-posts-list
-  .recent-posts-item
-    padding-left: 6px
-    &:last-child .divider
-      display: none
-    .recent-posts-item-title
-      font-size: $sm-font-size
-    .recent-posts-item-content
-      color: var(--text-color)
-      margin-top: 6px
-      font-size: $ml-font-size
-      padding: 6px 0
-      padding-left: 8px
-      transition: all 0.4s
-      &:hover
-        padding-left: 16px
-        cursor: pointer
-        border-radius: 0.3rem
-        background-color: var(--badge-background-color)
-        transition: all 0.4s
-        transition-duration: 0.4s
-        transition-timing-function: ease-in-out
-    + .recent-posts-item
-      margin-top: 10px
+.recent-posts-item
+  padding-left: 6px
+  &:last-child .divider
+    display: none
+  + .recent-posts-item
+    margin-top: 10px  
+.recent-posts-item-title
+  font-size: $sm-font-size
+.recent-posts-item-content
+  color: var(--text-color)
+  margin-top: 6px
+  font-size: $ml-font-size
+  padding: 6px 0
+  padding-left: 8px
+  transition: all .4s
+  &:hover
+    padding-left: 16px
+    cursor: pointer
+    border-radius: .3rem
+    background-color: var(--badge-background-color)
+    transition: all .4s
+    transition-duration: .4s
+    transition-timing-function: ease-in-out
+    
