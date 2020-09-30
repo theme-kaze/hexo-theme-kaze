@@ -1,7 +1,7 @@
-<% page.posts.sort('date', -1).forEach(post => { %>
+<% page.posts.forEach(post => { %>
 <div class="card">
   <% if(post.banner_img) { %>
-  <a href="/<%= post.path %>" class="image-wrapper">
+  <a href="/<%= post.path %>" class="image-wrapper" aria-label="thumbnail">
     <img src="<%= post.banner_img %>" data-src="<%= post.banner_img %>"
       srcset="<%= post.banner_img_set || theme.lazyload.loadingImg || "data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%20300%20300'%3E%3C/svg%3E" %>"
       class="image lozad">
@@ -22,7 +22,7 @@
     </div>
     <div class="card-post-footer">
       <div class="post-meta">
-        <time datetime="<%= date_xml(post.date) _%>" style="display: flex; align-items: center;">
+        <time datetime="<%= date_xml(post.date) _%>">
           <i class="iconfont icon-calendar" style="margin-right: 2px;"></i>
           <span><%= date(post.date) %></span>
         </time>

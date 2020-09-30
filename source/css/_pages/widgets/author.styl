@@ -3,46 +3,46 @@
   display: flex
   flex-direction: column
   align-items: center
-  .author-img
-    width: 5.5rem
-    height: 5.5rem
-    transition: all 0.5s
-  .author-name
-    margin-top: 0.7rem
-    font-size: $ex-font-size
-  .author-description
-    margin-top: 0.5rem
-    font-size: $md-font-size
-  .author-message
-    margin-top: 1.2rem
-    width: 100%
+.author-img
+  width: 5.5rem
+  height: 5.5rem
+  transition: all 0.5s
+.author-name
+  margin-top: 0.7rem
+  font-size: $ex-font-size
+.author-description
+  margin-top: 0.5rem
+  font-size: $md-font-size
+.author-message
+  margin-top: 1.2rem
+  width: 100%
+  display: flex
+  justify-content: center
+  flex-direction: row
+  > a
+    padding: 0 16px
+    color: var(--text-color)
     display: flex
-    justify-content: center
-    flex-direction: row
-    > a
-      padding: 0 16px
-      color: var(--text-color)
-      display: flex
-      flex-direction: column
-      align-items: center
-      > span
-        font-size: $lg-font-size
-        + span
-          font-size: $sm-font-size
-  .author-card-society
-    display: flex
-    flex-direction: row
-    justify-content: center
+    flex-direction: column
     align-items: center
-    margin-top: 1rem
-    .author-card-society-icon
-      padding: 0 7px
-      a
-        color: var(--text-color)
-        &:hover
-          color: var(--link-hover-color)
-        .iconfont
-          font-size: $lg-font-size
+    > span
+      font-size: $lg-font-size
+      + span
+        font-size: $sm-font-size
+.author-card-society
+  display: flex
+  flex-direction: row
+  justify-content: center
+  align-items: center
+  margin-top: 1rem
+  .author-card-society-icon
+    padding: 0 7px
+    a
+      color: var(--text-color)
+      &:hover
+        color: var(--link-hover-color)
+      .iconfont
+        font-size: $lg-font-size
 @media (max-width: 862px)
   .card-author
     display: $widgets-mobile

@@ -6,47 +6,46 @@
   box-shadow: var(--around-shadow-style)
   display: flex
   align-items: stretch
-  .navbar-logo
+.navbar-logo
+  display: inline-block
+  margin-left: 96px
+.navbar-logo-main
+  display: flex
+  align-items: center
+  justify-content: space-around
+  padding: 0.7rem 0.6rem
+.navbar-logo-dsc
+  font-size: $lg-font-size
+.navbar-logo-img
+  height: 34px
+  margin-right: 10px
+.navbar-menu
+  font-size: $md-font-size
+  display: flex
+  align-items: center
+  a
     display: inline-block
-    margin-left: 96px
-    .navbar-logo-main
-      display: flex
-      align-items: center
-      justify-content: space-around
-      padding: 0.7rem 0.6rem
-      .navbar-logo-dsc
-        font-size: $lg-font-size
-      .navbar-logo-img
-        height: 34px
-        margin-right: 10px
-  .navbar-menu
-    font-size: $md-font-size
-    display: flex
-    align-items: center
-    a
-      display: inline-block
-      color: var(--text-color)
-      cursor: pointer
-      padding: 0.7rem 0.6rem
-      &:hover
-        color: var(--link-hover-color)
+    color: var(--text-color)
+    cursor: pointer
+    padding: 0.7rem 0.6rem
+    &:hover
+      color: var(--link-hover-color)
 // mobiles navbar
 @media (max-width: 1088px)
   .navbar
     min-height: 90px
     display: block
-    .navbar-logo
-      margin-left: 0
-      display: block
-      .navbar-logo-main
-        justify-content: center
-    .navbar-menu
-      width: 100%
-      display: flex
-      margin-right: 0
-      justify-content: center
+  .navbar-logo
+    margin-left: 0
+    display: block
+  .navbar-logo-main
+    justify-content: center
+  .navbar-menu
+    width: 100%
+    display: flex
+    margin-right: 0
+    justify-content: center
 @media (max-width: 586px)
-  .navbar
-    .navbar-menu
-      display: flex
-      justify-content: space-between
+  .navbar-menu
+    display: flex
+    justify-content: space-between

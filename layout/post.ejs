@@ -2,7 +2,9 @@
 <div class="image-wrapper">
   <img src="<%= page.banner_img %>" data-src="<%=page.banner_img %>"
     srcset="<%= page.banner_img_set || theme.lazyload.loadingImg || "data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%20300%20300'%3E%3C/svg%3E" %>"
-    class="image lozad">
+    class="image lozad"
+    alt="thumbnail"
+  >
 </div>
 <% } %>
 <article class="card card-content">
@@ -12,7 +14,7 @@
     </h1>
   </header>
   <div class="post-meta post-show-meta">
-    <time datetime="<%= date_xml(page.date) _%>" style="display: flex; align-items: center;">
+    <time datetime="<%= date_xml(page.date) _%>">
       <i class="iconfont icon-calendar" style="margin-right: 2px;"></i>
       <span><%= date(page.date) %></span>
     </time>
