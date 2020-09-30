@@ -1,4 +1,4 @@
-<% page.posts.sort('date', -1).forEach(post => { %>
+<% page.posts.forEach(post => { %>
 <div class="card">
   <% if(post.banner_img) { %>
   <a href="/<%= post.path %>" class="image-wrapper" aria-label="thumbnail">
