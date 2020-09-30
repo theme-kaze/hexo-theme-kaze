@@ -159,7 +159,7 @@ lazyload:
 #------------------------
 # plugins config
 #------------------------
-fslightbox:
+lightbox:
   enable: true
 # If your hexo version is below 5.0.0, please upgrade first to use this config
 # we support eight highlight themes, you can go to prism website (https://prismjs.com) for more information
@@ -222,7 +222,7 @@ cdn:
     js: //cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.min.js
   valine: //unpkg.com/valine/dist/Valine.min.js
   livere: //cdn-city.livere.com/js/embed.dist.js
-  fslightbox: //cdn.jsdelivr.net/npm/fslightbox@3.1.0/index.min.js
+  baguetteBox: /js/lib/lightbox
   lozad: /js/lib/lozad.min.js
   prism: /js/lib/prism/
   busuanzi: /js/lib/busuanzi.min.js

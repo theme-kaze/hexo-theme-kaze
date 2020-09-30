@@ -4,14 +4,19 @@
     var i;
     for (i = 0; i < img.length; i++) {
       var wrapper = document.createElement('a');
-      wrapper.setAttribute('data-fslightbox', 'gallery');
       wrapper.setAttribute('href', img[i].getAttribute('data-src'));
       wrapper.setAttribute('aria-label', 'illustration');
       wrapper.style.cssText = 'width: 100%; display: flex; justify-content: center;';
+      if (img[i].alt) wrapper.dataset.caption = img[i].alt;
+      wrapper.dataset.nolink = true;
       img[i].before(wrapper);
       wrapper.append(img[i]);
+      var divWrap = document.createElement('div');
+      divWrap.classList.add('gallery');
+      wrapper.before(divWrap);
+      divWrap.append(wrapper);
     }
-    refreshFsLightbox();
+    baguetteBox.run('.gallery');
   }
 </script>
-<script>loadScript("<%= theme.cdn.fslightbox %>", addImgLayout)</script>
+<script>loadScript("<%= theme.cdn.baguetteBox + '/baguetteBox.min.js'%>", addImgLayout)</script>
