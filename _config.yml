@@ -132,6 +132,8 @@ comment:
     distractionFreeMode: false
     # en | zh-CN | zh-TW
     language: navigator.language || navigator.userLanguage
+    labels: ['Gitalk']
+    perPage: 10
   livere:
     uid:
 
