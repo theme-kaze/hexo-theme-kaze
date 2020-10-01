@@ -8,9 +8,9 @@
       clientSecret: '<%= theme.comment.gitalk.clientSecret %>',
       repo: '<%= theme.comment.gitalk.repo %>',
       owner: '<%= theme.comment.gitalk.owner %>',
-      admin: '<%= theme.comment.gitalk.admin %>',
-      id: '<%= theme.comment.gitalk.id %>',
-      distractionFreeMode: '<%= theme.comment.gitalk.distractionFreeMode %>',
+      admin: <%- JSON.stringify(theme.comment.gitalk.admin || []) %>,
+      id: <%= theme.comment.gitalk.id %>,
+      distractionFreeMode: <%= theme.comment.gitalk.distractionFreeMode %>,
       language: '<%= theme.comment.gitalk.language %>',
     })
 
