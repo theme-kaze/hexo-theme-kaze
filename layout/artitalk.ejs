@@ -1,5 +1,6 @@
 <% page.title = __('artitalk.title') %>
 
+<% if(theme.artitalk.enable) { %>
 <div id="artitalk_main"></div>
 
 <script>
@@ -13,3 +14,4 @@
     });
   };
 </script>
+<% } %>
