@@ -39,7 +39,7 @@
   <% if(theme.latex.enable) { %>
   <%- partial('_partial/plugins/latex.ejs') %>
   <% } %>
-  <% if(theme.lightbox.enable) { %>
+  <% if(theme.lightbox.enable && is_post()) { %>
   <%- partial('_partial/plugins/lightbox.ejs') %>
   <% } %>
   <%# javascript %>
