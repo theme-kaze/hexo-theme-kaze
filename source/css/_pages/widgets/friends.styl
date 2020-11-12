@@ -1,16 +1,16 @@
 .friend-card
   overflow: hidden
+.friend-item
+  width: (1 / 3) * 100%
+  padding: 6px 12px
+  float: left
+  margin: 8px 0
   &:hover
     border-radius: 0.3rem
     background-color: var(--badge-background-color)
     transition: background-color 0.3s
     transition-duration: 0.3s
     transition-timing-function: ease-in-out
-.friend-item
-  width: (1 / 3) * 100%
-  padding: 6px 12px
-  float: left
-  margin: 8px 0
 .friend-item-card
   display: block
   width: 100%
@@ -24,17 +24,17 @@
   flex-direction: column
 .friend-name
   max-width: 100%
-  overflow: hidden;
-  text-overflow: ellipsis;
-  white-space: nowrap;
+  overflow: hidden
+  text-overflow: ellipsis
+  white-space: nowrap
   color: var(--text-strong-color)
   font-size: $ml-font-size
   max-height: 24.8px
 .friend-dsc
   max-width: 100%
-  overflow: hidden;
-  text-overflow: ellipsis;
-  white-space: nowrap;
+  overflow: hidden
+  text-overflow: ellipsis
+  white-space: nowrap
   color: var(--info-text-color)
   font-size: $sm-font-size
   max-height: 19.2px
@@ -42,12 +42,9 @@
   height: 44px
   width: 44px
   margin-right: 14px
-
-@media (max-width : 968px)
+@media (max-width: 968px)
   .friend-item
     width: (1 / 2) * 100%
-
-@media (max-width : 742px)
+@media (max-width: 742px)
   .friend-item
     width: 100%
-
