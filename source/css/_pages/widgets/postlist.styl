@@ -5,18 +5,27 @@
   height: 0
   position: relative
   .image
+    -o-object-fit: cover
     object-fit: cover
     width: 100%
+    -webkit-filter: var(--image-filter-style)
     filter: var(--image-filter-style)
     position: absolute
-    transition: filter .4s ease 0s
+    transition: -webkit-filter 0.4s ease 0s
+    transition: filter 0.4s ease 0s
+    transition: filter 0.4s ease 0s, -webkit-filter 0.4s ease 0s
     &:not(.loaded)
+      -webkit-filter: blur(5px) var(--image-filter-style)
       filter: blur(5px) var(--image-filter-style)
 .post-image
   margin: auto
+  -webkit-filter: var(--image-filter-style)
   filter: var(--image-filter-style)
-  transition: filter .4s ease 0s
+  transition: -webkit-filter 0.4s ease 0s
+  transition: filter 0.4s ease 0s
+  transition: filter 0.4s ease 0s, -webkit-filter 0.4s ease 0s
   &:not(.loaded)
+    -webkit-filter: blur(5px)
     filter: blur(5px)
 @media screen and (min-width: 768px)
   .image-wrapper

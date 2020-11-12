@@ -29,10 +29,8 @@
     "gulp-shell": "^0.8.0"
   },
   "dependencies": {
-    "autoprefixer": "^9.8.5",
     "clean-css": "^4.2.3",
     "html-minifier": "^4.0.0",
-    "postcss": "^7.0.32",
     "uglify-es": "^3.3.9"
   },
   "directories": {
