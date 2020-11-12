@@ -26,13 +26,7 @@
     "eslint": "^7.4.0",
     "gulp": "^4.0.2",
     "gulp-eslint": "^6.0.0",
-    "husky": "^4.2.5",
     "gulp-shell": "^0.8.0"
-  },
-  "husky": {
-    "hooks": {
-      "pre-commit": "npm run lint"
-    }
   },
   "dependencies": {
     "autoprefixer": "^9.8.5",

@@ -6,7 +6,7 @@
     "ecmaVersion": 6
   },
   "rules": {
-    "semi": 2,
+    "semi": 0,
     "no-var": "error",
     "init-declarations": 2,
     "quotes": ["error", "single"],
