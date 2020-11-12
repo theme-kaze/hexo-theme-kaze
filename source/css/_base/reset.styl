@@ -54,7 +54,7 @@ a
   color: var(--text-strong-color)
   text-decoration: none
   border-bottom: 1px solid var(--post-link-color)
-  transition: all .1s
+  transition: all 0.1s
   &:hover
     border-bottom: 2px solid var(--post-link-color)
 div
@@ -84,10 +84,10 @@ li>p
 li+li
   margin-top: 0.25rem
 code, kbd
+  font-size: $sm-font-size
   color: var(--code-color)
   background-color: var(--code-background-color)
-  margin: auto 0.2rem
-  padding: 0.2rem 0.3rem 0.2rem
+  padding: 0.25rem 0.4rem
   overflow-wrap: break-word
   word-wrap: break-word
   border-radius: 0.25rem
@@ -128,7 +128,7 @@ pre
 ::-webkit-scrollbar-thumb
   background-color: $divider-color
   border-radius: 0.3rem
-@media (max-width : 742px)
+@media (max-width: 742px)
   #dark
     display: none
   #search
