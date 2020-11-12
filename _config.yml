@@ -15,6 +15,7 @@ menus:
   categories: /categories
   about: /about
   friends: /links
+  # artitalk: /shuoshuo # You can uncomment to add this route
 
 about:
   description: description
@@ -177,6 +178,11 @@ analytics:
   type: google # google
   google:
     id: # you can see more information in https://analytics.google.com/
+# Doc：https://artitalk.js.org/
+artitalk:
+  enable: false
+  appId: 
+  appKey: 
 #------------------------
 # minify config
 # css minify uses autoprefixer and clean-css
@@ -228,3 +234,4 @@ cdn:
   lozad: /js/lib/lozad.min.js
   prism: /js/lib/prism/
   busuanzi: /js/lib/busuanzi.min.js
+  artitalk: https://cdn.jsdelivr.net/npm/artitalk
