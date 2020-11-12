@@ -39,8 +39,8 @@
   <% if(theme.latex.enable) { %>
   <%- partial('_partial/plugins/latex.ejs') %>
   <% } %>
-  <% if(theme.fslightbox.enable) { %>
-  <%- partial('_partial/plugins/fslightbox.ejs') %>
+  <% if(theme.lightbox.enable && is_post()) { %>
+  <%- partial('_partial/plugins/lightbox.ejs') %>
   <% } %>
   <%# javascript %>
   <%- js('js/main.js') %>
