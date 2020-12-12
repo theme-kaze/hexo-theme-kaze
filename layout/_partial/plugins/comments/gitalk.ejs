@@ -2,6 +2,7 @@
   <div id="gitalk-container"></div>
   <%- css(theme.cdn.gitalk.css) %>
   <%- js(theme.cdn.gitalk.js) %>
+  <%- js(theme.cdn.md5) %>
   <script>
     var gitalk = new Gitalk({
       clientID: '<%= theme.comment.gitalk.clientID %>',
@@ -9,7 +10,7 @@
       repo: '<%= theme.comment.gitalk.repo %>',
       owner: '<%= theme.comment.gitalk.owner %>',
       admin: <%- JSON.stringify(theme.comment.gitalk.admin || []) %>,
-      id: <%= theme.comment.gitalk.id %>,
+      id: <%= md5(theme.comment.gitalk.id) %>,
       distractionFreeMode: <%= theme.comment.gitalk.distractionFreeMode %>,
       language: '<%= theme.comment.gitalk.language %>',
       labels: <%- JSON.stringify(theme.comment.gitalk.labels || []) %>,
