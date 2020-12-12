@@ -235,3 +235,4 @@ cdn:
   prism: /js/lib/prism/
   busuanzi: /js/lib/busuanzi.min.js
   artitalk: https://cdn.jsdelivr.net/npm/artitalk
+  md5: /js/lib/md5.min.js
