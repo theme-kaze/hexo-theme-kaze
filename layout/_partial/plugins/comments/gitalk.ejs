@@ -10,7 +10,7 @@
       repo: '<%= theme.comment.gitalk.repo %>',
       owner: '<%= theme.comment.gitalk.owner %>',
       admin: <%- JSON.stringify(theme.comment.gitalk.admin || []) %>,
-      id: <%= md5(theme.comment.gitalk.id) %>,
+      id: md5(<%- theme.comment.gitalk.id%>),
       distractionFreeMode: <%= theme.comment.gitalk.distractionFreeMode %>,
       language: '<%= theme.comment.gitalk.language %>',
       labels: <%- JSON.stringify(theme.comment.gitalk.labels || []) %>,
