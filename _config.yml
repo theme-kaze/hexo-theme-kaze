@@ -105,8 +105,9 @@ scrollUpAnimation: true
 #------------------------
 comment:
   enable: false
-  type: valine # valine | gitalk | livere | disqus | we recommend valine
+  type: valine # valine | gitalk | livere | disqus | we recommend valine | waline
   # gitalk config details can see in https://github.com/gitalk/gitalk/blob/master/readme-cn.md
+  # waline config details can see in https://waline.js.org
   valine:
     appId:
     appKey:
@@ -137,6 +138,20 @@ comment:
     perPage: 10
   livere:
     uid:
+  waline:
+    serverURL:
+    placeholder: Just go go
+    path: window.location.pathname
+    avatar: mp
+    meta: ["nick", "mail", "link"]
+    pageSize: 10
+    visitor: false
+    highlight: true
+    emojiCDN:
+    emojiMaps: null
+    enableQQ: false
+    requiredFields: []
+    anonymous: true
 
 #------------------------
 # latex config
@@ -230,6 +245,7 @@ cdn:
     js: //cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.min.js
   valine: //unpkg.com/valine/dist/Valine.min.js
   livere: //cdn-city.livere.com/js/embed.dist.js
+  waline: //cdn.jsdelivr.net/npm/@waline/client/dist/Waline.min.js
   baguetteBox: /js/lib/lightbox
   lozad: /js/lib/lozad.min.js
   prism: /js/lib/prism/
