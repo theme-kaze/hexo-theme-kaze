@@ -1,0 +1,31 @@
+<% if(theme.comment.waline.appId && theme.comment.waline.appKey) { %>
+    <div id="wcomments"></div>
+    
+    <script>
+      loadScript("<%= theme.cdn.waline %>");
+      var oldLoadVa = window.onload;
+      window.onload = function () {
+        oldLoadVa && oldLoadVa();
+        new waline({
+          el: '#wcomments',
+          serverURL: '<%= theme.comment.waline.serverURL %>',
+          placeholder: '<%= theme.comment.waline.placeholder %>',
+          path: <%= theme.comment.waline.path %>,
+          avatar: '<%= theme.comment.waline.avatar %>',
+          meta: <%- JSON.stringify(theme.comment.waline.meta || []) %>,
+          pageSize: '<%= theme.comment.waline.pageSize %>',
+          lang: '<%= theme.comment.waline.lang %>',
+          visitor: '<%= theme.comment.waline.visitor %>',
+          highlight: <%= theme.comment.waline.highlight %>,
+          anonymous: '<%= theme.comment.waline.anonymous %>'
+          <% if(theme.comment.waline.emojiCDN) { %>
+          emojiCDN: '<%= theme.comment.waline.emojiCDN %>',
+          <% } %>
+          <% if(theme.comment.waline.emojiMaps) { %>
+          emojiMaps: '<%= theme.comment.waline.emojiMaps %>',
+          <% } %>
+          requiredFields: <%- JSON.stringify(theme.comment.waline.requiredFields || []) %>,
+        });
+      };
+    </script>
+  <% } %>
