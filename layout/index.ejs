@@ -27,9 +27,19 @@
           <span><%= date(post.date) %></span>
         </time>
         <% if(post.categories && post.categories.data.length) { %>
+        <% let categoriesMap = [] %>
+        <% for(const item of post.categories.data) { %>
+        <% if(item.parent) { %>
+        <% categoriesMap.push(item.parent) %>
+        <% } %>
+        <% %>
+        <% } %>
         <span class="dot"></span>
         <% for(const item of post.categories.data) { %>
-        <a href="<%= item.path %>" class="post-meta-link"><%= item.name %></a>
+        <% if(categoriesMap.findIndex(x => x === item._id) !== -1) { %>
+        <% continue %>
+        <% } %>
+        <a href="<%= item.path %>" class="post-meta-link"><%= item.slug %></a>
         <% } %>
         <% } %>
       </div>
