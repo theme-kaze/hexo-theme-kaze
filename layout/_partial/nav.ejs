@@ -2,14 +2,14 @@
   <div class="navbar-logo">
     <span class="navbar-logo-main">
       <% if(theme.logo_img || theme.author_img ) { %>
-      <img class="navbar-logo-img" src="<%- theme.logo_img %>" alt="logo">
+      <img class="navbar-logo-img" src="<%- url_for(theme.logo_img) %>" alt="logo">
       <% } %>
       <span class="navbar-logo-dsc"><%- theme.title || config.title %></span>
     </span>
   </div>
   <div class="navbar-menu">
     <% for(const menu in theme.menus) { %>
-    <a href="<%= theme.menus[menu] %>" class="navbar-menu-item">
+    <a href="<%= url_for(theme.menus[menu]) %>" class="navbar-menu-item">
     <% if(__(menu + '.title') === menu + '.title') { %>
     <%- menu %>
     <% } else { %>

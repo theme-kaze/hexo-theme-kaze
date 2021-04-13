@@ -21,7 +21,7 @@
     <% if(page.categories && page.categories.data.length) { %>
     <span class="dot"></span>
     <% for(const item of page.categories.data) { %>
-    <a href="/<%= item.path %>" class="post-meta-link"><%= item.name %></a>
+    <a href="<%= url_for(item.path) %>" class="post-meta-link"><%= item.name %></a>
     <% } %>
     <% } %>
     <% if(theme.wordcount.enable) { %>
@@ -37,7 +37,7 @@
       <% if(index > 0) { %>
       <span class="dot"></span>
       <% } %>
-        <a href="/<%= item.path %>" class="post-meta-link"><%= item.name %></a>
+        <a href="<%= url_for(item.path) %>" class="post-meta-link"><%= item.name %></a>
       <% }) %>
     </div>
   </div>
@@ -49,8 +49,8 @@
   <div>
   <% if(theme.copyright.enable) { %>
   <div class="post-note note-<%= theme.copyright.style || "warning" %> copyright" style="margin-top: 42px">
-    <p><span style="font-weight: bold;">作者：</span><a target="_blank" rel="nofollow noopener noreferrer" href="<%= config.url + '/about' %>"><%= theme.copyright.writer || theme.author || config.author%></a></p>
-    <p><span style="font-weight: bold;">文章链接：</span><a target="_blank" rel="nofollow noopener noreferrer" href="<%= page.permalink %>"><%= page.permalink %></a></p>
+    <p><span style="font-weight: bold;">作者：</span><a target="_blank" rel="nofollow noopener noreferrer" href="<%= url_for('/about')  %>"><%= theme.copyright.writer || theme.author || config.author%></a></p>
+    <p><span style="font-weight: bold;">文章链接：</span><a target="_blank" rel="nofollow noopener noreferrer" href="<%= url_for(page.permalink) %>"><%= page.permalink %></a></p>
     <p><span style="font-weight: bold;">版权声明：</span><%- theme.copyright.declare %></p>
   </div>
   <% } %>

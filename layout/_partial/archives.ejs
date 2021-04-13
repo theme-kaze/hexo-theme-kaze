@@ -6,7 +6,7 @@
     <% site.posts.sort('date', -1).forEach(post => { %>
       <% if (date(post.date,'YYYY') != archiveYear) { %>
         <% if (count != 0) {%>
-          <a href="/archives/<%= archiveYear %>" class="archive-card-list-item">
+          <a href="<%= url_for('/archives/' + archiveYear) %>" class="archive-card-list-item">
               <%= archiveYear %>
               <span class="archive-card-list-item-badge"><%= count %></span>
           </a>
@@ -18,7 +18,7 @@
       <% } %>
     <% }); %>
     <% if (count != 0) {%>
-      <a href="/archives/<%= archiveYear %>" class="archive-card-list-item">
+      <a href="<%= url_for('/archives/' + archiveYear) %>" class="archive-card-list-item">
           <%= archiveYear %>
           <span class="archive-card-list-item-badge"><%= count %></span>
       </a>

@@ -2,8 +2,8 @@
 # Header config
 title: theme-kaze demo
 author: theme-kaze
-logo_img: /img/Kaze.png # put the logo on the ${blog_path}/source/img/${picname}.png or use urls
-author_img: /img/Kaze.png
+logo_img: https://demo.theme-kaze.top/img/Kaze.png # put the logo on the ${blog_path}/source/img/${picname}.png or use urls
+author_img: https://demo.theme-kaze.top/img/Kaze.png
 author_description: designed by theme-kaze
 #------------------------
 # Navbar config
@@ -52,7 +52,7 @@ copyright:
   style: warning # the style uses note warning | danger | primary | info | success
 
 search:
-  enable: true
+  enable: false
   path: search.json
   field: posts
   searchContent: true

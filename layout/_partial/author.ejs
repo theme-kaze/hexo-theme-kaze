@@ -4,15 +4,15 @@
 <p class="author-name"><%- theme.author || config.author %></p>
 <p class="author-description"><%- theme.author_description || config.description %></p>
 <div class="author-message">
-  <a class="author-posts-count" href="/archives">
+  <a class="author-posts-count" href="<%- url_for('/archives') %>">
     <span><%- site.posts.length %></span>
     <span><%- __("posts.title") %></span>
   </a>
-  <a class="author-categories-count" href="/categories">
+  <a class="author-categories-count" href="<%- url_for('/categories') %>">
     <span><%- site.categories.length %></span>
     <span><%- __("categories.title") %></span>
   </a>
-  <a class="author-tags-count" href="/tags">
+  <a class="author-tags-count" href="<%- url_for('/tags') %>">
     <span><%- site.tags.length %></span>
     <span><%- __("tags.title") %></span>
   </a>

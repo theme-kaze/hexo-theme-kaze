@@ -2,7 +2,7 @@
   <div class="categories-header"><i class="iconfont icon-fenlei" style="padding-right: 2px;"></i><%- __("categories.title") %></div>
   <div class="categories-list">
     <% for(const item of site.categories.data) { %>
-      <a href="/<%= item.path %>">
+      <a href="<%= url_for(item.path) %>">
         <div class="categories-list-item">
           <%= item.slug %>
           <span class="categories-list-item-badge"><%= item.posts.length %></span>
