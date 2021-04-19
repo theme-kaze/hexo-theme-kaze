@@ -1,28 +1,25 @@
 <% page.title = page.title || __('about.title') %>
 <div class="card card-content about-card">
   <% if(theme.author_img) { %>
-  <img src="<%= url_for(theme.author_img) %>" class="about-card-avatar">
+  <img src="<%= url_for(theme.author_img) %>" class="about-card-avatar" />
   <% } %>
   <div class="about-card-content">
     <div class="about-card-author"><%= theme.author || config.author %></div>
     <% if(theme.about.description) { %>
-      <div class="about-card-dsc"><%= theme.about.description %></div>
+    <div class="about-card-dsc"><%= theme.about.description %></div>
     <% } %>
     <div class="about-card-society">
-      <% if(theme.about.social_links) { %>
-      <% for(const item of theme.about.social_links) { %>
-        <div class="about-card-society-icon">
-          <a href="<%= url_for(item.link) %>">
-            <i class="iconfont <%= item.icon %> society-icon"></i>
-          </a>
-        </div>
-      <% } %>
-      <% } %>
+      <% if(theme.about.social_links) { %> <% for(const item of
+      theme.about.social_links) { %>
+      <div class="about-card-society-icon">
+        <a href="<%= url_for(item.link) %>">
+          <i class="iconfont <%= item.icon %> society-icon"></i>
+        </a>
+      </div>
+      <% } %> <% } %>
     </div>
   </div>
 </div>
 <div class="card card-content">
-  <div class="post-content">
-    <%- page.content %>
-  </div>
+  <div class="post-content"><%- page.content %></div>
 </div>

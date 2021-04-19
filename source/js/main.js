@@ -172,6 +172,7 @@ setTimeout(() => {
   })
 })
 
+// eslint-disable-next-line no-unused-vars
 const localSearch = function (path) {
   fetch(path)
     .then((res) => res.json())
@@ -234,6 +235,3 @@ const localSearch = function (path) {
       })
     })
 }
-setTimeout(() => {
-  localSearch('/search.json')
-}, 0)

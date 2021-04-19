@@ -1,1 +1,1 @@
-console.log('welcome to use theme kaze!');
+console.log('welcome to use theme kaze!')

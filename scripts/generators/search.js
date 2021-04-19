@@ -6,6 +6,8 @@
 
 /* global hexo */
 'use strict'
+// eslint-disable-next-line camelcase
+const url_for = require('hexo-util').url_for.bind(hexo)
 hexo.extend.generator.register('_hexo_generator_search', function (locals) {
   const config = hexo.theme.config
 
@@ -44,7 +46,7 @@ hexo.extend.generator.register('_hexo_generator_search', function (locals) {
     }
     data.push({
       title: post.title,
-      url: hexo.config.url + '/' + post.path,
+      url: url_for(`${post.path}`),
       content: config.search.searchContent
         ? post.content.replace(/<[^<>]+>/g, '')
         : '',
@@ -53,7 +55,7 @@ hexo.extend.generator.register('_hexo_generator_search', function (locals) {
     })
   })
   return {
-    path: config.search.path,
+    path: '/search.json',
     data: JSON.stringify(data),
   }
 })

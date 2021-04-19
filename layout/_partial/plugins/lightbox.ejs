@@ -1,22 +1,28 @@
 <script>
   var addImgLayout = function () {
-    var img = document.querySelectorAll('.post-content img');
-    var i;
+    var img = document.querySelectorAll('.post-content img')
+    var i
     for (i = 0; i < img.length; i++) {
-      var wrapper = document.createElement('a');
-      wrapper.setAttribute('href', img[i].getAttribute('data-src'));
-      wrapper.setAttribute('aria-label', 'illustration');
-      wrapper.style.cssText = 'width: 100%; display: flex; justify-content: center;';
-      if (img[i].alt) wrapper.dataset.caption = img[i].alt;
-      wrapper.dataset.nolink = true;
-      img[i].before(wrapper);
-      wrapper.append(img[i]);
-      var divWrap = document.createElement('div');
-      divWrap.classList.add('gallery');
-      wrapper.before(divWrap);
-      divWrap.append(wrapper);
+      var wrapper = document.createElement('a')
+      wrapper.setAttribute('href', img[i].getAttribute('data-src'))
+      wrapper.setAttribute('aria-label', 'illustration')
+      wrapper.style.cssText =
+        'width: 100%; display: flex; justify-content: center;'
+      if (img[i].alt) wrapper.dataset.caption = img[i].alt
+      wrapper.dataset.nolink = true
+      img[i].before(wrapper)
+      wrapper.append(img[i])
+      var divWrap = document.createElement('div')
+      divWrap.classList.add('gallery')
+      wrapper.before(divWrap)
+      divWrap.append(wrapper)
     }
-    baguetteBox.run('.gallery');
+    baguetteBox.run('.gallery')
   }
 </script>
-<script>loadScript("<%= theme.cdn.baguetteBox + '/baguetteBox.min.js'%>", addImgLayout)</script>
+<script>
+  loadScript(
+    "<%= url_for(theme.cdn.baguetteBox + '/baguetteBox.min.js') %>",
+    addImgLayout
+  )
+</script>
