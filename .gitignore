@@ -1,6 +1,6 @@
 .DS_Store
-yarn.lock
-package-lock.json
 node_modules/
 *.log
 .eslintignore
+yarn.lock
+package.json

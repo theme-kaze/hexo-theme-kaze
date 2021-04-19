@@ -1,7 +1,7 @@
 <div class="nav">
   <% if(page.prev) {%>
   <div class="nav-item-prev">
-    <a href="/<%= prev_link %>" class="nav-link">
+    <a href="<%= url_for(prev_link) %>" class="nav-link">
       <i class="iconfont icon-left nav-prev-icon"></i>
       <div>
         <div class="nav-label"><%= prev_label%></div>
@@ -14,7 +14,7 @@
   <% } %>
   <% if(page.next) {%>
   <div class="nav-item-next">
-    <a href="/<%= next_link %>" class="nav-link">
+    <a href="<%= url_for(next_link) %>" class="nav-link">
       <div>
         <div class="nav-label"><%= next_label %></div>
         <% if(next_title) { %>

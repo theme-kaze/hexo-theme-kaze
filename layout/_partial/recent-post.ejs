@@ -4,7 +4,7 @@
     <% site.posts.sort('date', -1).slice(0, Math.min(4, site.posts.length)).forEach(post => { %>
       <div class="recent-posts-item">
         <div class="recent-posts-item-title"><%= date(post.date) %></div>
-        <a href="/<%= post.path %>"><div class="recent-posts-item-content"><%= post.title %></div></a>
+        <a href="<%= url_for(post.path) %>"><div class="recent-posts-item-content"><%= post.title %></div></a>
       </div>
     <% }) %>
   </div>

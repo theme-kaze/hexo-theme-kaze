@@ -5,7 +5,7 @@
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <meta name="theme-color" content="#fff" id="theme-color">
   <meta name="description" content="<%= config.description || config.title || theme.title %>">
-  <link rel="icon" href="<%= theme.logo_img %>">
+  <link rel="icon" href="<%= url_for(theme.logo_img) %>">
   <title><%- page.title || theme.title %></title>
   <% if(theme.og && theme.og.enable) { %>
   <% if(theme.og.title) { %>
@@ -89,12 +89,13 @@
   <%# preload %>
   <%- preload_css('//at.alicdn.com/t/font_1946621_i1kgafibvw.css') %>
   <%- preload_css('//at.alicdn.com/t/font_1952792_89b4ac4k4up.css') %>
+  <!-- TODO: New Prefetch Plan -->
   <% if(theme.lightbox.enable) { %>
-  <%- preload_js(theme.cdn.baguetteBox + '/baguetteBox.min.js') %>
-  <%- preload_css(theme.cdn.baguetteBox + '/baguetteBox.min.css') %>
+  <%- preload_js(url_for(theme.cdn.baguetteBox + '/baguetteBox.min.js')) %>
+  <%- preload_css(url_for(theme.cdn.baguetteBox + '/baguetteBox.min.css')) %>
   <% } %>
   <% if(theme.lazyload.enable) { %>
-  <%- preload_js(theme.cdn.lozad) %>
+  <%- preload_js(url_for(theme.cdn.lozad)) %>
   <% } %>
   <%# end preload %>
   <%# prefetch %>
@@ -108,13 +109,13 @@
   <% } %>
   <%# end prefetch %>
   <%# main css %>
-  <%- css('css/main.css') %>
+  <%- ex_css(url_for('css/main.css')) %>
   <%# default icon %>
-  <%- css('//at.alicdn.com/t/font_1946621_i1kgafibvw.css') %>
+  <%- ex_css('//at.alicdn.com/t/font_1946621_i1kgafibvw.css') %>
   <%# social icon %>
-  <%- css('//at.alicdn.com/t/font_1952792_89b4ac4k4up.css') %>
+  <%- ex_css('//at.alicdn.com/t/font_1952792_89b4ac4k4up.css') %>
   <% if(theme.lightbox.enable && is_post()) { %>
-  <%- css(theme.cdn.baguetteBox + '/baguetteBox.min.css') %>
+  <%- ex_css(url_for(theme.cdn.baguetteBox + '/baguetteBox.min.css')) %>
   <% } %>
   <% if(config.prismjs) { %>
   <% if(config.prismjs.enable && !config.highlight.enable) { %>
@@ -124,7 +125,7 @@
   <link href="<%= themeUrl %>" rel="stylesheet" data-prism="<%= prismTheme %>">
   <% if(config.prismjs.line_number && config.prismjs.preprocess) { %>
   <% const lineUrl = theme.cdn.prism + 'prism-line-numbers.min.css' %>
-  <%- css(lineUrl) %>
+  <%- ex_css(url_for(lineUrl)) %>
   <% } %>
   <% } %>
   <% } else if(theme.prism.theme) { %>

@@ -14,7 +14,7 @@
       <div class="card card-content">
         <div class="archive-timeline-post-date"><%= date(post.date,'YYYY-MM-DD') %></div>
         <div class="archive-timeline-post-content">
-          <a href="/<%- post.path  %>" class="archive-timeline-post-item"><%= post.title %></a>
+          <a href="<%- url_for(post.path)  %>" class="archive-timeline-post-item"><%= post.title %></a>
         </div>
       </div>
     </div>
@@ -26,5 +26,5 @@
     prev_label: __("prev_page.title"), next_label:__("next_page.title"),
     prev_link: page.prev_link, next_link: page.next_link,
     prev_title: null, next_title: null
-   })%>
+  })%>
 <% } %>

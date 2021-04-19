@@ -2,7 +2,7 @@
   <div class="tags-header"><i class="iconfont icon-biaoqian" style="padding-right: 2px;"></i><%- __("hottags.title") %></div>
   <div class="tags-list">
     <% site.tags.data.slice(0, Math.min(16, site.tags.data.length)).forEach(function(item){ %>
-    <a href="/<%= item.path %>" title="<%- item.name %>"><div class="tags-list-item"><%= item.name %></div></a>
+    <a href="<%= url_for(item.path) %>" title="<%- item.name %>"><div class="tags-list-item"><%= item.name %></div></a>
     <% }) %>
   </div>
 </div>

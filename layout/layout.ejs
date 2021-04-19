@@ -1,79 +1,89 @@
 <!DOCTYPE html>
-<html <% if(config.language) { %> lang="<%- config.language %>" <% } %>>
-<%- partial('_partial/head') %>
+<html <% if(config.language) { %>
+  lang="<%- config.language %>" <% } %>> <%- partial('_partial/head') %>
 
-<body>
-  <div class="wrapper">
-    <%# navbar %>
-    <%- partial('_partial/nav.ejs') %>
-    <%# search content %>
-    <div id="local-search" style="display: none;">
-      <input class="navbar-menu-item" id="search-input" placeholder="请输入搜索内容...">
-      <div id="search-content"></div>
-    </div>
-    <%# main content %>
-    <div class="section-wrap">
-      <div class="container">
-        <div class="columns">
-          <main class="main-column"><%- body %></main>
-          <aside class="left-column">
-            <%# author card %>
-            <div class="card card-author">
-              <%- partial('_partial/author') %>
-            </div>
-            <%# sticky-tablet %>
-            <%- partial('_partial/left-aside') %>
-          </aside>
-          <aside class="right-column">
-            <%- partial('_partial/right-aside') %>
-          </aside>
+  <body>
+    <div class="wrapper">
+      <%# navbar %> <%- partial('_partial/nav.ejs') %> <%# search content %>
+      <div id="local-search" style="display: none">
+        <input
+          class="navbar-menu-item"
+          id="search-input"
+          placeholder="请输入搜索内容..."
+        />
+        <div id="search-content"></div>
+      </div>
+      <%# main content %>
+      <div class="section-wrap">
+        <div class="container">
+          <div class="columns">
+            <main class="main-column"><%- body %></main>
+            <aside class="left-column">
+              <%# author card %>
+              <div class="card card-author">
+                <%- partial('_partial/author') %>
+              </div>
+              <%# sticky-tablet %> <%- partial('_partial/left-aside') %>
+            </aside>
+            <aside class="right-column">
+              <%- partial('_partial/right-aside') %>
+            </aside>
+          </div>
         </div>
       </div>
     </div>
-  </div>
-  <%# footer %>
-  <%- partial('_partial/footer.ejs') %>
-  <%- partial('_partial/scrollbutton.ejs') %>
-
-  <%# plugins %>
-  <% if(theme.latex.enable) { %>
-  <%- partial('_partial/plugins/latex.ejs') %>
-  <% } %>
-  <% if(theme.lightbox.enable && is_post()) { %>
-  <%- partial('_partial/plugins/lightbox.ejs') %>
-  <% } %>
-  <%# javascript %>
-  <%- js('js/main.js') %>
-  <% if(theme.footer.statistics.enable && theme.footer.statistics.type === 'busuanzi') { %>
-  <script>loadScript("<%= theme.cdn.busuanzi %>")</script>
-  <% } %>
-  <% if(theme.lazyload.enable) { %>
-  <script>
-    var addLazyload = function () {
-      var observer = lozad('.lozad', {
-        load: function (el) {
-          el.srcset = el.getAttribute('data-src');
-        },
-        loaded: function (el) {
-          el.classList.add('loaded');
+    <%# footer %> <%- partial('_partial/footer.ejs') %> <%-
+    partial('_partial/scrollbutton.ejs') %> <%# plugins %> <%
+    if(theme.latex.enable) { %> <%- partial('_partial/plugins/latex.ejs') %> <%
+    } %> <% if(theme.lightbox.enable && is_post()) { %> <%-
+    partial('_partial/plugins/lightbox.ejs') %> <% } %> <%# javascript %> <%-
+    ex_js(url_for('/js/main.js')) %> <% if(theme.footer.statistics.enable &&
+    theme.footer.statistics.type === 'busuanzi') { %>
+    <script>
+      loadScript('<%= url_for(theme.cdn.busuanzi) %>')
+    </script>
+    <% } %> <% if(theme.lazyload.enable) { %>
+    <script>
+      var addLazyload = function () {
+        var observer = lozad('.lozad', {
+          load: function (el) {
+            el.srcset = el.getAttribute('data-src')
+          },
+          loaded: function (el) {
+            el.classList.add('loaded')
+          },
+        })
+        observer.observe()
+      }
+    </script>
+    <script>
+      loadScript('<%= url_for(theme.cdn.lozad) %>', addLazyload)
+    </script>
+    <% } %> <% if(theme.analytics.enable && theme.analytics.type === 'google' &&
+    theme.analytics.google.id) { %>
+    <script>
+      var googleAnalytics = function () {
+        window.dataLayer = window.dataLayer || []
+        function gtag() {
+          dataLayer.push(arguments)
         }
-      });
-      observer.observe();
-    }
-  </script>
-  <script>loadScript("<%= theme.cdn.lozad %>", addLazyload)</script>
-  <% } %>
-  <% if(theme.analytics.enable && theme.analytics.type === 'google' && theme.analytics.google.id) { %>
-  <script>
-    var googleAnalytics = function() {
-      window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
-      gtag('js', new Date());
-      gtag('config', '<%= theme.analytics.google.id %>');
-    }
-  </script>
-  <script>loadScript("https://www.googletagmanager.com/gtag/js?id=" + "<%= theme.analytics.google.id %>", googleAnalytics)</script>
-  <% } %>
-</body>
-
+        gtag('js', new Date())
+        gtag('config', '<%= theme.analytics.google.id %>')
+      }
+    </script>
+    <script>
+      loadScript(
+        'https://www.googletagmanager.com/gtag/js?id=' +
+          '<%= theme.analytics.google.id %>',
+        googleAnalytics
+      )
+    </script>
+    <% } %>
+    <% if(theme.search && theme.search.enable && theme.search.path)  { %>
+    <script>
+      setTimeout(() => {
+        localSearch('<%= theme.search.path || "search.json" %>')}, 0)
+    </script>
+    <% } %>
+  </body>
 </html>
