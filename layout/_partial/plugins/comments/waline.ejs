@@ -1,7 +1,7 @@
 <% if(theme.comment.waline.appId && theme.comment.waline.appKey) { %>
-    <div id="wcomments"></div>
+  <div id="wcomments"></div>
     
-    <script>
+  <script>
       loadScript("<%= theme.cdn.waline %>");
       var oldLoadVa = window.onload;
       window.onload = function () {
@@ -28,4 +28,4 @@
         });
       };
     </script>
-  <% } %>
+<% } %>

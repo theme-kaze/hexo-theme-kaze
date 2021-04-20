@@ -5,15 +5,21 @@
 <div class="archive-timeline">
   <% let archiveYear = ''; %>
   <% page.posts.forEach(post => { %>
-    <% if (date(post.date,'YYYY') != archiveYear) { %>
-      <div class="archive-timeline-tag"><span><%= date(post.date,'YYYY') %></span></div>
-      <% archiveYear = date(post.date,'YYYY'); %>
+    <% if (date(post.date, 'YYYY') != archiveYear) { %>
+      <div class="archive-timeline-tag"><span><%= date(post.date, 'YYYY') %></span></div>
+      <% archiveYear = date(post.date, 'YYYY'); %>
     <% } %>
     <div class="archive-timeline-item">
       <div class="archive-timeline-post">
         <div class="card card-content">
-          <div class="archive-timeline-post-date"><%= date(post.date,'YYYY-MM-DD') %></div>
-          <div class="archive-timeline-post-content"><a href="<%- url_for(post.path)  %>" class="archive-timeline-post-item"><%= post.title %></a></div>
+          <div class="archive-timeline-post-date"><%= date(post.date, 'YYYY-MM-DD') %></div>
+          <div class="archive-timeline-post-content">
+            <a 
+              href="<%- url_for(post.path) %>" 
+              class="archive-timeline-post-item">
+              <%= post.title %>
+            </a>
+          </div>
         </div>
       </div>
     </div>

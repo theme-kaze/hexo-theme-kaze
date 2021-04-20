@@ -1,28 +1,32 @@
 <div class="nav">
-  <% if(page.prev) {%>
-  <div class="nav-item-prev">
-    <a href="<%= url_for(prev_link) %>" class="nav-link">
-      <i class="iconfont icon-left nav-prev-icon"></i>
-      <div>
-        <div class="nav-label"><%= prev_label%></div>
-        <% if(prev_title) { %>
-        <div class="nav-title"><%= prev_title %> </div>
-        <% } %>
-      </div>
-    </a>
-  </div>
+  <% if(page.prev) { %>
+    <div class="nav-item-prev">
+      <a 
+        href="<%= url_for(prev_link) %>" 
+        class="nav-link">
+        <i class="iconfont icon-left nav-prev-icon"></i>
+        <div>
+          <div class="nav-label"><%= prev_label %></div>
+          <% if(prev_title) { %>
+            <div class="nav-title"><%= prev_title %> </div>
+          <% } %>
+        </div>
+      </a>
+    </div>
   <% } %>
-  <% if(page.next) {%>
-  <div class="nav-item-next">
-    <a href="<%= url_for(next_link) %>" class="nav-link">
-      <div>
-        <div class="nav-label"><%= next_label %></div>
-        <% if(next_title) { %>
-        <div class="nav-title"><%= next_title %> </div>
-        <% } %>
-      </div>
-      <i class="iconfont icon-right nav-next-icon"></i>
-    </a>
-  </div>
+  <% if(page.next) { %>
+    <div class="nav-item-next">
+      <a 
+        href="<%= url_for(next_link) %>" 
+        class="nav-link">
+        <div>
+          <div class="nav-label"><%= next_label %></div>
+          <% if(next_title) { %>
+            <div class="nav-title"><%= next_title %> </div>
+          <% } %>
+        </div>
+        <i class="iconfont icon-right nav-next-icon"></i>
+      </a>
+    </div>
   <% } %>
 </div>

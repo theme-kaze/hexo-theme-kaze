@@ -1,11 +1,12 @@
 <% if(page.banner_img) { %>
-<div class="image-wrapper">
-  <img src="<%= page.banner_img %>" data-src="<%=page.banner_img %>"
-    srcset="<%= page.banner_img_set || theme.lazyload.loadingImg || "data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%20300%20300'%3E%3C/svg%3E" %>"
-    class="image lozad"
-    alt="<%= page.title %> thumbnail"
-  >
-</div>
+  <div class="image-wrapper">
+    <img 
+      src="<%= page.banner_img %>" 
+      data-src="<%= page.banner_img %>"
+      srcset="<%= page.banner_img_set || theme.lazyload.loadingImg || 'data:image/svg+xml,%3Csvg%20xmlns=\'http://www.w3.org/2000/svg\'%20viewBox=\'0%200%20300%20300\'%3E%3C/svg%3E' %>"
+      class="image lozad"
+      alt="<%= page.title %> thumbnail">
+  </div>
 <% } %>
 <article class="card card-content">
   <header>
@@ -15,58 +16,96 @@
   </header>
   <div class="post-meta post-show-meta">
     <time datetime="<%= date_xml(page.date) _%>">
-      <i class="iconfont icon-calendar" style="margin-right: 2px;"></i>
+      <i 
+        class="iconfont icon-calendar" 
+        style="margin-right: 2px;">
+      </i>
       <span><%= date(page.date) %></span>
     </time>
     <% if(page.categories && page.categories.data.length) { %>
-    <span class="dot"></span>
-    <% for(const item of page.categories.data) { %>
-    <a href="<%= url_for(item.path) %>" class="post-meta-link"><%= item.name %></a>
-    <% } %>
+      <span class="dot"></span>
+      <% for(const item of page.categories.data) { %>
+        <a 
+          href="<%= url_for(item.path) %>" 
+          class="post-meta-link">
+          <%= item.name %>
+        </a>
+      <% } %>
     <% } %>
     <% if(theme.wordcount.enable) { %>
-    <span class="dot"></span>
-    <span><%= wordcount(page.content) %> <%= __('words_count.title') %></span>
+      <span class="dot"></span>
+      <span><%= wordcount(page.content) %> <%= __('words_count.title') %></span>
     <% } %>
   </div>
   <% if(page.tags && page.tags.data.length) { %>
-  <div class="post-meta post-show-meta" style="margin-top: -10px;">
-    <div style="display: flex; align-items: center;">
-      <i class="iconfont icon-biaoqian" style="margin-right: 2px; font-size: 1.15rem;"></i>
-      <% page.tags.data.forEach((item, index) => { %>
-      <% if(index > 0) { %>
-      <span class="dot"></span>
-      <% } %>
-        <a href="<%= url_for(item.path) %>" class="post-meta-link"><%= item.name %></a>
-      <% }) %>
+    <div 
+      class="post-meta post-show-meta" 
+      style="margin-top: -10px;">
+      <div style="display: flex; align-items: center;">
+        <i 
+          class="iconfont icon-biaoqian" 
+          style="margin-right: 2px; font-size: 1.15rem;">
+        </i>
+        <% page.tags.data.forEach((item, index) => { %>
+          <% if(index > 0) { %>
+            <span class="dot"></span>
+          <% } %>
+          <a 
+            href="<%= url_for(item.path) %>" 
+            class="post-meta-link">
+            <%= item.name %>
+          </a>
+        <% }) %>
+      </div>
     </div>
-  </div>
   <% } %>
   </header>
-  <div id="section" class="post-content">
+  <div 
+    id="section" 
+    class="post-content">
     <%- page.content %>
   </div>
   <div>
-  <% if(theme.copyright.enable) { %>
-  <div class="post-note note-<%= theme.copyright.style || "warning" %> copyright" style="margin-top: 42px">
-    <p><span style="font-weight: bold;">作者：</span><a target="_blank" rel="nofollow noopener noreferrer" href="<%= url_for('/about')  %>"><%= theme.copyright.writer || theme.author || config.author%></a></p>
-    <p><span style="font-weight: bold;">文章链接：</span><a target="_blank" rel="nofollow noopener noreferrer" href="<%= url_for(page.permalink) %>"><%= page.permalink %></a></p>
-    <p><span style="font-weight: bold;">版权声明：</span><%- theme.copyright.declare %></p>
-  </div>
-  <% } %>
+    <% if(theme.copyright.enable) { %>
+      <div 
+        class="post-note note-<%= theme.copyright.style || 'warning' %> copyright" 
+        style="margin-top: 42px">
+        <p>
+          <span style="font-weight: bold;">作者：</span><a 
+            target="_blank" 
+            rel="nofollow noopener noreferrer" 
+            href="<%= url_for('/about') %>">
+            <%= theme.copyright.writer || theme.author || config.author %>
+          </a>
+        </p>
+        <p>
+          <span style="font-weight: bold;">文章链接：</span><a 
+            target="_blank" 
+            rel="nofollow noopener noreferrer" 
+            href="<%= url_for(page.permalink) %>">
+            <%= page.permalink %>
+          </a>
+        </p>
+        <p><span style="font-weight: bold;">版权声明：</span><%- theme.copyright.declare %></p>
+      </div>
+    <% } %>
   </div>
 </article>
-<%- partial('_partial/pagination',{ 
-  prev_label: __("prev_post.title"), next_label:__("next_post.title"),
-  prev_link: page.prev ? page.prev.path : '', next_link: page.next ? page.next.path : '',
-  prev_title: page.prev ? page.prev.title : '', next_title: page.next ? page.next.title : ''
- })%>
+<%- partial('_partial/pagination', { 
+    prev_label: __('prev_post.title'), next_label:__('next_post.title'),
+    prev_link: page.prev ? page.prev.path : '', next_link: page.next ? page.next.path : '',
+    prev_title: page.prev ? page.prev.title : '', next_title: page.next ? page.next.title : ''
+  }) %>
 <% if(theme.comment.enable && page.comment !== false) { %>
-<div class="card card-content comment-card" style="margin-top: 16px;">
-  <div class="comment-card-title">评论</div>
-  <%- partial('_partial/plugins/comments/' + theme.comment.type) %>
-</div>
+  <div 
+    class="card card-content comment-card" 
+    style="margin-top: 16px;">
+    <div class="comment-card-title">评论</div>
+    <%- partial('_partial/plugins/comments/' + theme.comment.type) %>
+  </div>
 <% } %>
-<div class="card card-content toc-card" id="mobiletoc">
+<div 
+  class="card card-content toc-card" 
+  id="mobiletoc">
   <%- partial('_partial/toc-card') %>
 </div>

@@ -1,16 +1,25 @@
 <% page.title = __('categories.title') %>
 <div class="card card-content">
-  <div class="categories-page-title" style="margin-bottom: 0.6rem;"><%- __('categories.title') %></div>
+  <div 
+    class="categories-page-title" 
+    style="margin-bottom: 0.6rem;">
+    <%- __('categories.title') %>
+  </div>
   <div>
-    <%=__('categories.total').split(' ')[0] %>&nbsp;<%= site.posts.data.length %>&nbsp;<%= __('categories.total').split(' ')[1] %>
+    <%= __('categories.total').split(' ')[0] %>&nbsp;<%= site.posts.data.length %>&nbsp;<%= __('categories.total').split(' ')[1] %>
   </div>
 </div>
 <div class="card card-content categories-page-card">
   <% for(const postList of site.categories.data) { %>
-  <a href="<%= url_for(postList.path) %>" class="categories-page-list-item" style="margin-top: 0;">
-    <span><%= postList.slug %></span>
-    <span
-      class="categories-page-list-item-total"><%= __('categories.total').split(' ')[0] %>&nbsp;<%= postList.posts.length %>&nbsp;<%= __('categories.total').split(' ')[1] %></span>
-  </a>
+    <a 
+      href="<%= url_for(postList.path) %>" 
+      class="categories-page-list-item" 
+      style="margin-top: 0;">
+      <span><%= postList.slug %></span>
+      <span
+        class="categories-page-list-item-total">
+        <%= __('categories.total').split(' ')[0] %>&nbsp;<%= postList.posts.length %>&nbsp;<%= __('categories.total').split(' ')[1] %>
+      </span>
+    </a>
   <% } %>
 </div>

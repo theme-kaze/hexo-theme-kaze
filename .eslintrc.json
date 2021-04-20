@@ -1,21 +1,37 @@
 {
   "extends": [
-    "eslint:recommended"
+    "eslint:recommended",
+    "plugin:lodash-template/all"
   ],
   "parserOptions": {
-    "ecmaVersion": 6
+    "ecmaVersion": 2020
   },
+  "overrides": [
+    {
+      "files": ["*.ejs"],
+      "processor": "lodash-template/html",
+      "parserOptions": {
+        "templateSettings": {
+          "evaluate": "(?:(?:<%_)|(?:<%(?!%)))([\\s\\S]*?)[_\\-]?%>",
+          "interpolate": "<%-([\\s\\S]*?)[_\\-]?%>",
+          "escape": "<%=([\\s\\S]*?)[_\\-]?%>"
+        }
+      }
+    }
+  ],
   "rules": {
     "semi": 0,
     "no-var": "error",
+    // hack for ejs lint
+    "no-undef": 0,
     "init-declarations": 2,
+    "camelcase": 0,
     "quotes": ["error", "single"],
-    // "linebreak-style": ["error", "unix"],
-    "indent": ["error", 2, {"SwitchCase": 1}],
-    "brace-style": [2, "1tbs", {"allowSingleLine": true}],
-    "camelcase": 2,
-    "comma-spacing": [2, {"before": false, "after": true}],
-    "comma-style": [2, "last"]
+    "indent": ["error", 2, { "SwitchCase": 1 }],
+    "brace-style": [2, "1tbs", { "allowSingleLine": true }],
+    "comma-spacing": [2, { "before": false, "after": true }],
+    "comma-style": [2, "last"],
+    "lodash-template/prefer-escape-template-interpolations": 0
   },
   "env": {
     "browser": true,

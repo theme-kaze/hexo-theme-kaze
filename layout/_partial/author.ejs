@@ -1,30 +1,39 @@
 <% if(theme.author_img) { %>
-<img src="<%- theme.author_img %>" class="author-img" alt="author avatar">
+  <img 
+    src="<%- theme.author_img %>" 
+    class="author-img" 
+    alt="author avatar">
 <% } %>
 <p class="author-name"><%- theme.author || config.author %></p>
 <p class="author-description"><%- theme.author_description || config.description %></p>
 <div class="author-message">
-  <a class="author-posts-count" href="<%- url_for('/archives') %>">
+  <a 
+    class="author-posts-count" 
+    href="<%- url_for('/archives') %>">
     <span><%- site.posts.length %></span>
-    <span><%- __("posts.title") %></span>
+    <span><%- __('posts.title') %></span>
   </a>
-  <a class="author-categories-count" href="<%- url_for('/categories') %>">
+  <a 
+    class="author-categories-count" 
+    href="<%- url_for('/categories') %>">
     <span><%- site.categories.length %></span>
-    <span><%- __("categories.title") %></span>
+    <span><%- __('categories.title') %></span>
   </a>
-  <a class="author-tags-count" href="<%- url_for('/tags') %>">
+  <a 
+    class="author-tags-count" 
+    href="<%- url_for('/tags') %>">
     <span><%- site.tags.length %></span>
-    <span><%- __("tags.title") %></span>
+    <span><%- __('tags.title') %></span>
   </a>
 </div>
 <% if(theme.about.social_links) { %>
-<div class="author-card-society">
-  <% for(const item of theme.about.social_links) { %>
-    <div class="author-card-society-icon">
-      <a href="<%= item.link %>">
-        <i class="iconfont <%= item.icon %> society-icon"></i>
-      </a>
-    </div>
-  <% } %>
-</div>
+  <div class="author-card-society">
+    <% for(const item of theme.about.social_links) { %>
+      <div class="author-card-society-icon">
+        <a href="<%= item.link %>">
+          <i class="iconfont <%= item.icon %> society-icon"></i>
+        </a>
+      </div>
+    <% } %>
+  </div>
 <% } %>
