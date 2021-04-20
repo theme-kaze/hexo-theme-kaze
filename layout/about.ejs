@@ -1,7 +1,7 @@
 <% page.title = page.title || __('about.title') %>
 <div class="card card-content about-card">
   <% if(theme.author_img) { %>
-  <img src="<%= url_for(theme.author_img) %>" class="about-card-avatar" />
+  <img src="<%= url_for(theme.author_img) %>" class="about-card-avatar" alt="Blog Author Avatar" />
   <% } %>
   <div class="about-card-content">
     <div class="about-card-author"><%= theme.author || config.author %></div>
