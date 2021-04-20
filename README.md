@@ -84,14 +84,7 @@ Or download compression package and unzip under `your site/themes`, rename `hexo
 
 If you have any `bug` or suggestion, please send us `issue`!
 
-```markdown
-## Hexo version and the problems you encountered
-TODO
-## Reproduction method
-TODO
-## other problems
-TODO
-```
+You can see issue template details when creating new issues.
 
 ## Contributors
 
