@@ -22,12 +22,18 @@
   },
   "homepage": "https://demo.theme-kaze.top/",
   "devDependencies": {
-    "ejs-lint": "^1.1.0",
+    "@babel/core": "^7.13.16",
+    "@rollup/plugin-babel": "^5.3.0",
+    "@rollup/plugin-typescript": "^8.2.1",
     "eslint": "^7.4.0",
     "eslint-plugin-lodash-template": "^0.19.0",
     "gulp": "^4.0.2",
     "gulp-eslint": "^6.0.0",
-    "gulp-shell": "^0.8.0"
+    "gulp-shell": "^0.8.0",
+    "rollup": "^2.45.2",
+    "rollup-plugin-terser": "^7.0.2",
+    "tslib": "^2.2.0",
+    "typescript": "^4.2.4"
   },
   "dependencies": {
     "clean-css": "^4.2.3",

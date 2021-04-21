@@ -4,7 +4,8 @@
     "plugin:lodash-template/all"
   ],
   "parserOptions": {
-    "ecmaVersion": 2020
+    "ecmaVersion": 2020,
+    "sourceType": "module"
   },
   "overrides": [
     {
@@ -19,6 +20,7 @@
       }
     }
   ],
+  "ignorePatterns": ["src/scripts/*.js", "**/main.js"],
   "rules": {
     "semi": 0,
     "no-var": "error",
