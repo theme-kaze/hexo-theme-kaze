@@ -61,6 +61,66 @@
     <% } %>
   <% } %>
   <script>
+    function loadScript(url, cb) {
+      var script = document.createElement('script');
+      script.src = url;
+      if (cb) script.onload = cb;
+      script.async = true;
+      document.body.appendChild(script);
+    }
+    function loadCSS(href, data, attr) {
+      var sheet = document.createElement('link');
+      sheet.ref = 'stylesheet';
+      sheet.href = href;
+      sheet.dataset[data] = attr;
+      document.head.appendChild(sheet);
+    }
+    function changeCSS(cssFile, data, attr) {
+      var oldlink = document.querySelector(data);
+      var newlink = document.createElement("link");
+      newlink.setAttribute("rel", "stylesheet");
+      newlink.setAttribute("href", cssFile);
+      newlink.dataset.prism = attr;
+      document.head.replaceChild(newlink, oldlink);
+    }
+  </script>
+  <% if(config.prismjs) { %>
+    <% if(config.prismjs.enable && !config.highlight.enable) { %>
+      <% let prismTheme = theme.prism.theme || 'default' %>
+      <% prismTheme = (prismTheme === 'default') ? 'prism' : ('prism-' + prismTheme) %>
+      <% const themeUrl = url_for(theme.cdn.prism + prismTheme + '.min.css') %>
+      <% if (theme.prism.darkTheme) { %>
+        <% let darkPrismTheme = theme.prism.darkTheme || 'default' %>
+        <% darkPrismTheme = (darkPrismTheme === 'default') ? 'prism' : ('prism-' + darkPrismTheme) %>
+        <% const darkThemeUrl = url_for(theme.cdn.prism + darkPrismTheme + '.min.css') %>
+        <script>
+          function prismThemeChange() {
+            if(document.getElementById('theme-color').dataset.mode === 'dark') {
+              if(document.querySelector('[data-prism]')) {
+                changeCSS('<%- darkThemeUrl %>', '[data-prism]', '<%= darkPrismTheme %>');
+              } else {
+                loadCSS('<%- darkThemeUrl %>', 'prism', '<%= darkPrismTheme %>');
+              }
+            } else {
+              if(document.querySelector('[data-prism]')) {
+                changeCSS('<%- themeUrl %>', '[data-prism]', '<%= prismTheme %>');
+              } else {
+                loadCSS('<%- themeUrl %>', 'prism', '<%= prismTheme %>');
+              }
+            }
+          }
+          prismThemeChange()
+        </script>
+      <% } %>
+      <% if(config.prismjs.line_number && config.prismjs.preprocess) { %>
+        <% const lineUrl = theme.cdn.prism + 'prism-line-numbers.min.css' %>
+        <%- ex_css(url_for(lineUrl)) %>
+      <% } %>
+    <% } %>
+  <% } else if(theme.prism.theme) { %>
+    <% console.log('INFO: your Hexo version < 5.0.0 and could not use prismjs') %>
+  <% } %>
+  <script>
     // control reverse button
     var reverseDarkList = {
       dark: 'light',
@@ -88,32 +148,55 @@
       return setting;
     };
     // apply current darkmode setting
-    var setDarkmode = function(mode) {
+  </script>
+  <% if(config.prismjs && config.prismjs.enable && theme.prism && theme.prism.darkTheme) { %>
+    <script>
+      var setDarkmode = function(mode) {
       var setting = mode || localStorage.getItem('user-color-scheme');
       if(setting === getCssMediaQuery()) {
         document.documentElement.removeAttribute('data-user-color-scheme');
         localStorage.removeItem('user-color-scheme');
         document.getElementById('theme-color').content = themeColor[setting];
+        document.getElementById('theme-color').dataset.mode = setting;
+        prismThemeChange();
       } else if(reverseDarkList[setting]) {
         document.documentElement.setAttribute('data-user-color-scheme', setting);
         document.getElementById('theme-color').content = themeColor[setting];
+        document.getElementById('theme-color').dataset.mode = setting;
+        prismThemeChange();
       } else {
         document.documentElement.removeAttribute('data-user-color-scheme');
         localStorage.removeItem('user-color-scheme');
         document.getElementById('theme-color').content = themeColor[getCssMediaQuery()];
+        document.getElementById('theme-color').dataset.mode = getCssMediaQuery();
+        prismThemeChange();
       }
     };
     setDarkmode();
-  </script>
-  <script>
-    function loadScript(url, cb) {
-      var script = document.createElement('script');
-      script.src = url;
-      if (cb) script.onload = cb;
-      script.async = true;
-      document.body.appendChild(script);
-    }
-  </script>
+    </script>
+  <% } else { %>
+    <script>
+      var setDarkmode = function(mode) {
+      var setting = mode || localStorage.getItem('user-color-scheme');
+      if(setting === getCssMediaQuery()) {
+        document.documentElement.removeAttribute('data-user-color-scheme');
+        localStorage.removeItem('user-color-scheme');
+        document.getElementById('theme-color').content = themeColor[setting];
+        document.getElementById('theme-color').dataset.mode = setting;
+      } else if(reverseDarkList[setting]) {
+        document.documentElement.setAttribute('data-user-color-scheme', setting);
+        document.getElementById('theme-color').content = themeColor[setting];
+        document.getElementById('theme-color').dataset.mode = setting;
+      } else {
+        document.documentElement.removeAttribute('data-user-color-scheme');
+        localStorage.removeItem('user-color-scheme');
+        document.getElementById('theme-color').content = themeColor[getCssMediaQuery()];
+        document.getElementById('theme-color').dataset.mode = getCssMediaQuery();
+      }
+    };
+    setDarkmode();
+    </script>
+  <% } %>
   <%# preload %>
   <%- preload_css('//at.alicdn.com/t/font_1946621_i1kgafibvw.css') %>
   <%- preload_css('//at.alicdn.com/t/font_1952792_89b4ac4k4up.css') %>
@@ -144,22 +227,5 @@
   <%- ex_css('//at.alicdn.com/t/font_1952792_89b4ac4k4up.css') %>
   <% if(theme.lightbox.enable && is_post()) { %>
     <%- ex_css(url_for(theme.cdn.baguetteBox + '/baguetteBox.min.css')) %>
-  <% } %>
-  <% if(config.prismjs) { %>
-    <% if(config.prismjs.enable && !config.highlight.enable) { %>
-      <% let prismTheme = theme.prism.theme || 'default' %>
-      <% prismTheme = (prismTheme === 'default') ? 'prism' : ('prism-' + prismTheme) %>
-      <% const themeUrl = theme.cdn.prism + prismTheme + '.min.css' %>
-      <link 
-        href="<%= themeUrl %>" 
-        rel="stylesheet" 
-        data-prism="<%= prismTheme %>">
-      <% if(config.prismjs.line_number && config.prismjs.preprocess) { %>
-        <% const lineUrl = theme.cdn.prism + 'prism-line-numbers.min.css' %>
-        <%- ex_css(url_for(lineUrl)) %>
-      <% } %>
-    <% } %>
-  <% } else if(theme.prism.theme) { %>
-    <% console.log('INFO: your Hexo version < 5.0.0 and could not use prismjs') %>
   <% } %>
 </head>

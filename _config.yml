@@ -183,7 +183,8 @@ lightbox:
 # we support eight highlight themes, you can go to prism website (https://prismjs.com) for more information
 # theme: default | coy | dark | funky | okaidia | solarizedlight | tomorrow | twilight
 prism:
-  theme:
+  theme: default
+  darkTheme: tomorrow
 # show the number of words in posts
 wordcount:
   enable: true

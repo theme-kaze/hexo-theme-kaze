@@ -1,8 +1,5 @@
 {
-  "extends": [
-    "eslint:recommended",
-    "plugin:lodash-template/all"
-  ],
+  "extends": ["eslint:recommended", "plugin:lodash-template/all"],
   "parserOptions": {
     "ecmaVersion": 2020,
     "sourceType": "module"
