@@ -1,12 +1,12 @@
 <%
-let flag = theme.latex.enable;
-if(flag) {
-  if(is_page() || is_post()) {
-    flag = theme.latex.global || page.latex;
-  } else {
-    flag = false;
+  let flag = theme.latex.enable;
+  if(flag) {
+    if(is_page() || is_post()) {
+      flag = theme.latex.global || page.latex;
+    } else {
+      flag = false;
+    }
   }
-}
 %>
 <% if(flag) { %>
   <% const engine = theme.latex.engine; %>

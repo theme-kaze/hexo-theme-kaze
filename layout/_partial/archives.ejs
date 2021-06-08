@@ -1,26 +1,35 @@
 <div class="archive-card">
-  <div class="archive-card-header"><i class="iconfont icon-wodebaobiao" style="padding-right: 2px;"></i><%- __("archive.title") %></div>
+  <div class="archive-card-header">
+    <i 
+      class="iconfont icon-wodebaobiao" 
+      style="padding-right: 2px;">
+    </i><%- __('archive.title') %>
+  </div>
   <div class="archive-card-list">
     <% let archiveYear = ''; %>
     <% let count = 0; %>
     <% site.posts.sort('date', -1).forEach(post => { %>
-      <% if (date(post.date,'YYYY') != archiveYear) { %>
-        <% if (count != 0) {%>
-          <a href="<%= url_for('/archives/' + archiveYear) %>" class="archive-card-list-item">
-              <%= archiveYear %>
-              <span class="archive-card-list-item-badge"><%= count %></span>
+      <% if (date(post.date, 'YYYY') != archiveYear) { %>
+        <% if (count != 0) { %>
+          <a 
+            href="<%= url_for('/archives/' + archiveYear) %>" 
+            class="archive-card-list-item">
+            <%= archiveYear %>
+            <span class="archive-card-list-item-badge"><%= count %></span>
           </a>
         <% } %>
         <% count = 1; %>
-        <% archiveYear = date(post.date,'YYYY'); %>
+        <% archiveYear = date(post.date, 'YYYY'); %>
       <% } else { %>
         <% count++; %>
       <% } %>
     <% }); %>
-    <% if (count != 0) {%>
-      <a href="<%= url_for('/archives/' + archiveYear) %>" class="archive-card-list-item">
-          <%= archiveYear %>
-          <span class="archive-card-list-item-badge"><%= count %></span>
+    <% if (count != 0) { %>
+      <a 
+        href="<%= url_for('/archives/' + archiveYear) %>" 
+        class="archive-card-list-item">
+        <%= archiveYear %>
+        <span class="archive-card-list-item-badge"><%= count %></span>
       </a>
     <% } %>
   </div>

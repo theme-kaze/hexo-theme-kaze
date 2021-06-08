@@ -2,57 +2,73 @@
   <div class="footer-container">
     <div>
       <div class="footer-dsc">
-        <span>Copyright ©
+        <span>
+          Copyright ©
           <% if(theme.footer.copyYear) { %>
-          <%- theme.footer.copyYear %> -
+            <%- theme.footer.copyYear %> -
           <% } %>
           <%- date(Date.now(), 'YYYY') %>
         </span>
         &nbsp;
-        <a href="<%- url_for('/')%>" class="footer-link"><%- theme.title %> </a>
+        <a 
+          href="<%- url_for('/') %>" 
+          class="footer-link">
+          <%- theme.title %>
+        </a>
       </div>
     </div>
 
     <% if(theme.footer.showPoweredBy || theme.footer.showThemeName) { %>
-    <div class="footer-dsc">
-      <% if(theme.footer.showPoweredBy) { %>
-      Powered by
-      <a href="https://hexo.io/" class="footer-link" target="_blank" rel="nofollow noopener noreferrer">&nbsp;Hexo </a>
-      <% } %>
-      <% if(theme.footer.showPoweredBy && theme.footer.showThemeName) { %>
-      <span>&nbsp;|&nbsp;</span>
-      <% } %>
-      <% if(theme.footer.showThemeName) { %>
-      Theme -
-      <a href="https://github.com/theme-kaze" class="footer-link" target="_blank"
-        rel="nofollow noopener noreferrer">&nbsp;Kaze</a>
-      <% } %>
-    </div>
+      <div class="footer-dsc">
+        <% if(theme.footer.showPoweredBy) { %>
+          Powered by
+          <a 
+            href="https://hexo.io/" 
+            class="footer-link" 
+            target="_blank" 
+            rel="nofollow noopener noreferrer">
+            &nbsp;Hexo
+          </a>
+        <% } %>
+        <% if(theme.footer.showPoweredBy && theme.footer.showThemeName) { %>
+          <span>&nbsp;|&nbsp;</span>
+        <% } %>
+        <% if(theme.footer.showThemeName) { %>
+          Theme -
+          <a 
+            href="https://github.com/theme-kaze" 
+            class="footer-link" 
+            target="_blank"
+            rel="nofollow noopener noreferrer">
+            &nbsp;Kaze
+          </a>
+        <% } %>
+      </div>
     <% } %>
     <%# Record Info %>
     <% if(theme.footer.RecordInfo) { %>
-    <div class="BbeiAn-info">
-      <a href="https://beian.miit.gov.cn/"><%= theme.footer.RecordInfo %> </a>
-    </div>
-    <% if(theme.footer.govRecordInfo) { %>
-    <div class="BbeiAn-info">
-      <span style="padding-left: 25px;background: url(/img/beian.png) no-repeat left center"></span>
-      <a href="<%= theme.footer.govRecordUrl %> "><%= theme.footer.govRecordInfo %>
-      </a>
-      <br />
-    </div>
-    <% } %>
+      <div class="BbeiAn-info">
+        <a href="https://beian.miit.gov.cn/"><%= theme.footer.RecordInfo %> </a>
+      </div>
+      <% if(theme.footer.govRecordInfo) { %>
+        <div class="BbeiAn-info">
+          <span style="padding-left: 25px;background: url(/img/beian.png) no-repeat left center"></span>
+          <a href="<%= theme.footer.govRecordUrl %> "><%= theme.footer.govRecordInfo %>
+          </a>
+          <br />
+        </div>
+      <% } %>
     <% } %>
     <% if(theme.footer.statistics.enable && theme.footer.statistics.type === 'busuanzi') { %>
       <div class="footer-dsc">
         <% if(theme.footer.statistics.pv.enable) { %>
-        <%= theme.footer.statistics.pv.style.split('{}')[0] %><span id="busuanzi_value_site_pv"></span><%= theme.footer.statistics.pv.style.split('{}')[1] %>
+          <%= theme.footer.statistics.pv.style.split('{}')[0] %><span id="busuanzi_value_site_pv"></span><%= theme.footer.statistics.pv.style.split('{}')[1] %>
         <% } %>
         <% if(theme.footer.statistics.pv.enable && theme.footer.statistics.uv.enable) { %>
-        <span>&nbsp;|&nbsp;</span>
+          <span>&nbsp;|&nbsp;</span>
         <% } %>
         <% if(theme.footer.statistics.uv.enable) { %>
-        <%= theme.footer.statistics.uv.style.split('{}')[0] %><span id="busuanzi_value_site_uv"></span><%= theme.footer.statistics.uv.style.split('{}')[1] %>
+          <%= theme.footer.statistics.uv.style.split('{}')[0] %><span id="busuanzi_value_site_uv"></span><%= theme.footer.statistics.uv.style.split('{}')[1] %>
         <% } %>
       </div>
       

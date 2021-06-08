@@ -1,9 +1,9 @@
 <% page.title = __('artitalk.title') %>
 
 <% if(theme.artitalk.enable) { %>
-<div id="artitalk_main"></div>
+  <div id="artitalk_main"></div>
 
-<script>
+  <script>
   loadScript("<%= theme.cdn.artitalk %>");
   var oldLoadVa = window.onload;
   window.onload = function () {
@@ -13,5 +13,5 @@
       appKey: '<%= theme.artitalk.appKey %>',
     });
   };
-</script>
+  </script>
 <% } %>

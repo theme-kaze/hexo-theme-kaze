@@ -2,22 +2,38 @@
   <div class="navbar-logo">
     <span class="navbar-logo-main">
       <% if(theme.logo_img || theme.author_img ) { %>
-      <img class="navbar-logo-img" src="<%- url_for(theme.logo_img) %>" alt="logo">
+        <img 
+          class="navbar-logo-img" 
+          src="<%- url_for(theme.logo_img) %>" 
+          alt="blog logo">
       <% } %>
       <span class="navbar-logo-dsc"><%- theme.title || config.title %></span>
     </span>
   </div>
   <div class="navbar-menu">
     <% for(const menu in theme.menus) { %>
-    <a href="<%= url_for(theme.menus[menu]) %>" class="navbar-menu-item">
-    <% if(__(menu + '.title') === menu + '.title') { %>
-    <%- menu %>
-    <% } else { %>
-    <%- __(menu + '.title') %>
+      <a 
+        href="<%= url_for(theme.menus[menu]) %>" 
+        class="navbar-menu-item">
+        <% if(__(menu + '.title') === menu + '.title') { %>
+          <%- menu %>
+        <% } else { %>
+          <%- __(menu + '.title') %>
+        <% } %>
+      </a>
     <% } %>
+    <a 
+      class="navbar-menu-item darknavbar" 
+      id="dark">
+      <i class="iconfont icon-weather"></i>
     </a>
-    <% } %>
-    <a class="navbar-menu-item darknavbar" id="dark"><i class="iconfont icon-weather"></i></a>
-    <a class="navbar-menu-item searchnavbar" id="search"><i class="iconfont icon-search" style="font-size: 1.2rem; font-weight: 400;"></i></a>
+    <a 
+      class="navbar-menu-item searchnavbar" 
+      id="search">
+      <i 
+        class="iconfont icon-search" 
+        style="font-size: 1.2rem; font-weight: 400;">
+      </i>
+    </a>
   </div>
 </nav>

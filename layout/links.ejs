@@ -6,12 +6,20 @@
   <ul class="links">
     <% for(const link in theme.links) { %>
       <div class="friend-item">
-        <a class="friend-item-card" href="<%= theme.links[link].url %>" target="_blank" rel="nofollow noopener noreferrer" title="<%= link %>">
+        <a 
+          class="friend-item-card" 
+          href="<%= theme.links[link].url %>" 
+          target="_blank" 
+          rel="nofollow noopener noreferrer" 
+          title="<%= link %>">
           <div class="friend-item-content">
             <% if(theme.links[link].avatar) { %>
-            <div class="friend-avatar">
-              <img src="<%- theme.links[link].avatar %>" style="border-radius: 50%;">
-            </div>
+              <div class="friend-avatar">
+                <img 
+                  src="<%- theme.links[link].avatar %>" 
+                  style="border-radius: 50%;" 
+                  alt="friend <%= link %> avatar">
+              </div>
             <% } %>
             <div class="friend-text">
               <div class="friend-name"><%= link %></div>

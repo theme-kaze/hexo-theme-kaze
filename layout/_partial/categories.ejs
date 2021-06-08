@@ -1,5 +1,10 @@
 <div class="categories-card">
-  <div class="categories-header"><i class="iconfont icon-fenlei" style="padding-right: 2px;"></i><%- __("categories.title") %></div>
+  <div class="categories-header">
+    <i 
+      class="iconfont icon-fenlei" 
+      style="padding-right: 2px;">
+    </i><%- __('categories.title') %>
+  </div>
   <div class="categories-list">
     <% for(const item of site.categories.data) { %>
       <a href="<%= url_for(item.path) %>">

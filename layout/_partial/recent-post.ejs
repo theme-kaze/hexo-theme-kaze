@@ -1,5 +1,10 @@
 <div class="recent-posts-card">
-  <div class="recent-posts-header"><i class="iconfont icon-wenzhang_huaban" style="padding-right: 2px;"></i><%- __("recentposts.title") %></div>
+  <div class="recent-posts-header">
+    <i 
+      class="iconfont icon-wenzhang_huaban" 
+      style="padding-right: 2px;">
+    </i><%- __('recentposts.title') %>
+  </div>
   <div class="recent-posts-list">
     <% site.posts.sort('date', -1).slice(0, Math.min(4, site.posts.length)).forEach(post => { %>
       <div class="recent-posts-item">
