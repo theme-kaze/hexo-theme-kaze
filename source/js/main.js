@@ -146,6 +146,11 @@ setTimeout(() => {
 }, 0)
 // search.js
 // search button
+function htmlEscape(h) {
+  return h.replace(/[<>&"]/g, (i) => {
+    return { '<': '&lt;', '>': '&gt;', '&': '&amp;', '"': '&quot;' }[i]
+  })
+}
 function searchClick(event) {
   const searchContent = document.querySelector('#local-search')
   if (!searchContent.contains(event.target)) {
@@ -182,7 +187,7 @@ const localSearch = function (path) {
 
       input.addEventListener('input', function () {
         let str = '<ul class="search-result-list">'
-        let keyword = this.value.trim().toLowerCase()
+        let keyword = htmlEscape(this.value.trim().toLowerCase())
         resultContent.innerHTML = ''
         if (this.value.trim().length <= 0) {
           return
@@ -192,26 +197,32 @@ const localSearch = function (path) {
           if (!data.title || data.title.trim() === '') {
             data.title = 'Untitled'
           }
-          const dataTitle = data.title.trim().toLowerCase()
+          let dataTitle = data.title.trim().toLowerCase()
           const dataContent = data.content
             .trim()
             .replace(/<[^>]+>/g, '')
             .toLowerCase()
           let firstOccur = -1
+          let titleOccur = -1
+          const indexTitle = dataTitle.indexOf(keyword)
+          titleOccur = indexTitle
+          let indexContent = ''
           if (dataContent !== '') {
-            const indexTitle = dataTitle.indexOf(keyword)
-            const indexContent = dataContent.indexOf(keyword)
+            indexContent = dataContent.indexOf(keyword)
             firstOccur = indexContent
-            if (indexTitle < 0 && indexContent < 0) {
-              isMatch = false
-            } else if (indexContent < 0) {
-              firstOccur = 0
-            }
-          } else {
+          }
+          if (indexTitle < 0 && indexContent < 0) {
             isMatch = false
           }
+          if (indexContent < 0) {
+            firstOccur = 0
+          }
+          if (indexTitle < 0) {
+            titleOccur = 0
+          }
           if (isMatch) {
-            str += `<li><a href="${data.url}" class="search-result-title" >'${dataTitle}</a>`
+            dataTitle = dataTitle.replaceAll(keyword, `<em class="search-keyword">${keyword}</em>`)
+            str += `<li><a href="${data.url}" class="search-result-title" >${dataTitle}</a>`
             const content = data.content
             if (firstOccur >= 0) {
               const start = Math.max(0, firstOccur - 12)
