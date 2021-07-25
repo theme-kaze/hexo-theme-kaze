@@ -4,5 +4,3 @@ import './menuButton'
 import './popButton'
 import './scrollUp'
 import './search'
-
-export default {}
