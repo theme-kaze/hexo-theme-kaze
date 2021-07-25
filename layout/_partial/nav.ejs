@@ -3,7 +3,9 @@
     <span class="navbar-logo-main">
       <% if(theme.logo_img || theme.author_img ) { %>
         <img 
-          class="navbar-logo-img" 
+          class="navbar-logo-img"
+          width="32"
+          height="32"
           src="<%- url_for(theme.logo_img) %>" 
           alt="blog logo">
       <% } %>
