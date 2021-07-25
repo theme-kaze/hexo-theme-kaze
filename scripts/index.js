@@ -7,9 +7,9 @@ hexo.on('generateBefore', () => {
     if (hexo.theme.config.minify.css) {
       require('../lib/minify/minifyCSS')(hexo);
     }
-    if (hexo.theme.config.minify.js) {
-      require('../lib/minify/minifyJS')(hexo);
-    }
+    // if (hexo.theme.config.minify.js) {
+    //   require('../lib/minify/minifyJS')(hexo);
+    // }
     if (hexo.theme.config.minify.html) {
       require('../lib/minify/minifyHTML')(hexo);
     }
