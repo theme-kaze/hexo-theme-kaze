@@ -6,11 +6,9 @@
           Copyright ©
           <% if(theme.footer.copyYear) { %>
             <%- theme.footer.copyYear %>
-              <% if (theme.footer.copyYear != date(Date.now(), 'YYYY'))
-                -
-              <% } %>
           <% } %>
-          <% if (theme.footer.copyYear != date(Date.now(), 'YYYY'))
+          <% if (theme.footer.copyYear != date(Date.now(), 'YYYY')) { %>
+                - 
                 <%- date(Date.now(), 'YYYY') %>
           <% } %>
         </span>
