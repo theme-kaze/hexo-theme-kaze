@@ -1,0 +1,60 @@
+# 繁體中文由郭桓桓翻譯
+# Copyright (c) 2021 KuoHuanHuan,
+# permission of re-publish is allowed,
+# just keep this text appears.
+
+home:
+  title: 首頁
+
+archive:
+  title: 存檔
+
+about:
+  title: 關於
+
+friends:
+  title: 友鏈
+
+artitalk:
+  title: 小語
+
+posts:
+  title: 文章
+
+categories:
+  title: 分類
+  total: 共計 篇文章
+
+tags:
+  title: 標籤
+  total: 共計 個標籤
+
+hottags:
+  title: 熱門標籤
+
+readmore:
+  title: 繼續閱讀
+
+recentposts:
+  title: 最新文章
+
+toc:
+  title: 目錄
+
+prev_page:
+  title: 上一頁
+
+next_page:
+  title: 下一頁
+
+prev_post:
+  title: 上一篇
+
+next_post:
+  title: 下一篇
+
+words_count:
+  title: 個字
+
+min2read:
+  title: 分鐘
