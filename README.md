@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="https://img.songhn.com/img/feature-kaze-logo.webp" width="256">
+  <img src="https://img.songhn.com/img/feature-kaze-show-v2.webp" width="800">
 </p>
 <p align="center"><b>Hexo Theme Kaze</b></p>
 <p align="center">A simple, responsive Hexo theme</p>
