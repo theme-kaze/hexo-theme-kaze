@@ -22,7 +22,7 @@
 ---
 ## Preview
 
-![preview](https://img.songhn.com/img/gallery.png?imageslim)
+<img src="https://img.songhn.com/img/kaze-new-preview.webp">
 
 ## Introduction
 
