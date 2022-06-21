@@ -70,7 +70,9 @@
       <script>
         loadScript('<%= url_for(theme.cdn.lozad) %>', addLazyload)
       </script>
-    <% } %> 
+    <% } %>
+    <script src="//instant.page/5.1.0" type="module"
+      integrity="sha384-by67kQnR+pyfy8yWP4kPO12fHKRLHZPfEsiSXR8u2IKcTdxD805MGUXBzVPnkLHw"></script>
     <% if(theme.analytics.enable && theme.analytics.type === 'google' && theme.analytics.google.id) { %>
       <script>
         var googleAnalytics = function () {
