@@ -18,6 +18,11 @@ hexo.extend.helper.register(
 )
 
 hexo.extend.helper.register(
+  'prefetch_css',
+  (url) => `<link rel="prefetch" href="${url}" as="style">`
+)
+
+hexo.extend.helper.register(
   'ex_css',
   (url) => `<link rel="stylesheet" href="${url}">`
 )
