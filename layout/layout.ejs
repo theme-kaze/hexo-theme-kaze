@@ -19,8 +19,6 @@
       <div class="section-wrap">
         <div class="container">
           <div class="columns">
-            <div class="left-holder"></div>
-            <main class="main-column"><%- body %></main>
             <aside class="left-column">
               <%# author card %>
               <div class="card card-author">
@@ -28,6 +26,9 @@
               </div>
               <%# sticky-tablet %> <%- partial('_partial/left-aside') %>
             </aside>
+            <main class="main-column">
+              <%- body %>
+            </main>
             <aside class="right-column">
               <%- partial('_partial/right-aside') %>
             </aside>
