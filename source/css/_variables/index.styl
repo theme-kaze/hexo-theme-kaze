@@ -75,17 +75,21 @@ $dark-note-danger-color = theme-config('color.dark-note-danger-color', '#925346'
 // font variables
 $base-font-size = theme-config('font.font-size', '16px')
 $font-family = theme-config('font.font-family', 'Microsoft Yahei, sans-serif')
+$xs-font-size = 0.8rem
 $sm-font-size = 0.9rem
 $md-font-size = 1rem
 $ml-font-size = 1.15rem
 $lg-font-size = 1.3rem
 $ex-font-size = 1.5rem
 // style variables
-$around-shadow-style = 0 2px 3px 0 rgba(0, 0, 0, 0.1)
+$base-shadow-color = 0deg, 0%, 72%
+$around-shadow-style = .3px .2px .3px hsla($base-shadow-color, 0.4), .7px .5px .8px -1.3px hsla($base-shadow-color, 0.32), 1.9px 1.4px 2.1px -2.7px hsla($base-shadow-color, 0.25), 5.2px 3.8px 5.8px -4px hsla($base-shadow-color, 0.17)
 $tag-shadow-style = 0 2px 4px 0 rgba(0, 0, 0, 0.2)
 $image-filter-style = none
 $dark-around-shadow-style = none
 $dark-tag-shadow-style = none
 $dark-image-filter-style = brightness(0.6) contrast(1.2)
+$border-radius = theme-config('border.border-radius', '.5rem')
+$xs-border-radius = theme-config('border.border-radius-lg', '.2rem')
 // config styles
 $widgets-mobile = theme-config('widgets.showWidgetsMobiles', 'none')

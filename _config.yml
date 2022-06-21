@@ -1,9 +1,10 @@
 #------------------------
 # Header config
-title: theme-kaze demo
+title: Theme Kaze
 author: theme-kaze
-logo_img: https://demo.theme-kaze.top/img/Kaze.png # put the logo on the ${blog_path}/source/img/${picname}.png or use urls
-author_img: https://demo.theme-kaze.top/img/Kaze.png
+# put the logo on the ${blog_path}/source/img/${picname}.png or use urls
+# logo_img: https://img.songhn.com/img/Y67gdd.png
+author_img: https://img.songhn.com/img/Y67gdd.png
 author_description: designed by theme-kaze
 #------------------------
 # Navbar config
