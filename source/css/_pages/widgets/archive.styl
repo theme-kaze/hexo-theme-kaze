@@ -10,27 +10,27 @@
   color: var(--text-color)
   font-size: $md-font-size
   padding: 6px 8px
-  transition: all 0.4s
+  transition: background-color 0.4s
+  border-radius: 0.3rem
   &:hover
-    padding: 6px 12px
+    // padding: 6px 12px
     cursor: pointer
-    border-radius: 0.3rem
     background-color: var(--badge-background-color)
-    transition: all 0.4s
-    transition-duration: 0.3s
-    transition-timing-function: ease-in-out
-    .archive-card-list-item-badge
-      background-color: var(--badge-hover-background-color)
-      transition: all 0.4s
+    // transition: all 0.4s
+    // transition-duration: 0.3s
+    // transition-timing-function: ease-in-out
+    // .archive-card-list-item-badge
+    //   background-color: var(--badge-hover-background-color)
+    //   transition: all 0.4s
   + .archive-card-list-item
     margin-top: 3px
 .archive-card-list-item-badge
   float: right
   margin-right: 10px
-  font-size: $sm-font-size
+  font-size: $xs-font-size
   background-color: var(--badge-background-color)
   transition: all 0.4s
-  padding: 3px 7px
+  padding: 2px 7px
   text-align: center
   border-radius: 0.3rem
 @media (max-width: 862px)
