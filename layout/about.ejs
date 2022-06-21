@@ -12,16 +12,15 @@
       <div class="about-card-dsc"><%= theme.about.description %></div>
     <% } %>
     <div class="about-card-society">
-      <% if(theme.about.social_links) {
- %> <% for(const item of
-      theme.about.social_links) { %>
+      <% if(theme.about.social_links) { %> 
+        <% for(const item of theme.about.social_links) { %>
           <div class="about-card-society-icon">
             <a href="<%= url_for(item.link) %>">
               <i class="iconfont <%= item.icon %> society-icon"></i>
             </a>
           </div>
-        <% } %> <% 
-        } %>
+        <% } %> 
+      <% } %>
     </div>
   </div>
 </div>
