@@ -1,11 +1,5 @@
 @import 'postlist.styl'
 
-.left-holder
-  display: block
-  order: -1
-  min-width: 0
-  height: 0
-  max-height: 0
 // layout into two columns
 .columns, .left-column, .main-column, .right-column
   display: block
@@ -15,18 +9,18 @@
     margin-bottom: 0.8rem
 .main-column
   content-visibility: auto
+.right-column, .left-column
+  display: none
 @media screen and (min-width: 862px)
   .columns
     display: flex
   .left-column, .right-column
     width: (1 / 3) * 100%
-  .left-column
-    order: 1
+  // .left-column
+    // order: 1
   .main-column
-    order: 2
+    // order: 2
     width: (2 / 3) * 100%
-.right-column
-  display: none
 // big screen layout, layout into three columns
 @media screen and (min-width: 1280px)
   .left-column .display-when-two-columns, .widescreen-archive
@@ -35,8 +29,8 @@
     width: 52%
   .left-column, .right-column
     width: 24%
-  .right-column
-    order: 3
+  .right-column, .left-column
+    // order: 3
     display: block
 // sticky aside
 @media screen and (min-width: 1280px)
