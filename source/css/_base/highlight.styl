@@ -1,9 +1,10 @@
 code, pre
   font-family: 'Fira Code', 'Consolas', monospace !important
-code[class*='hljs'], pre[class*='highlight']
+code[class*='hljs'], pre[class*='highlight'], code[class*='language']
   color: #ccc
   background: none
-  font-size: 1rem
+  // This !important is required to override the default style of highlight
+  font-size: 1rem !important
   padding: 0
   margin-left: 0
   text-align: left
