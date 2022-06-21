@@ -2,9 +2,9 @@
   "name": "hexo-theme-kaze",
   "version": "1.1.0-beta6",
   "description": "hexo-theme-kaze",
-  "main": "index.js",
   "scripts": {
-    "lint": "eslint **/*.ejs --fix"
+    "lint": "eslint **/*.ejs --fix",
+    "source:js": "rollup -c ./src/scripts/rollup.config.js"
   },
   "repository": {
     "type": "git",
@@ -42,5 +42,13 @@
   },
   "directories": {
     "lib": "lib"
-  }
+  },
+  "files": [
+    "languages",
+    "layout",
+    "scripts",
+    "source",
+    "_config.yml",
+    "_vendors.yml"
+  ]
 }
