@@ -2,7 +2,7 @@
 .navbar
   background-color: var(--widget-background-color)
   transition: background-color 0.3s
-  min-height: 3.25rem
+  height: 3.5rem
   box-shadow: var(--around-shadow-style)
   display: flex
   align-items: stretch
@@ -10,10 +10,12 @@
   display: inline-block
   margin-left: 96px
 .navbar-logo-main
-  display: flex
+  display: inline-flex
+  height: 100%
   align-items: center
   justify-content: space-around
   padding: 0.7rem 0.6rem
+  color: var(--text-color)
 .navbar-logo-dsc
   font-size: $lg-font-size
 .navbar-logo-img
@@ -25,7 +27,9 @@
   display: flex
   align-items: center
   a
-    display: inline-block
+    display: inline-flex
+    height: 100%
+    align-items: center
     color: var(--text-color)
     cursor: pointer
     padding: 0.7rem 0.6rem

@@ -8,30 +8,32 @@
 .categories-list-item
   color: var(--text-color)
   padding: 6px 8px
-  font-size: $ml-font-size
-  transition: all 0.4s
+  font-size: $md-font-size
+  border-radius: $border-radius
+  transition: background-color 0.4s ease-in-out
   &:hover
-    padding: 6px 12px
+    // padding: 6px 12px
     cursor: pointer
-    border-radius: 0.3rem
+    // border-radius: $border-radius
     background-color: var(--badge-background-color)
-    transition: all 0.4s
-    transition-duration: 0.4s
-    transition-timing-function: ease-in-out
-    .categories-list-item-badge
-      background-color: var(--badge-hover-background-color)
-      transition: all 0.4s
+    // transition: background-color 0.4s ease-in-out
+    // transition: all 0.4s
+    // transition-duration: 0.4s
+    // transition-timing-function: ease-in-out
+    // .categories-list-item-badge
+    //   background-color: var(--badge-hover-background-color)
+    //   transition: all 0.4s
   + .categories-list-item
     margin-top: 3px
 .categories-list-item-badge
   float: right
   margin-right: 10px
-  font-size: $sm-font-size
+  font-size: $xs-font-size
   background-color: var(--badge-background-color)
-  transition: all 0.4s
-  padding: 3px 7px
+  // transition: all 0.4s
+  padding: 2px 7px
   text-align: center
-  border-radius: 0.3rem
+  border-radius: $xs-border-radius
 
 @media (max-width: 862px)
   .categories-widget
