@@ -1,30 +1,30 @@
-<% if(theme.comment.waline.appId && theme.comment.waline.appKey) { %>
+<% if(theme.comment.waline.serverURL) { %>
   <div id="wcomments"></div>
-    
   <script>
-      loadScript("<%= theme.cdn.waline %>");
+      loadScript("<%= theme.cdn.waline.js %>");
       var oldLoadVa = window.onload;
       window.onload = function () {
         oldLoadVa && oldLoadVa();
-        new waline({
+        Waline.init({
           el: '#wcomments',
           serverURL: '<%= theme.comment.waline.serverURL %>',
-          placeholder: '<%= theme.comment.waline.placeholder %>',
           path: <%= theme.comment.waline.path %>,
-          avatar: '<%= theme.comment.waline.avatar %>',
-          meta: <%- JSON.stringify(theme.comment.waline.meta || []) %>,
-          pageSize: '<%= theme.comment.waline.pageSize %>',
           lang: '<%= theme.comment.waline.lang %>',
-          visitor: '<%= theme.comment.waline.visitor %>',
-          highlight: <%= theme.comment.waline.highlight %>,
-          anonymous: '<%= theme.comment.waline.anonymous %>'
-          <% if(theme.comment.waline.emojiCDN) { %>
-          emojiCDN: '<%= theme.comment.waline.emojiCDN %>',
+          placeholder: '<%= theme.comment.waline.placeholder %>',
+          meta: <%- JSON.stringify(theme.comment.waline.meta || []) %>,
+          requiredMeta: <%- JSON.stringify(theme.comment.waline.requiredMeta || []) %>,
+          dark: '<%= theme.comment.waline.dark  %>',
+          login: '<%= theme.comment.waline.login  %>',
+
+          wordLimit: <%- JSON.stringify(theme.comment.waline.wordLimit) %>,
+          pageSize: <%= theme.comment.waline.pageSize %>,
+          <% if (theme.comment.waline.emoji) { %>
+            emoji : <%- JSON.stringify(theme.comment.waline.emoji) %>,
           <% } %>
-          <% if(theme.comment.waline.emojiMaps) { %>
-          emojiMaps: '<%= theme.comment.waline.emojiMaps %>',
+          <% if (theme.comment.waline.locale) { %>
+          
+            locale : <%- JSON.stringify(theme.comment.waline.locale) %>,
           <% } %>
-          requiredFields: <%- JSON.stringify(theme.comment.waline.requiredFields || []) %>,
         });
       };
     </script>

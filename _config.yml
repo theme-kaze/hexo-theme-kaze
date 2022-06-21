@@ -141,18 +141,17 @@ comment:
     uid:
   waline:
     serverURL:
-    placeholder: Just go go
     path: window.location.pathname
     avatar: mp
     meta: ["nick", "mail", "link"]
+    requiredMeta: []
+    lang: zh-CN
+    dark: html[data-user-color-scheme="dark"]
+    login: enable
+    wordLimit: 0
     pageSize: 10
-    visitor: false
-    highlight: true
-    emojiCDN:
-    emojiMaps: null
-    enableQQ: false
-    requiredFields: []
-    anonymous: true
+    locale:
+      placeholder: Just go go
 
 #------------------------
 # latex config
@@ -247,7 +246,9 @@ cdn:
     js: //cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.min.js
   valine: //unpkg.com/valine/dist/Valine.min.js
   livere: //cdn-city.livere.com/js/embed.dist.js
-  waline: //cdn.jsdelivr.net/npm/@waline/client/dist/Waline.min.js
+  waline: 
+    js: //unpkg.com/@waline/client@v2/dist/waline.js
+    css: //unpkg.com/@waline/client@v2/dist/waline.css
   baguetteBox: /js/lib/lightbox
   lozad: /js/lib/lozad.min.js
   prism: /js/lib/prism/
