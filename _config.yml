@@ -199,6 +199,9 @@ artitalk:
   enable: false
   appId: 
   appKey: 
+editedArticle:
+  enable: false
+  repo: 
 #------------------------
 # minify config
 # css minify uses autoprefixer and clean-css
