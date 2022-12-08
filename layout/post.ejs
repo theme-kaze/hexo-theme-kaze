@@ -14,9 +14,9 @@
       <%= page.title %>
     </h1>
   </header>
-  <% if(page.editLink) { %>
+  <% if(theme.editLink.enable && page.editLink !== false) { %>
     <div class="post-meta post-show-meta">
-      <a href="<%= theme.editedArticle.repo %>/edit/server/source/<%- page.source %>" target="_blank"><%= theme.editedArticle.text %></a>
+      <a href="<%= theme.editLink.repo %>/edit/server/source/<%- page.source %>" target="_blank"><%= theme.editLink.text %></a>
     </div>
   <% } %>
   <div class="post-meta post-show-meta">

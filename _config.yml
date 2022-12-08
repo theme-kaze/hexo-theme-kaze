@@ -212,7 +212,7 @@ artitalk:
 # editLink: true
 #---
 #------------------------
-editedArticle:
+editLink:
   enable: false
   repo: 
   text: 编辑原文
