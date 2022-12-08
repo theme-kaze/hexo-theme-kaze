@@ -199,6 +199,23 @@ artitalk:
   enable: false
   appId: 
   appKey: 
+# 编辑原文链接，支持 GitHub、GitLab 等代码仓库
+# 详见 https://github.com/theme-kaze/hexo-theme-kaze/issues/77
+#------------------------
+# EXAMPLE
+# enable: true
+# repo: https://github.com/theme-kaze/theme-kaze-demo
+# text: 编辑原文
+# 同时需要在对应的markdown文档头部中添加
+#---
+# title: Edit Link
+# editLink: true
+#---
+#------------------------
+editLink:
+  enable: false
+  repo: 
+  text: 编辑原文
 #------------------------
 # minify config
 # css minify uses autoprefixer and clean-css
